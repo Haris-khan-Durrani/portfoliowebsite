@@ -120,6 +120,13 @@ export const metadata: Metadata = {
     description:
       'Engineering systems that move businesses — from architecture through hands-on full-stack code, telephony, and DevOps.',
   },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? {
+        verification: {
+          google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+        },
+      }
+    : {}),
   category: 'technology',
 };
 

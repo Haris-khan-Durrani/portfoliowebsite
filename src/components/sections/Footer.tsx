@@ -26,7 +26,15 @@ export function Footer() {
             {SITE_CONFIG.phone}
           </div>
           <div>Head of IT · Solution Architecture · Full-Stack Systems · Telephony · DevOps</div>
-          <div>&copy; 2026 All Rights Reserved · {SITE_CONFIG.domain}</div>
+          <div className="flex items-center gap-4">
+            <span>&copy; 2026 All Rights Reserved · {SITE_CONFIG.domain}</span>
+            <a
+              href="/sitemap.xml"
+              className="text-[var(--acid)] transition-opacity hover:opacity-80"
+            >
+              Sitemap.xml
+            </a>
+          </div>
         </div>
       </div>
     </footer>
