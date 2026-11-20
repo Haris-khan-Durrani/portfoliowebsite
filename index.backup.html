@@ -1,0 +1,3017 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haris Khan Durrani — Head of IT | Senior Full-Stack Developer | Solution Architect</title>
+  <meta name="description" content="Dubai-based Head of IT, Senior Full-Stack Developer, and CRM & Automation Specialist with 9+ years of experience architecting enterprise SaaS, ERP/CRM, telephony, and cloud infrastructure." />
+  <meta name="author" content="Haris Khan Durrani" />
+  <meta name="keywords" content="Haris Khan Durrani, Head of IT, Solution Architect, Senior Full-Stack Developer, Dubai, UAE, EBMS, GoHighLevel, Zoho CRM, 3CX, Next.js, Node.js, PostgreSQL, Docker, Laravel" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://hariskhandurrani.com/" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Haris Khan Durrani — Head of IT &amp; Senior Full-Stack Developer" />
+  <meta property="og:description" content="Technology leader with 9+ years experience architecting enterprise SaaS, ERP/CRM, and workflow automation platforms across Dubai &amp; global enterprises." />
+  <meta property="og:url" content="https://hariskhandurrani.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Haris Khan Durrani — Head of IT &amp; Solution Architect" />
+  <meta name="twitter:description" content="Engineering systems that move businesses — from architecture through hands-on full-stack code, telephony, and DevOps." />
+  <meta name="theme-color" content="#060608" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,850&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          colors: {
+            acid: '#c8ff3d',
+            'acid-dark': '#a3db18',
+            cyan: '#38bdf8',
+            obsidian: '#060608',
+            surface: '#0d0e14',
+            'surface-light': '#141620',
+            paper: '#f6f6f2'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --ink: #060608;
+      --paper: #f6f6f2;
+      --acid: #c8ff3d;
+      --acid-glow: rgba(200, 255, 61, 0.35);
+      --acid-subtle: rgba(200, 255, 61, 0.08);
+      --cyan: #38bdf8;
+      --cyan-glow: rgba(56, 189, 248, 0.3);
+      --page-bg: #060608;
+      --page-text: #f4f4f0;
+      --surface: #0c0d13;
+      --surface-elevated: rgba(14, 16, 24, 0.88);
+      --surface-card: #10121b;
+      --header-bg: rgba(9, 10, 16, 0.78);
+      --header-border: rgba(255, 255, 255, 0.11);
+      --header-text: #f4f4f0;
+      --text-soft: rgba(244, 244, 240, 0.72);
+      --text-faint: rgba(244, 244, 240, 0.44);
+      --line: rgba(255, 255, 255, 0.1);
+      --line-subtle: rgba(255, 255, 255, 0.05);
+      --shadow: rgba(0, 0, 0, 0.55);
+      --header-clear: 104px;
+    }
+
+    html[data-theme="light"] {
+      --page-bg: #f6f6f2;
+      --page-text: #0e1017;
+      --surface: #ffffff;
+      --surface-elevated: rgba(255, 255, 255, 0.92);
+      --surface-card: #f9f9f5;
+      --header-bg: rgba(246, 246, 242, 0.85);
+      --header-border: rgba(14, 16, 23, 0.12);
+      --header-text: #0e1017;
+      --text-soft: rgba(14, 16, 23, 0.75);
+      --text-faint: rgba(14, 16, 23, 0.48);
+      --line: rgba(14, 16, 23, 0.12);
+      --line-subtle: rgba(14, 16, 23, 0.06);
+      --shadow: rgba(20, 25, 35, 0.12);
+      --acid: #82c400;
+      --acid-glow: rgba(130, 196, 0, 0.32);
+      --acid-subtle: rgba(130, 196, 0, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html {
+      background: var(--page-bg);
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--page-bg);
+      color: var(--page-text);
+      font-family: "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+
+    body.modal-open, body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    ::selection { background: var(--acid); color: #060608; }
+
+    /* WebGL Canvas & Background Auroras (UUPM inspired) */
+    #webgl {
+      position: fixed; inset: 0; width: 100%; height: 100%;
+      z-index: 0; pointer-events: none; opacity: 0.95;
+    }
+    .webgl-fade {
+      position: fixed; inset: 0; z-index: 1; pointer-events: none;
+      background:
+        radial-gradient(circle at 75% 30%, rgba(200, 255, 61, 0.04), transparent 50%),
+        radial-gradient(circle at 20% 60%, rgba(56, 189, 248, 0.03), transparent 60%),
+        linear-gradient(90deg, rgba(6, 6, 8, 0.96) 0%, rgba(6, 6, 8, 0.65) 45%, rgba(6, 6, 8, 0.15) 85%);
+    }
+    html[data-theme="light"] .webgl-fade {
+      background:
+        radial-gradient(circle at 75% 30%, rgba(130, 196, 0, 0.05), transparent 50%),
+        radial-gradient(circle at 20% 60%, rgba(56, 189, 248, 0.04), transparent 60%),
+        linear-gradient(90deg, rgba(246, 246, 242, 0.98) 0%, rgba(246, 246, 242, 0.75) 45%, rgba(246, 246, 242, 0.2) 85%);
+    }
+
+    /* Architectural Subtle Blueprint Grid */
+    .arch-grid-bg {
+      position: fixed; inset: 0; z-index: 2; pointer-events: none;
+      background-size: 54px 54px;
+      background-image: 
+        linear-gradient(to right, var(--line-subtle) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--line-subtle) 1px, transparent 1px);
+      mask-image: radial-gradient(circle at 50% 50%, black 25%, transparent 85%);
+      -webkit-mask-image: radial-gradient(circle at 50% 50%, black 25%, transparent 85%);
+    }
+
+    .grain {
+      position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: 0.032; mix-blend-mode: screen;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+    }
+    html[data-theme="light"] .grain { opacity: 0.02; mix-blend-mode: multiply; }
+
+    main, header, footer { position: relative; z-index: 10; }
+
+    /* Topbar Navigation — High-End Luxury Tech Pill (RareUI / UUPM) */
+    .topbar {
+      position: fixed; z-index: 80; top: 16px; left: 50%; transform: translateX(-50%);
+      width: min(1360px, calc(100% - clamp(20px, 3.5vw, 48px)));
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      min-height: 62px; padding: 8px 14px 8px 22px;
+      color: var(--header-text); background: var(--header-bg);
+      border: 1px solid var(--header-border); border-radius: 999px;
+      backdrop-filter: blur(28px) saturate(180%); -webkit-backdrop-filter: blur(28px) saturate(180%);
+      box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.09);
+      transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+    html[data-theme="light"] .topbar {
+      box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark-cube {
+      width: 34px; height: 34px; border-radius: 10px;
+      background: linear-gradient(135deg, rgba(200, 255, 61, 0.2), rgba(56, 189, 248, 0.15));
+      border: 1px solid rgba(200, 255, 61, 0.4);
+      display: grid; place-items: center; font-family: "JetBrains Mono", monospace;
+      font-weight: 850; font-size: 11px; color: var(--acid);
+      box-shadow: 0 0 18px rgba(200, 255, 61, 0.22); flex: none;
+    }
+    .brand-text-wrap { display: flex; align-items: baseline; gap: 8px; }
+    .brand-name {
+      font-size: 13.5px; font-weight: 850; letter-spacing: -0.01em; color: var(--page-text);
+      white-space: nowrap;
+    }
+    .brand-role-tag {
+      font-size: 9.5px; font-family: "JetBrains Mono", monospace; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-faint); white-space: nowrap;
+    }
+
+    .navlinks {
+      display: flex; gap: 4px; align-items: center;
+      background: rgba(255, 255, 255, 0.035); border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 4px 6px; border-radius: 999px;
+    }
+    html[data-theme="light"] .navlinks {
+      background: rgba(0, 0, 0, 0.03); border-color: rgba(0, 0, 0, 0.05);
+    }
+    .navlinks a {
+      color: var(--text-soft); font-size: 11.5px; font-weight: 600; letter-spacing: 0.02em;
+      padding: 7px 15px; border-radius: 999px; transition: all 0.2s ease;
+    }
+    .navlinks a:hover {
+      color: var(--page-text); background: rgba(255, 255, 255, 0.08);
+    }
+    html[data-theme="light"] .navlinks a:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .status-pill {
+      display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px;
+      border-radius: 999px; background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 10.5px; font-family: "JetBrains Mono", monospace; color: var(--text-soft);
+    }
+    .status-pulse-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #22c55e;
+      box-shadow: 0 0 10px #22c55e; animation: pulseGlow 2s infinite ease-in-out;
+    }
+    @keyframes pulseGlow { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.85); } }
+
+    .theme-toggle, .menu-toggle, .terminal-quick-btn {
+      width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.1); background: transparent; color: var(--page-text);
+      cursor: pointer; transition: all 0.25s ease;
+    }
+    html[data-theme="light"] .theme-toggle, html[data-theme="light"] .terminal-quick-btn {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+    .theme-toggle:hover, .terminal-quick-btn:hover {
+      background: var(--acid); color: #060608; border-color: var(--acid); transform: translateY(-2px);
+    }
+    .theme-toggle svg, .terminal-quick-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+    .theme-toggle .sun { display: none; }
+    html[data-theme="light"] .theme-toggle .sun { display: block; }
+    html[data-theme="light"] .theme-toggle .moon { display: none; }
+
+    .btn-header-consult {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px;
+      border-radius: 999px; background: linear-gradient(135deg, #c8ff3d, #a5ea10);
+      color: #060608; font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
+      text-transform: uppercase; box-shadow: 0 4px 18px rgba(200, 255, 61, 0.28);
+      transition: all 0.25s ease;
+    }
+    .btn-header-consult:hover {
+      transform: translateY(-2px); box-shadow: 0 8px 26px rgba(200, 255, 61, 0.45);
+    }
+
+    .menu-toggle { display: none; }
+
+    /* Mobile Drawer Menu */
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 75;
+      visibility: hidden; pointer-events: none;
+    }
+    .mobile-menu-backdrop {
+      position: absolute; inset: 0; background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(12px); opacity: 0; transition: opacity 0.35s ease;
+    }
+    .mobile-menu-panel {
+      position: absolute; top: calc(var(--header-clear) - 6px); left: 14px; right: 14px;
+      max-height: calc(100svh - var(--header-clear) - 16px); overflow-y: auto;
+      padding: 24px 20px 20px; color: var(--header-text); background: var(--surface-card);
+      border: 1px solid var(--header-border); border-radius: 24px; box-shadow: 0 30px 90px var(--shadow);
+      opacity: 0; transform: translateY(-16px) scale(0.98);
+      transition: opacity 0.35s ease, transform 0.38s cubic-bezier(0.2, 0.9, 0.25, 1);
+    }
+    .mobile-menu-nav a {
+      display: flex; align-items: center; justify-content: space-between;
+      min-height: 54px; border-bottom: 1px solid var(--line-subtle);
+      font-size: 20px; font-weight: 850; text-transform: uppercase; letter-spacing: -0.02em;
+    }
+    .mobile-menu-nav a span { font-size: 10.5px; font-family: "JetBrains Mono", monospace; color: var(--acid); }
+    body.menu-open .mobile-menu { visibility: visible; pointer-events: auto; }
+    body.menu-open .mobile-menu-backdrop { opacity: 1; }
+    body.menu-open .mobile-menu-panel { opacity: 1; transform: none; }
+
+    /* Hero Section — Luxury Editorial Layout */
+    .hero {
+      min-height: 100vh; min-height: 100svh; position: relative; display: flex; align-items: center;
+      padding: calc(var(--header-clear) + 30px) clamp(20px, 4vw, 72px) clamp(40px, 5vh, 70px);
+      border-bottom: 1px solid var(--line); overflow: hidden;
+    }
+    .hero-content {
+      width: min(1120px, 62vw); position: relative; z-index: 5;
+    }
+
+    .hero-kicker-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 6px 16px; border-radius: 999px;
+      background: rgba(200, 255, 61, 0.06); border: 1px solid rgba(200, 255, 61, 0.22);
+      box-shadow: 0 0 24px rgba(200, 255, 61, 0.08); margin-bottom: 24px;
+    }
+    .hero-kicker-loc {
+      font-size: 10px; font-family: "JetBrains Mono", monospace; font-weight: 700;
+      color: var(--acid); letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .hero-kicker-sep { width: 3px; height: 3px; border-radius: 50%; background: rgba(255, 255, 255, 0.35); }
+    .hero-kicker-role {
+      font-size: 10.5px; font-family: "JetBrains Mono", monospace; color: var(--text-soft); letter-spacing: 0.06em;
+    }
+
+    .hero-title {
+      margin: 0 0 24px;
+      font-size: clamp(44px, min(6.5vw, 11vh), 94px);
+      font-weight: 850; letter-spacing: -0.04em; line-height: 1.0; text-transform: uppercase;
+    }
+    .hero-line { display: block; }
+    .hero-gradient-text {
+      background: linear-gradient(135deg, #c8ff3d 15%, #38bdf8 85%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 35px rgba(200, 255, 61, 0.28)); font-style: italic;
+    }
+    .hero-line-light { color: var(--page-text); opacity: 0.95; }
+
+    .hero-desc {
+      max-width: 660px; font-size: clamp(15px, 1.2vw, 18px);
+      line-height: 1.68; color: var(--text-soft); font-weight: 450; margin: 0 0 36px;
+    }
+
+    /* 4 Micro Glass Metric Cards (UUPM + RareUI) with Animated Counters */
+    .hero-stat-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 12px; max-width: 720px; margin-bottom: 38px;
+    }
+    .hero-stat-card {
+      background: rgba(255, 255, 255, 0.028);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px; padding: 14px 16px;
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+    }
+    html[data-theme="light"] .hero-stat-card {
+      background: rgba(0, 0, 0, 0.025); border-color: rgba(0, 0, 0, 0.08);
+    }
+    .hero-stat-card:hover {
+      border-color: rgba(200, 255, 61, 0.45); transform: translateY(-3px);
+      background: rgba(200, 255, 61, 0.05);
+    }
+    .hero-stat-num {
+      display: block; font-size: clamp(22px, 2.2vw, 28px); font-weight: 850;
+      letter-spacing: -0.03em; color: var(--page-text); line-height: 1;
+    }
+    .hero-stat-num span { color: var(--acid); }
+    .hero-stat-label {
+      display: block; font-size: 9.5px; font-family: "JetBrains Mono", monospace;
+      color: var(--text-faint); margin-top: 6px; letter-spacing: 0.03em; line-height: 1.35;
+    }
+
+    .hero-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .btn-hero-primary {
+      display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px;
+      border-radius: 999px; background: linear-gradient(135deg, #c8ff3d, #a5ea10); color: #060608;
+      font-size: 11px; font-weight: 850; letter-spacing: 0.12em; text-transform: uppercase;
+      box-shadow: 0 8px 24px rgba(200, 255, 61, 0.3); transition: all 0.25s ease;
+    }
+    .btn-hero-primary:hover {
+      transform: translateY(-2px); box-shadow: 0 14px 34px rgba(200, 255, 61, 0.45);
+    }
+
+    .btn-hero-secondary {
+      display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px;
+      border-radius: 999px; background: rgba(255, 255, 255, 0.035); color: var(--page-text);
+      border: 1px solid rgba(255, 255, 255, 0.12); font-size: 11px; font-weight: 750;
+      letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.25s ease;
+    }
+    html[data-theme="light"] .btn-hero-secondary {
+      background: rgba(0, 0, 0, 0.035); border-color: rgba(0, 0, 0, 0.12);
+    }
+    .btn-hero-secondary:hover {
+      transform: translateY(-2px); border-color: var(--acid); color: var(--acid);
+      background: rgba(200, 255, 61, 0.06);
+    }
+
+    /* Section Eyebrow & Titles */
+    .section-eyebrow {
+      font-size: 11px; font-family: "JetBrains Mono", monospace; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--acid); margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: clamp(36px, 5.8vw, 88px); font-weight: 900; letter-spacing: -0.055em;
+      line-height: 0.9; text-transform: uppercase; margin: 0;
+    }
+
+    /* ----------------------------------------------------
+       NEW SECTION: Career & Leadership Timeline (Haris's CV)
+       ---------------------------------------------------- */
+    .experience-section {
+      padding: 110px clamp(20px, 4vw, 72px);
+      background: var(--surface-card);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .timeline-container {
+      position: relative; margin-top: 64px; max-width: 1200px;
+    }
+    .timeline-spine {
+      position: absolute; top: 0; bottom: 0; left: 24px; width: 2px;
+      background: linear-gradient(180deg, var(--acid) 0%, rgba(200, 255, 61, 0.15) 85%, transparent 100%);
+    }
+    .timeline-card-wrapper {
+      position: relative; margin-bottom: 48px; padding-left: 64px;
+    }
+    .timeline-node {
+      position: absolute; left: 16px; top: 32px; width: 18px; height: 18px; border-radius: 50%;
+      background: var(--surface); border: 3px solid var(--acid);
+      box-shadow: 0 0 16px var(--acid); z-index: 2;
+    }
+    .timeline-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 26px; padding: clamp(24px, 3.5vw, 42px);
+      position: relative; overflow: hidden;
+      box-shadow: 0 20px 50px var(--shadow);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .timeline-card:hover {
+      transform: translateY(-3px); border-color: rgba(200, 255, 61, 0.4);
+    }
+    .timeline-card.highlight {
+      border-color: rgba(200, 255, 61, 0.35);
+      background: linear-gradient(135deg, rgba(200, 255, 61, 0.03) 0%, var(--surface) 100%);
+    }
+    .timeline-head-row {
+      display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 14px;
+      margin-bottom: 18px;
+    }
+    .timeline-company {
+      font-size: clamp(24px, 2.8vw, 36px); font-weight: 850; letter-spacing: -0.04em;
+      text-transform: uppercase; color: var(--page-text);
+    }
+    .timeline-period {
+      font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 700;
+      color: var(--acid); letter-spacing: 0.12em; text-transform: uppercase;
+      background: rgba(200, 255, 61, 0.08); padding: 5px 12px; border-radius: 999px;
+      border: 1px solid rgba(200, 255, 61, 0.25);
+    }
+    .timeline-role-badge {
+      font-size: 14.5px; font-weight: 750; color: var(--cyan); letter-spacing: -0.01em; margin-bottom: 20px;
+    }
+    .timeline-points {
+      margin: 0; padding-left: 20px; color: var(--text-soft); font-size: 14px; line-height: 1.7;
+    }
+    .timeline-points li { margin-bottom: 10px; }
+    .timeline-metrics-strip {
+      display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; padding-top: 20px;
+      border-top: 1px solid var(--line-subtle);
+    }
+    .metric-pill {
+      font-family: "JetBrains Mono", monospace; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--page-text);
+      background: var(--surface-card); border: 1px solid var(--line);
+      padding: 6px 14px; border-radius: 999px;
+    }
+    .metric-pill strong { color: var(--acid); }
+
+    /* ----------------------------------------------------
+       NEW SECTION: RareUI Interactive Folder Component
+       (Tactile fanning cards for architectural dossiers)
+       ---------------------------------------------------- */
+    .folder-section {
+      padding: 110px clamp(20px, 4vw, 72px);
+      background: var(--page-bg);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .rare-folder-container {
+      max-width: 1260px; margin: 50px auto 0;
+      background: var(--surface-card); border: 1px solid var(--line);
+      border-radius: 32px; padding: clamp(28px, 4vw, 54px);
+      box-shadow: 0 35px 90px var(--shadow); position: relative;
+    }
+    .folder-header-bar {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+    .folder-tab-badge {
+      font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 800;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--acid);
+      background: rgba(200, 255, 61, 0.09); border: 1px solid rgba(200, 255, 61, 0.3);
+      padding: 6px 16px; border-radius: 999px;
+    }
+    .folder-instruction {
+      font-size: 11.5px; font-family: "JetBrains Mono", monospace; color: var(--text-faint);
+    }
+
+    /* Deck Layout with 3D Fanning Cards */
+    .folder-deck-stage {
+      perspective: 1200px;
+      min-height: 480px;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+    .folder-dossier-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 30px 26px 26px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative;
+      box-shadow: 0 16px 40px var(--shadow);
+      transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+    .folder-dossier-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      border-color: var(--acid);
+      box-shadow: 0 25px 60px rgba(200, 255, 61, 0.15);
+      z-index: 10;
+    }
+    .dossier-tag {
+      font-family: "JetBrains Mono", monospace; font-size: 9.5px; font-weight: 800;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--acid); margin-bottom: 12px;
+    }
+    .folder-dossier-card h4 {
+      margin: 0 0 12px; font-size: 20px; font-weight: 850; letter-spacing: -0.03em;
+      text-transform: uppercase; color: var(--page-text); line-height: 1.15;
+    }
+    .folder-dossier-card p {
+      margin: 0 0 22px; font-size: 13px; line-height: 1.6; color: var(--text-soft); flex: 1;
+    }
+    .dossier-foot {
+      padding-top: 16px; border-top: 1px solid var(--line-subtle);
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .dossier-foot span {
+      font-family: "JetBrains Mono", monospace; font-size: 10px; color: var(--text-faint);
+    }
+    .dossier-action-btn {
+      font-size: 10px; font-family: "JetBrains Mono", monospace; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--acid);
+      background: transparent; border: none; cursor: pointer; padding: 0;
+      transition: transform 0.2s ease;
+    }
+    .folder-dossier-card:hover .dossier-action-btn { transform: translateX(3px); }
+
+    /* ----------------------------------------------------
+       NEW SECTION: RareUI Single-Accent Code Snippet Inspector
+       ---------------------------------------------------- */
+    .codeplay-section {
+      padding: 110px clamp(20px, 4vw, 72px);
+      background: var(--surface-card);
+      border-bottom: 1px solid var(--line);
+    }
+    .rare-code-container {
+      max-width: 1180px; margin: 48px auto 0;
+      background: #08090e; border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px; overflow: hidden; box-shadow: 0 35px 90px rgba(0, 0, 0, 0.7);
+    }
+    .rare-code-topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 18px; height: 50px; background: #0f111a;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08); flex-wrap: wrap; gap: 12px;
+    }
+    .code-tabs { display: flex; gap: 4px; overflow-x: auto; padding: 6px 0; }
+    .code-tab-btn {
+      background: transparent; border: none; border-radius: 8px;
+      padding: 6px 14px; font-family: "JetBrains Mono", monospace; font-size: 11px;
+      font-weight: 600; color: rgba(255, 255, 255, 0.5); cursor: pointer;
+      transition: all 0.2s ease; white-space: nowrap;
+    }
+    .code-tab-btn:hover { color: #fff; background: rgba(255, 255, 255, 0.05); }
+    .code-tab-btn.active {
+      color: #060608; background: var(--acid); font-weight: 750;
+      box-shadow: 0 2px 10px var(--acid-glow);
+    }
+    .code-actions-right { display: flex; align-items: center; gap: 10px; }
+    .btn-copy-code {
+      display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px;
+      border-radius: 6px; background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12); color: rgba(255, 255, 255, 0.75);
+      font-family: "JetBrains Mono", monospace; font-size: 10.5px; cursor: pointer;
+      transition: 0.2s ease;
+    }
+    .btn-copy-code:hover { background: rgba(255, 255, 255, 0.12); color: #fff; }
+    .code-editor-body {
+      padding: 24px 28px; overflow-x: auto; font-family: "JetBrains Mono", monospace;
+      font-size: 12.5px; line-height: 1.7; color: #e2e8f0; min-height: 320px;
+    }
+    .code-editor-body pre { margin: 0; }
+    .code-accent { color: var(--acid); font-weight: 700; }
+    .code-cyan { color: var(--cyan); }
+    .code-comment { color: rgba(255, 255, 255, 0.4); font-style: italic; }
+    .code-str { color: #fed7aa; }
+    .code-footer-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 24px; background: #0b0d14; border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-family: "JetBrains Mono", monospace; font-size: 10px; color: rgba(255, 255, 255, 0.45);
+    }
+
+    /* ----------------------------------------------------
+       Projects Grid (12 Production Systems)
+       ---------------------------------------------------- */
+    .projects-section {
+      padding: 110px clamp(20px, 4vw, 72px);
+      background: var(--page-bg);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .filter-bar {
+      display: flex; flex-wrap: wrap; gap: 9px; margin: 42px 0 48px;
+    }
+    .filter-pill {
+      background: var(--surface); border: 1px solid var(--line); color: var(--text-soft);
+      padding: 10px 18px; border-radius: 999px; font-size: 10.5px; font-weight: 750;
+      letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .filter-pill:hover { border-color: var(--acid); color: var(--page-text); }
+    .filter-pill.active {
+      background: var(--acid); color: #060608; border-color: var(--acid);
+      box-shadow: 0 4px 18px var(--acid-glow);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 540px), 1fr));
+      gap: 28px;
+    }
+    .proj-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .proj-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(200, 255, 61, 0.45);
+      box-shadow: 0 24px 60px var(--shadow);
+    }
+    .proj-header { padding: 32px 32px 18px; }
+    .proj-meta-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px;
+    }
+    .proj-category {
+      font-size: 9.5px; font-family: "JetBrains Mono", monospace; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--acid);
+    }
+    .proj-stars {
+      display: flex; align-items: center; gap: 4px; font-size: 11px;
+      font-family: "JetBrains Mono", monospace; color: var(--text-faint);
+    }
+    .proj-card h3 {
+      font-size: clamp(24px, 2.4vw, 34px); font-weight: 850; letter-spacing: -0.04em;
+      line-height: 1.05; text-transform: uppercase; margin: 0 0 14px;
+    }
+    .proj-summary {
+      font-size: 13.5px; line-height: 1.6; color: var(--text-soft); margin: 0;
+    }
+    .proj-tags {
+      display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px;
+    }
+    .proj-tags span {
+      padding: 5px 11px; border-radius: 999px; border: 1px solid var(--line);
+      font-size: 9px; font-family: "JetBrains Mono", monospace; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-soft); background: var(--surface-card);
+    }
+
+    .proj-preview-box {
+      margin: 12px 28px 24px;
+      border-radius: 16px;
+      background: #08090e;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 16px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      overflow: hidden;
+      position: relative;
+    }
+    .preview-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      margin-bottom: 10px; color: rgba(255, 255, 255, 0.45); font-size: 10px;
+    }
+    .preview-tag {
+      padding: 2px 7px; border-radius: 4px; background: rgba(200, 255, 61, 0.15); color: var(--acid);
+    }
+
+    .proj-footer {
+      padding: 18px 32px 28px;
+      border-top: 1px solid var(--line-subtle);
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-case-modal {
+      background: var(--acid); color: #060608; border-radius: 999px; border: none;
+      padding: 11px 18px; font-size: 10px; font-weight: 850; letter-spacing: 0.14em;
+      text-transform: uppercase; cursor: pointer; transition: 0.25s ease;
+    }
+    .btn-case-modal:hover { transform: translateY(-2px); box-shadow: 0 8px 24px var(--acid-glow); }
+    .btn-live-link, .btn-github-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 10.5px; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-soft); transition: 0.2s ease;
+    }
+    .btn-live-link:hover, .btn-github-link:hover { color: var(--acid); }
+
+    /* Interactive Terminal Console Section */
+    .terminal-section {
+      padding: clamp(60px, 8vh, 100px) clamp(20px, 4vw, 72px);
+      background: linear-gradient(180deg, var(--page-bg), var(--surface) 50%, var(--page-bg) 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .terminal-container {
+      max-width: 1180px; margin: 0 auto;
+      background: #090a0f; border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 20px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+      overflow: hidden; font-family: "JetBrains Mono", monospace;
+    }
+    .terminal-bar {
+      height: 44px; background: #11131c; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex; align-items: center; justify-content: space-between; padding: 0 18px;
+    }
+    .terminal-dots { display: flex; gap: 8px; }
+    .term-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .term-dot.red { background: #ff5f56; }
+    .term-dot.yellow { background: #ffbd2e; }
+    .term-dot.green { background: #27c93f; }
+    .terminal-title { font-size: 11px; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.06em; }
+    .terminal-body {
+      padding: 24px; min-height: 280px; max-height: 440px; overflow-y: auto;
+      color: #d1d5db; font-size: 12.5px; line-height: 1.7;
+    }
+    .term-output { margin-bottom: 14px; }
+    .term-command { color: var(--acid); font-weight: 700; }
+    .term-prompt { color: #60a5fa; margin-right: 8px; }
+    .terminal-chips {
+      display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 24px 20px;
+      background: #0b0d14; border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .term-chip {
+      background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-soft); padding: 5px 12px; border-radius: 6px; font-size: 11px;
+      cursor: pointer; transition: 0.2s ease;
+    }
+    .term-chip:hover { background: var(--acid); color: #060608; border-color: var(--acid); }
+
+    /* Skills Marquee Section */
+    .skills-marquee {
+      position: relative; overflow: hidden; padding: 110px 0;
+      background: var(--page-bg); border-bottom: 1px solid var(--line);
+    }
+    .marquee-row {
+      display: flex; overflow: hidden; width: 100%; padding: 10px 0;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+      mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+    }
+    .marquee-track {
+      display: flex; width: max-content; flex: none;
+      animation: skills-left 36s linear infinite; will-change: transform;
+    }
+    .marquee-row.reverse .marquee-track { animation-name: skills-right; animation-duration: 42s; }
+    .skill-group { display: flex; gap: 12px; padding-right: 12px; }
+    .skill-pill {
+      display: flex; align-items: center; gap: 10px; min-width: max-content;
+      padding: 14px 22px; border: 1px solid var(--line); border-radius: 999px;
+      background: var(--surface); color: var(--page-text); font-size: 11px;
+      font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase;
+      box-shadow: 0 6px 24px var(--shadow); transition: 0.25s ease;
+    }
+    .skill-pill::before {
+      content: ''; width: 7px; height: 7px; border-radius: 50%;
+      background: var(--acid); box-shadow: 0 0 12px var(--acid);
+    }
+    .skill-pill:hover { background: var(--acid); color: #060608; border-color: var(--acid); transform: translateY(-2px); }
+    .skills-marquee:hover .marquee-track { animation-play-state: paused; }
+    @keyframes skills-left { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+    @keyframes skills-right { from { transform: translate3d(-50%, 0, 0); } to { transform: translate3d(0, 0, 0); } }
+
+    /* Architecture Layers (4 Pillars) */
+    .architecture {
+      position: relative; padding: 120px clamp(20px, 4vw, 72px);
+      background: var(--surface); border-bottom: 1px solid var(--line);
+    }
+    .arch-head { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 6vw; align-items: start; margin-bottom: 70px; }
+    .layers-container { border-top: 1px solid var(--line); }
+    .layer-item {
+      display: grid; grid-template-columns: 80px 1.1fr 1.6fr auto; gap: 24px; align-items: center;
+      padding: 34px 0; border-bottom: 1px solid var(--line); position: relative; overflow: hidden;
+      transition: color 0.3s ease;
+    }
+    .layer-item::before {
+      content: ''; position: absolute; inset: 0; background: var(--acid);
+      transform: translateY(102%); transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1); z-index: -1;
+    }
+    .layer-item:hover::before { transform: translateY(0); }
+    .layer-item:hover { color: #060608; }
+    .layer-item:hover .layer-desc, .layer-item:hover .layer-idx { color: rgba(6, 6, 8, 0.75); }
+    .layer-idx { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--text-faint); font-weight: 700; }
+    .layer-title { font-size: clamp(24px, 3vw, 44px); font-weight: 850; letter-spacing: -0.04em; text-transform: uppercase; }
+    .layer-desc { font-size: 13.5px; line-height: 1.6; color: var(--text-soft); }
+
+    /* Contact Section */
+    .contact {
+      padding: 120px clamp(20px, 4vw, 72px); background: var(--page-bg); position: relative;
+    }
+    .contact h2 {
+      margin: 0; font-size: clamp(52px, 10vw, 150px); font-weight: 900; letter-spacing: -0.07em;
+      line-height: 0.85; text-transform: uppercase;
+    }
+    .contact h2 .outline { color: transparent; -webkit-text-stroke: 1.5px var(--page-text); opacity: 0.75; }
+    .contact-grid {
+      margin-top: 60px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px;
+      align-items: start; border-top: 1px solid var(--line); padding-top: 48px;
+    }
+    .contact-info p { font-size: 16px; line-height: 1.65; color: var(--text-soft); max-width: 580px; margin: 0 0 28px; }
+    .direct-reach-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .reach-card {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+      padding: 20px; transition: 0.25s ease;
+    }
+    .reach-card:hover { border-color: var(--acid); transform: translateY(-3px); }
+    .reach-card small { display: block; font-size: 10px; font-family: "JetBrains Mono", monospace; color: var(--acid); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 6px; }
+    .reach-card strong { display: block; font-size: 13.5px; font-weight: 750; color: var(--page-text); }
+
+    /* ----------------------------------------------------
+       NEW COMPONENT: RareUI Floating Scroll Progress Dock
+       ---------------------------------------------------- */
+    .rare-scroll-dock {
+      position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+      z-index: 70; display: flex; align-items: center; gap: 8px;
+      background: var(--header-bg); border: 1px solid var(--header-border);
+      border-radius: 999px; padding: 6px 14px 6px 18px;
+      backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%);
+      box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease;
+    }
+    .dock-progress-wrap {
+      display: flex; align-items: center; gap: 8px; font-family: "JetBrains Mono", monospace;
+      font-size: 10px; color: var(--text-soft); border-right: 1px solid var(--line);
+      padding-right: 14px; margin-right: 4px;
+    }
+    .dock-progress-bar-bg {
+      width: 44px; height: 4px; border-radius: 999px; background: rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+    }
+    .dock-progress-fill {
+      width: 0%; height: 100%; background: var(--acid);
+      transition: width 0.1s linear;
+    }
+    .dock-nav-items { display: flex; align-items: center; gap: 4px; }
+    .dock-nav-link {
+      padding: 6px 12px; border-radius: 999px; font-size: 10.5px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-soft);
+      transition: all 0.2s ease;
+    }
+    .dock-nav-link:hover { color: var(--page-text); background: rgba(255, 255, 255, 0.08); }
+    .dock-nav-link.active { background: var(--acid); color: #060608; }
+
+    /* Custom Blueprint Modal */
+    .custom-modal-backdrop {
+      position: fixed; inset: 0; z-index: 100; background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      display: flex; align-items: center; justify-content: center; padding: 20px;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+    }
+    .custom-modal-backdrop.open { opacity: 1; pointer-events: auto; }
+    .custom-modal-panel {
+      width: min(1040px, 95vw); max-height: 90vh; background: var(--surface-card);
+      border: 1px solid var(--header-border); border-radius: 26px; overflow: hidden;
+      display: flex; flex-direction: column; box-shadow: 0 40px 120px rgba(0, 0, 0, 0.75);
+      transform: scale(0.96) translateY(14px); transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.25, 1);
+    }
+    .custom-modal-backdrop.open .custom-modal-panel { transform: scale(1) translateY(0); }
+    .modal-head {
+      padding: 30px 36px 22px; border-bottom: 1px solid var(--line);
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;
+    }
+    .modal-head h2 { margin: 8px 0 0; font-size: clamp(26px, 3.8vw, 48px); font-weight: 850; letter-spacing: -0.04em; text-transform: uppercase; }
+    .modal-close-btn {
+      width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line);
+      background: var(--surface); color: var(--page-text); font-size: 20px;
+      display: grid; place-items: center; cursor: pointer; transition: 0.2s ease;
+    }
+    .modal-close-btn:hover { background: var(--acid); color: #060608; border-color: var(--acid); }
+    .modal-content-scroll { padding: 36px; overflow-y: auto; flex: 1; }
+    .modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+    .modal-block h4 {
+      font-size: 10px; font-family: "JetBrains Mono", monospace; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--acid); margin: 0 0 12px;
+    }
+    .modal-block p, .modal-block li { font-size: 13.5px; line-height: 1.65; color: var(--text-soft); }
+    .modal-block ul { padding-left: 18px; margin: 0; }
+    .modal-stack { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+    .modal-stack span {
+      padding: 6px 12px; border-radius: 999px; background: var(--surface);
+      border: 1px solid var(--line); font-size: 9.5px; font-family: "JetBrains Mono", monospace;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-soft);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed; bottom: 30px; right: 30px; z-index: 150;
+      background: var(--acid); color: #060608; padding: 12px 22px;
+      border-radius: 999px; font-size: 11px; font-weight: 850; letter-spacing: 0.12em;
+      text-transform: uppercase; box-shadow: 0 10px 30px var(--acid-glow);
+      opacity: 0; transform: translateY(20px); pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* Footer */
+    footer {
+      padding: 36px clamp(20px, 4vw, 72px) 90px;
+      display: flex; justify-content: space-between; align-items: center; gap: 24px;
+      font-size: 10.5px; font-family: "JetBrains Mono", monospace; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--text-faint); border-top: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 900px) {
+      .brand-role-tag, .navlinks { display: none; }
+      .menu-toggle { display: grid; }
+      .mobile-menu { display: block; }
+      .hero { padding-top: calc(var(--header-clear) + 20px); align-items: flex-end; }
+      .hero-content { width: 100%; }
+      .hero-stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .timeline-spine { left: 12px; }
+      .timeline-card-wrapper { padding-left: 36px; }
+      .timeline-node { left: 4px; }
+      .arch-head { grid-template-columns: 1fr; }
+      .layer-item { grid-template-columns: 50px 1fr; gap: 14px; }
+      .layer-desc { grid-column: 2 / -1; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .modal-grid { grid-template-columns: 1fr; }
+      .rare-scroll-dock { display: none; }
+      footer { padding-bottom: 44px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Haris Khan Durrani",
+    "url": "https://hariskhandurrani.com/",
+    "jobTitle": "Head of IT & Senior Full-Stack Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "EBMS Business Services"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "AE"
+    },
+    "telephone": "+971551651588",
+    "email": "haris.khan5117@gmail.com",
+    "sameAs": [
+      "https://github.com/Haris-Khan-Durrani",
+      "https://linkedin.com/in/Haris-Khan-Durrani"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- 3D Three.js Architecture Background -->
+  <canvas id="webgl" aria-hidden="true"></canvas>
+  <div class="webgl-fade" aria-hidden="true"></div>
+  <div class="arch-grid-bg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Top Floating Capsule Navigation (RareUI / UUPM) -->
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#hero" aria-label="Haris Khan Durrani — Home">
+      <div class="brand-mark-cube">HKD</div>
+      <div class="brand-text-wrap">
+        <span class="brand-name">Haris Khan Durrani</span>
+        <span class="brand-role-tag hidden md:inline">/ Head of IT &amp; Architect</span>
+      </div>
+    </a>
+
+    <nav class="navlinks hidden lg:flex" aria-label="Primary navigation">
+      <a href="#experience">Experience</a>
+      <a href="#dossiers">Blueprints</a>
+      <a href="#work">Systems (12)</a>
+      <a href="#codeplay">Code</a>
+      <a href="#terminal">Console >_</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="status-pill hidden sm:inline-flex">
+        <span class="status-pulse-dot"></span>
+        <span>Dubai · Available</span>
+      </div>
+
+      <button class="terminal-quick-btn" id="terminalToggleBtn" type="button" aria-label="Toggle System Terminal" title="Launch Interactive Terminal">
+        <svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+      </button>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme">
+        <svg class="moon" viewBox="0 0 24 24"><path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+
+      <a class="btn-header-consult hidden sm:inline-flex" href="#contact">Consult ↗</a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open mobile menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-backdrop" data-menu-close></div>
+    <div class="mobile-menu-panel">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 text-xs font-mono text-acid">
+        <span>HARIS KHAN DURRANI // CV</span>
+        <span id="mobileDubaiClock">--:--:-- GST</span>
+      </div>
+      <nav class="mobile-menu-nav my-4">
+        <a href="#experience" data-menu-close><span>01</span> Experience &amp; Leadership</a>
+        <a href="#dossiers" data-menu-close><span>02</span> Architectural Blueprints</a>
+        <a href="#work" data-menu-close><span>03</span> 12 Production Systems</a>
+        <a href="#codeplay" data-menu-close><span>04</span> Code Playground</a>
+        <a href="#architecture" data-menu-close><span>05</span> Technology Stack</a>
+        <a href="#terminal" data-menu-close><span>06</span> Interactive Terminal</a>
+        <a href="#contact" data-menu-close><span>07</span> Get In Touch</a>
+      </nav>
+      <div class="pt-4 border-t border-white/10 flex justify-between items-center text-xs">
+        <span class="text-white/60">+971 55 1651588</span>
+        <a href="https://github.com/Haris-Khan-Durrani" target="_blank" class="text-acid font-bold">GitHub ↗</a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="hero-kicker-pill">
+          <span class="hero-kicker-loc">Dubai · UAE</span>
+          <span class="hero-kicker-sep"></span>
+          <span class="hero-kicker-role">Head of IT | Senior Full-Stack Developer</span>
+          <span class="hero-kicker-sep hidden sm:inline-block"></span>
+          <span class="text-xs font-mono text-white/40 hidden sm:inline-block" id="dubaiClock">--:--:-- GST</span>
+        </div>
+
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-line">I engineer</span>
+          <span class="hero-line"><span class="hero-gradient-text">systems</span> that</span>
+          <span class="hero-line hero-line-light">move businesses.</span>
+        </h1>
+
+        <p class="hero-desc">
+          Technology leader and Senior Full-Stack Developer with 9+ years of experience architecting enterprise SaaS, ERP/CRM, and workflow automation platforms that replace manual processes and scale across companies. Leading engineering and IT teams while remaining hands-on in React, Next.js, Node.js, PHP/Laravel, 3CX, and GoHighLevel.
+        </p>
+
+        <!-- 4 Micro Glass Metric Cards with Animated Counters (RareUI + UUPM) -->
+        <div class="hero-stat-grid">
+          <div class="hero-stat-card">
+            <span class="hero-stat-num" data-target="9">9<span>+</span></span>
+            <span class="hero-stat-label">Years Leadership</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num" data-target="105">105<span> Users</span></span>
+            <span class="hero-stat-label">EBMS Systems Scale</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num" data-target="80">80<span>%</span></span>
+            <span class="hero-stat-label">Duplicate Tooling Cut</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num" data-target="12">12<span>+</span></span>
+            <span class="hero-stat-label">Production Platforms</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn-hero-primary" href="#dossiers">Inspect Blueprints ↓</a>
+          <a class="btn-hero-secondary" href="#experience">Career Timeline ↗</a>
+          <a class="btn-hero-secondary" href="https://github.com/Haris-Khan-Durrani" target="_blank" rel="noopener">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub Profile ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: Professional Experience & Leadership Timeline (CV) -->
+    <section class="experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="max-w-[1360px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <div class="section-eyebrow">01 / Career Journey &amp; Leadership</div>
+            <h2 class="section-title" id="experience-title">Professional Experience.</h2>
+          </div>
+          <p class="max-w-md text-sm text-text-soft m-0">
+            9+ years leading IT strategy, software delivery, and full-stack engineering across the UAE. Managing end-to-end infrastructure, security, and developer teams.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-spine"></div>
+
+          <!-- 1. EBMS Business Services (Current Leadership) -->
+          <div class="timeline-card-wrapper">
+            <div class="timeline-node"></div>
+            <article class="timeline-card highlight">
+              <div class="timeline-head-row">
+                <span class="timeline-company">EBMS Business Services</span>
+                <span class="timeline-period">2020 — PRESENT · DUBAI, UAE</span>
+              </div>
+              <div class="timeline-role-badge">Head of IT | Senior Full-Stack Developer | CRM &amp; Automation Specialist</div>
+              <ul class="timeline-points">
+                <li>Spearheaded technology strategy, solution architecture, and engineering delivery across business operations, owning hands-on development and infrastructure for systems serving <strong>105 internal users</strong>.</li>
+                <li>Architected enterprise SaaS, ERP, CRM, proposal automation, and white-label portal platforms, giving EBMS and <strong>9 sister companies</strong> a shared API-driven technology foundation and reducing duplicate tooling by <strong>80%</strong>.</li>
+                <li>Automated sales and operations workflows by integrating Zoho CRM, GoHighLevel, WhatsApp Business API, and 3CX telephony through custom REST/WebSocket APIs, eliminating repetitive manual work.</li>
+                <li>Led and mentored development and IT teams while managing Linux VPS servers, databases, Docker deployments, security practices (JWT/RBAC), system availability, and technical support.</li>
+              </ul>
+              <div class="timeline-metrics-strip">
+                <span class="metric-pill">Team Leadership: <strong>Engineering &amp; IT</strong></span>
+                <span class="metric-pill">Enterprise Scale: <strong>105 Users / 9 Companies</strong></span>
+                <span class="metric-pill">Tooling Reduction: <strong>-80% Overhead</strong></span>
+                <span class="metric-pill">Core Stack: <strong>React · Next.js · Node · GHL · 3CX · Docker</strong></span>
+              </div>
+            </article>
+          </div>
+
+          <!-- 2. Capital Sands Financial Services -->
+          <div class="timeline-card-wrapper">
+            <div class="timeline-node"></div>
+            <article class="timeline-card">
+              <div class="timeline-head-row">
+                <span class="timeline-company">Capital Sands Financial Services</span>
+                <span class="timeline-period">2019 — 2020 · UAE</span>
+              </div>
+              <div class="timeline-role-badge">Senior Web Developer</div>
+              <ul class="timeline-points">
+                <li>Engineered and maintained business web applications, integrations, and internal financial tools as a senior member of the development team.</li>
+                <li>Implemented secure customer portal interfaces and robust API connections with high data integrity.</li>
+              </ul>
+              <div class="timeline-metrics-strip">
+                <span class="metric-pill">Domain: <strong>Financial Services</strong></span>
+                <span class="metric-pill">Focus: <strong>Business Apps &amp; Internal Integrations</strong></span>
+              </div>
+            </article>
+          </div>
+
+          <!-- 3. Tecxone -->
+          <div class="timeline-card-wrapper">
+            <div class="timeline-node"></div>
+            <article class="timeline-card">
+              <div class="timeline-head-row">
+                <span class="timeline-company">Tecxone</span>
+                <span class="timeline-period">2018 — 2019 · UAE</span>
+              </div>
+              <div class="timeline-role-badge">Senior Web Developer | Plugin Developer</div>
+              <ul class="timeline-points">
+                <li>Served as senior developer on <strong>Mymahd</strong>, an e-commerce platform for a regional brand.</li>
+                <li>Engineered custom plugins and performance enhancements ensuring sub-second checkout speeds.</li>
+              </ul>
+              <div class="timeline-metrics-strip">
+                <span class="metric-pill">Project: <strong>Mymahd E-Commerce</strong></span>
+                <span class="metric-pill">Focus: <strong>Custom Plugin Architecture</strong></span>
+              </div>
+            </article>
+          </div>
+
+          <!-- 4. Netxsite -->
+          <div class="timeline-card-wrapper">
+            <div class="timeline-node"></div>
+            <article class="timeline-card">
+              <div class="timeline-head-row">
+                <span class="timeline-company">Netxsite</span>
+                <span class="timeline-period">2017 — 2018 · UAE</span>
+              </div>
+              <div class="timeline-role-badge">Web Developer | Plugin Developer</div>
+              <ul class="timeline-points">
+                <li>Developed and maintained WordPress websites, custom plugins, and client-facing web solutions.</li>
+                <li>Delivered high-performance themes with clean database query optimization.</li>
+              </ul>
+              <div class="timeline-metrics-strip">
+                <span class="metric-pill">Focus: <strong>WordPress Engine &amp; Plugin Engineering</strong></span>
+              </div>
+            </article>
+          </div>
+
+          <!-- 5. Education & Certifications Card -->
+          <div class="timeline-card-wrapper">
+            <div class="timeline-node"></div>
+            <article class="timeline-card bg-[#0b0d14]">
+              <div class="timeline-head-row">
+                <span class="timeline-company">Education &amp; Credentials</span>
+                <span class="timeline-period">ACADEMIC &amp; CERTIFIED</span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+                <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                  <span class="text-[10px] font-mono text-acid font-bold uppercase tracking-widest block mb-1">HIGHER EDUCATION</span>
+                  <h4 class="text-base font-bold text-white m-0 mb-1">BS Computer Science</h4>
+                  <p class="text-xs text-white/60 m-0">Newports Institute of Communication and Economics (NICE) · Completed coursework through 5th semester (2017)</p>
+                </div>
+                <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                  <span class="text-[10px] font-mono text-acid font-bold uppercase tracking-widest block mb-1">SOFTWARE ENGINEERING</span>
+                  <h4 class="text-base font-bold text-white m-0 mb-1">ACCP Certified Programmer</h4>
+                  <p class="text-xs text-white/60 m-0">Aptech Computer Education · 3-Year Software Engineering Certification (2014 — 2017)</p>
+                </div>
+                <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                  <span class="text-[10px] font-mono text-acid font-bold uppercase tracking-widest block mb-1">DESIGN &amp; MULTIMEDIA</span>
+                  <h4 class="text-base font-bold text-white m-0 mb-1">Graphic Design Certification</h4>
+                  <p class="text-xs text-white/60 m-0">Arena Multimedia (2017) · UI/UX Layouts, Visual Hierarchy &amp; Brand Systems</p>
+                </div>
+              </div>
+              <div class="mt-4 pt-4 border-t border-white/10 text-xs font-mono text-white/50 flex flex-wrap gap-6">
+                <span>LANGUAGES: English (Professional), Urdu (Native)</span>
+                <span>SECURITY: JWT, RBAC, OAuth 2.0, AES-256</span>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: RareUI Tactile Folder Component (Architectural Dossiers) -->
+    <section class="folder-section" id="dossiers" aria-labelledby="folder-title">
+      <div class="max-w-[1360px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <div class="section-eyebrow">02 / RareUI Component · Tactile Folder</div>
+            <h2 class="section-title" id="folder-title">Architectural Dossiers.</h2>
+          </div>
+          <p class="max-w-md text-sm text-text-soft m-0">
+            Interactive folder deck showcasing core enterprise systems designed for EBMS and group companies. Hover or click to fan out and inspect system blueprints.
+          </p>
+        </div>
+
+        <div class="rare-folder-container">
+          <div class="folder-header-bar">
+            <span class="folder-tab-badge">EBMS GROUP PLATFORMS &amp; SAAS ARCHITECTURES</span>
+            <span class="folder-instruction">Select any dossier to open full blueprint modal ↗</span>
+          </div>
+
+          <div class="folder-deck-stage">
+            <!-- Dossier 1: Proposal Automation (NO URL as explicitly requested) -->
+            <div class="folder-dossier-card" data-case="proposal">
+              <div>
+                <span class="dossier-tag">DOCUMENT AUTOMATION</span>
+                <h4>Proposal &amp; Contract Engine</h4>
+                <p>
+                  Replaced manual sales documentation across EBMS and 9 sister companies. Custom workflows for 360 Audit &amp; Business Setup with GrapesJS visual templates and deterministic mPDF rendering.
+                </p>
+              </div>
+              <div class="dossier-foot">
+                <span>Node · MySQL · mPDF</span>
+                <button class="dossier-action-btn">Blueprint ↗</button>
+              </div>
+            </div>
+
+            <!-- Dossier 2: Portal for EBMS & Sister Companies -->
+            <div class="folder-dossier-card" data-case="ebmsportal">
+              <div>
+                <span class="dossier-tag">WHITE-LABEL CRM PORTAL</span>
+                <h4>Portal for EBMS &amp; Sister Companies</h4>
+                <p>
+                  White-label CRM portal deployed across multiple group companies, providing centralized multi-tenant access and real-time GoHighLevel OAuth 2.0 data synchronization.
+                </p>
+              </div>
+              <div class="dossier-foot">
+                <span>GHL OAuth · Node · EJS</span>
+                <button class="dossier-action-btn">Blueprint ↗</button>
+              </div>
+            </div>
+
+            <!-- Dossier 3: School Management ERP -->
+            <div class="folder-dossier-card" data-case="school">
+              <div>
+                <span class="dossier-tag">MULTI-TENANT SAAS</span>
+                <h4>School Management ERP</h4>
+                <p>
+                  Multi-tenant school ERP covering admissions, fee management, examinations, payroll, family billing, data imports, and automated WhatsApp notifications. Live at sms.onesol.ae.
+                </p>
+              </div>
+              <div class="dossier-foot">
+                <span>Next.js · Prisma · Docker</span>
+                <button class="dossier-action-btn">Blueprint ↗</button>
+              </div>
+            </div>
+
+            <!-- Dossier 4: TableHub -->
+            <div class="folder-dossier-card" data-case="tablehub">
+              <div>
+                <span class="dossier-tag">NO-CODE DATABASE SAAS</span>
+                <h4>TableHub Collaborative Platform</h4>
+                <p>
+                  Airtable-style multi-tenant SaaS with customizable databases, dashboards, workflow automation, real-time collaboration, role permissions, and Stripe billing. Live at tablehub.ai.
+                </p>
+              </div>
+              <div class="dossier-foot">
+                <span>React · Socket.IO · Stripe</span>
+                <button class="dossier-action-btn">Blueprint ↗</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: RareUI Single-Accent Code Snippet Inspector -->
+    <section class="codeplay-section" id="codeplay" aria-labelledby="codeplay-title">
+      <div class="max-w-[1360px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <div class="section-eyebrow">03 / RareUI Component · Single-Accent Code Inspector</div>
+            <h2 class="section-title" id="codeplay-title">Production Code.</h2>
+          </div>
+          <p class="max-w-md text-sm text-text-soft m-0">
+            Real architectural code patterns from telephony gateways, CRM webhooks, multi-device WhatsApp, and encrypted PostgreSQL backup daemons.
+          </p>
+        </div>
+
+        <div class="rare-code-container">
+          <div class="rare-code-topbar">
+            <div class="code-tabs">
+              <button class="code-tab-btn active" data-tab="telephony">3CX-AutoDialer.js</button>
+              <button class="code-tab-btn" data-tab="portal">GHL-Portal-Sync.ts</button>
+              <button class="code-tab-btn" data-tab="whatsapp">WATI-WhatsApp-OTP.js</button>
+              <button class="code-tab-btn" data-tab="backup">PGVault-Stream-Backup.ts</button>
+            </div>
+            <div class="code-actions-right">
+              <button class="btn-copy-code" id="btnCopyCode" type="button" title="Copy code snippet">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span id="copyCodeLabel">Copy Snippet</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="code-editor-body" id="codeEditorContent">
+            <!-- Dynamic Code Block Rendered by JS -->
+          </div>
+
+          <div class="code-footer-bar">
+            <span>SYNTAX: VERIFIED FOR PRODUCTION</span>
+            <span>RUNTIME: NODE.JS v20.x · ZERO LEAK STREAM</span>
+            <span>ENCRYPTED &amp; HMAC SEALED</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 Production Systems & Projects Grid -->
+    <section class="projects-section" id="work" aria-labelledby="projects-title">
+      <div class="max-w-[1360px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <div class="section-eyebrow">04 / Systems &amp; Repositories</div>
+            <h2 class="section-title" id="projects-title">Architected &amp; Shipped.</h2>
+          </div>
+          <p class="max-w-md text-sm text-text-soft m-0">
+            Real production systems, enterprise integrations, and open-source tooling. Every system can be inspected down to its problem, flow, and architecture.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar" id="projectFilterBar">
+          <button class="filter-pill active" data-filter="all">All Systems (12)</button>
+          <button class="filter-pill" data-filter="saas">SaaS &amp; Platforms</button>
+          <button class="filter-pill" data-filter="telephony">Telephony &amp; WhatsApp</button>
+          <button class="filter-pill" data-filter="crm">CRM &amp; Automation</button>
+          <button class="filter-pill" data-filter="infra">Database &amp; Ops</button>
+        </div>
+
+        <!-- Projects Grid (12 Projects) -->
+        <div class="projects-grid" id="projectsGrid">
+          
+          <!-- 1. Proposal & Contract Automation Platform (NO URL) -->
+          <article class="proj-card" data-category="saas" data-project="proposal">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">Enterprise Document Automation</span>
+                <span class="proj-stars">★ EBMS &amp; 9 Companies</span>
+              </div>
+              <h3>Proposal &amp; Contract Platform</h3>
+              <p class="proj-summary">
+                Engineered a proposal and document-generation platform that replaced inconsistent manual sales documentation across EBMS and 9 sister companies. Adapted for 360 Audit &amp; Business Setup Consultancy with custom workflows, dynamic templates, and deterministic mPDF rendering.
+              </p>
+              <div class="proj-tags">
+                <span>Node.js</span><span>Express</span><span>MySQL</span><span>PHP</span><span>mPDF</span><span>GrapesJS</span><span>REST APIs</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>proposal-engine // doc-gen</span>
+                <span class="preview-tag">9 COMPANIES</span>
+              </div>
+              <div class="text-white/80">Audit: 360 Audit &amp; Business Setup Consultancy template loaded</div>
+              <div class="text-acid">Dynamic GrapesJS canvas converted to PDF in 680ms</div>
+              <div class="text-white/60">Automated sales proposals adopted across 105 EBMS users</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="proposal">System Blueprint ↗</button>
+              <span class="text-xs font-mono text-white/40">Enterprise Private Deployment</span>
+            </div>
+          </article>
+
+          <!-- 2. Portal for EBMS & Sister Companies -->
+          <article class="proj-card" data-category="crm" data-project="ebmsportal">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">White-Label CRM &amp; Multi-Tenant</span>
+                <span class="proj-stars">★ Group Platform</span>
+              </div>
+              <h3>Portal for EBMS Group</h3>
+              <p class="proj-summary">
+                Developed a white-label CRM portal deployed across multiple group companies, providing centralized access and real-time GoHighLevel OAuth 2.0 data synchronization with Tailwind CSS and Node.js.
+              </p>
+              <div class="proj-tags">
+                <span>GoHighLevel OAuth 2.0</span><span>Node.js</span><span>Express</span><span>MySQL</span><span>Tailwind CSS</span><span>EJS</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>ebms-portal // ghl-v2-oauth</span>
+                <span class="preview-tag">MULTI-TENANT</span>
+              </div>
+              <div class="text-white/80">OAuth Token verified across sister company locations</div>
+              <div class="text-acid">Real-time bi-directional pipeline &amp; lead synchronization</div>
+              <div class="text-white/60">Reduced duplicate tooling overhead by 80% across the group</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="ebmsportal">System Blueprint ↗</button>
+              <span class="text-xs font-mono text-white/40">Group Enterprise Platform</span>
+            </div>
+          </article>
+
+          <!-- 3. School Management ERP (Live: sms.onesol.ae) -->
+          <article class="proj-card" data-category="saas" data-project="school">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">Multi-Tenant Education ERP</span>
+                <span class="proj-stars">★ Live SaaS</span>
+              </div>
+              <h3>School Management ERP</h3>
+              <p class="proj-summary">
+                Architected a multi-tenant school ERP covering admissions, fee management, examinations, payroll, reporting, family billing, data imports, and automated WhatsApp notifications with strict RBAC security.
+              </p>
+              <div class="proj-tags">
+                <span>Next.js</span><span>Node.js</span><span>Prisma ORM</span><span>MySQL</span><span>JWT / RBAC</span><span>Docker</span><span>WhatsApp API</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>school-erp // multi-tenant</span>
+                <span class="preview-tag">LIVE: sms.onesol.ae</span>
+              </div>
+              <div class="text-white/80">RBAC Scopes: Admins, Accounts, Faculty, Parents, Students</div>
+              <div class="text-acid">Fee ledger &amp; family billing reconciled with WhatsApp alerts</div>
+              <div class="text-white/60">Dockerized production microservices running on high-availability VPS</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="school">System Blueprint ↗</button>
+              <a class="btn-live-link" href="https://sms.onesol.ae/" target="_blank" rel="noopener">sms.onesol.ae ↗</a>
+            </div>
+          </article>
+
+          <!-- 4. TableHub (Live: tablehub.ai) -->
+          <article class="proj-card" data-category="saas" data-project="tablehub">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">No-Code Collaborative SaaS</span>
+                <span class="proj-stars">★ Live SaaS</span>
+              </div>
+              <h3>TableHub Database Platform</h3>
+              <p class="proj-summary">
+                Architected an Airtable-style multi-tenant SaaS with customizable databases, dashboards, workflow automation, real-time collaboration, role-based permissions, integrations, and Stripe subscription billing.
+              </p>
+              <div class="proj-tags">
+                <span>Next.js</span><span>React</span><span>TypeScript</span><span>Prisma</span><span>MySQL</span><span>Socket.IO</span><span>Stripe</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>tablehub // realtime-cluster</span>
+                <span class="preview-tag">LIVE: tablehub.ai</span>
+              </div>
+              <div class="text-white/80">Socket.IO operational delta broadcast to active team peers</div>
+              <div class="text-acid">Prisma transaction committed in 3.8ms with optimistic UI</div>
+              <div class="text-white/60">Stripe Customer Portal &amp; automated tier billing provisioning</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="tablehub">System Blueprint ↗</button>
+              <a class="btn-live-link" href="https://tablehub.ai/" target="_blank" rel="noopener">tablehub.ai ↗</a>
+            </div>
+          </article>
+
+          <!-- 5. 3CX AI Auto Caller, Dialer & Call Widget -->
+          <article class="proj-card" data-category="telephony" data-project="3cx">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">AI Telephony &amp; Auto-Dialer</span>
+                <span class="proj-stars">★ 3CX PBX Core</span>
+              </div>
+              <h3>3CX AI Auto Caller &amp; Dialer</h3>
+              <p class="proj-summary">
+                Building an AI-assisted auto-calling and dialer platform with CRM integration, real-time call management, 3CX Call Control API bridging, and a lightweight website-to-agent calling widget.
+              </p>
+              <div class="proj-tags">
+                <span>Node.js</span><span>Express</span><span>3CX Call Control API</span><span>WebSockets</span><span>WebRTC</span><span>Docker</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>3cx-dialer // auto-caller</span>
+                <span class="preview-tag">REALTIME PBX</span>
+              </div>
+              <div class="text-white/80">Call Control API handshake → Outbound campaign queue</div>
+              <div class="text-acid">Bridged website caller to agent extension 102 in 450ms</div>
+              <div class="text-white/60">Dispatched call audio recording signed URL to CRM webhook</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="3cx">System Blueprint ↗</button>
+              <a class="btn-github-link" href="https://github.com/Haris-Khan-Durrani/maqsam" target="_blank" rel="noopener">Telephony Repo ↗</a>
+            </div>
+          </article>
+
+          <!-- 6. Nexus Basketball (Live: nexusbasketball.com) -->
+          <article class="proj-card" data-category="saas" data-project="nexus">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">Interactive 3D Web &amp; CMS</span>
+                <span class="proj-stars">★ Live Website</span>
+              </div>
+              <h3>Nexus Basketball 3D Platform</h3>
+              <p class="proj-summary">
+                Built a fully custom WordPress platform with a bespoke theme and plugin-based admin layer so non-technical staff manage dynamic content. Implemented Three.js and GSAP interactions without sacrificing content manageability.
+              </p>
+              <div class="proj-tags">
+                <span>WordPress</span><span>PHP</span><span>Custom Plugin</span><span>Three.js</span><span>GSAP</span><span>JavaScript</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>nexus // three.js-court</span>
+                <span class="preview-tag">LIVE: nexusbasketball.com</span>
+              </div>
+              <div class="text-white/80">WebGL 3D interactive basketball court rendering at 60 FPS</div>
+              <div class="text-acid">GSAP scroll animations mapped to custom admin schema</div>
+              <div class="text-white/60">Custom plugin admin layer eliminating visual builder bloat</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="nexus">System Blueprint ↗</button>
+              <a class="btn-live-link" href="https://nexusbasketball.com/" target="_blank" rel="noopener">nexusbasketball.com ↗</a>
+            </div>
+          </article>
+
+          <!-- 7. Home Of Hammam (Live: homeofhammam.ae) -->
+          <article class="proj-card" data-category="saas" data-project="hammam">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">E-Commerce &amp; Payments</span>
+                <span class="proj-stars">★ Live Store</span>
+              </div>
+              <h3>Home Of Hammam Storefront</h3>
+              <p class="proj-summary">
+                Delivered a responsive, high-conversion Shopify storefront with bespoke product catalog architecture, optimized checkout configuration, payment gateway integrations, and performance UX enhancements.
+              </p>
+              <div class="proj-tags">
+                <span>Shopify</span><span>Liquid</span><span>Stripe</span><span>Responsive UX</span><span>Payment Gateways</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>storefront // shopify-stripe</span>
+                <span class="preview-tag">LIVE: homeofhammam.ae</span>
+              </div>
+              <div class="text-white/80">Curated luxury Hammam product setup &amp; localized currency</div>
+              <div class="text-acid">Frictionless mobile checkout flow with sub-second page loads</div>
+              <div class="text-white/60">Delivered on-time storefront for regional UAE wellness brand</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="hammam">System Blueprint ↗</button>
+              <a class="btn-live-link" href="https://homeofhammam.ae/" target="_blank" rel="noopener">homeofhammam.ae ↗</a>
+            </div>
+          </article>
+
+          <!-- 8. PGVault Core (GitHub OSS) -->
+          <article class="proj-card" data-category="infra" data-project="pgvault">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">Database &amp; Cloud Disaster Recovery</span>
+                <span class="proj-stars">★ GitHub OSS</span>
+              </div>
+              <h3>PGVault Core</h3>
+              <p class="proj-summary">
+                Automated PostgreSQL backup &amp; disaster recovery daemon. Compresses, encrypts (AES-256 GCM), and schedules multi-cloud database backups (AWS S3, Google Drive, Local) with web UI management and instant point-in-time recovery.
+              </p>
+              <div class="proj-tags">
+                <span>TypeScript</span><span>PostgreSQL</span><span>AWS S3</span><span>Google Drive</span><span>AES-256</span><span>Docker</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>pgvault-daemon --status</span>
+                <span class="preview-tag">HEALTHY</span>
+              </div>
+              <div class="text-white/80">$ pgvault backup --target=s3 --encrypt=AES-256</div>
+              <div class="text-acid">[✓] Stream dump compressed (680MB) &amp; encrypted in 1.4s</div>
+              <div class="text-white/60">[✓] Uploaded to s3://prod-pg-vault/backups/db-snap-2026.sql.gz.enc</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="pgvault">System Blueprint ↗</button>
+              <a class="btn-github-link" href="https://github.com/Haris-Khan-Durrani/PGVault-Core" target="_blank" rel="noopener">GitHub Repo ↗</a>
+            </div>
+          </article>
+
+          <!-- 9. Free Accounting Application & UAE VAT 201 -->
+          <article class="proj-card" data-category="saas" data-project="accounting">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">Enterprise SaaS &amp; Compliance</span>
+                <span class="proj-stars">★ Production Ready</span>
+              </div>
+              <h3>Accounting &amp; UAE VAT 201 SaaS</h3>
+              <p class="proj-summary">
+                Multi-tenant SaaS billing, accounting, and financial management application built for modern enterprises. Features 20+ modules, 11 PDF invoice templates, UAE FTA VAT 201 compliance, and whitelabel domains.
+              </p>
+              <div class="proj-tags">
+                <span>PHP</span><span>MySQL</span><span>Multi-Tenant</span><span>UAE VAT 201</span><span>PDF Engines</span><span>REST API</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>tax-engine // uae-fta-vat201</span>
+                <span class="preview-tag">COMPLIANT</span>
+              </div>
+              <div class="text-white/80">Standard Rated Supplies: AED 1,450,000.00 (VAT 5%: AED 72,500)</div>
+              <div class="text-acid">Net Tax Payable calculated: AED 48,220.00</div>
+              <div class="text-white/60">Generated PDF Invoice Template #04 with QR tax stamp</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="accounting">System Blueprint ↗</button>
+              <a class="btn-github-link" href="https://github.com/Haris-Khan-Durrani/Free-Accounting-Application" target="_blank" rel="noopener">GitHub Repo ↗</a>
+            </div>
+          </article>
+
+          <!-- 10. WhatsApp Business API & WATI Hub -->
+          <article class="proj-card" data-category="telephony" data-project="whatsapp">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">Messaging &amp; Bot API</span>
+                <span class="proj-stars">★ Multi-Device</span>
+              </div>
+              <h3>WhatsApp Automation &amp; WATI Hub</h3>
+              <p class="proj-summary">
+                Multi-device WhatsApp REST API server with whatsapp-web.js, WATI template dispatchers, and WhatsApp OTP authentication systems with session resilience, QR generation, and MySQL webhook synchronization.
+              </p>
+              <div class="proj-tags">
+                <span>Node.js</span><span>whatsapp-web.js</span><span>WATI API</span><span>MySQL</span><span>OTP Auth</span><span>Webhooks</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>wati-dispatcher // template-queue</span>
+                <span class="preview-tag">SENT 200 OK</span>
+              </div>
+              <div class="text-white/80">Payload: sendTemplateMessage(template="order_confirmation_v2")</div>
+              <div class="text-acid">Delivered via WhatsApp API to +971-55-XXX-XXXX</div>
+              <div class="text-white/60">Webhook acknowledgment received · Status updated in MySQL</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="whatsapp">System Blueprint ↗</button>
+              <a class="btn-github-link" href="https://github.com/Haris-Khan-Durrani/Wati-send-template" target="_blank" rel="noopener">GitHub Repo ↗</a>
+            </div>
+          </article>
+
+          <!-- 11. Central Freezone Compliance Hub -->
+          <article class="proj-card" data-category="crm" data-project="centralpanel">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">Operational Dashboard</span>
+                <span class="proj-stars">★ UAE Free Zones</span>
+              </div>
+              <h3>Central Freezone Compliance Hub</h3>
+              <p class="proj-summary">
+                Unified operations and checklist management panel connecting multiple UAE Free Zones and mainland licensing workflows into a single dashboard with session management, MySQL persistence, and real-time step trackers.
+              </p>
+              <div class="proj-tags">
+                <span>Node.js</span><span>Express</span><span>MySQL</span><span>EJS/Tailwind</span><span>Session Auth</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>compliance // dxb-freezone-sync</span>
+                <span class="preview-tag">VERIFIED</span>
+              </div>
+              <div class="text-white/80">Checklist status: Trade License + Establishment Card + Visa Quota</div>
+              <div class="text-acid">100% Steps validated across 6 corporate authorities</div>
+              <div class="text-white/60">Unified operational tracking for legal &amp; corporate agents</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="centralpanel">System Blueprint ↗</button>
+              <a class="btn-github-link" href="https://github.com/Haris-Khan-Durrani/centralpanel" target="_blank" rel="noopener">GitHub Repo ↗</a>
+            </div>
+          </article>
+
+          <!-- 12. Stripe Multi-Tenant Billing Hub -->
+          <article class="proj-card" data-category="infra" data-project="stripeapp">
+            <div class="proj-header">
+              <div class="proj-meta-row">
+                <span class="proj-category">Billing &amp; Security</span>
+                <span class="proj-stars">★ Webhook Hardening</span>
+              </div>
+              <h3>Stripe Multi-Tenant Billing Hub</h3>
+              <p class="proj-summary">
+                Hardened billing integration engine handling Stripe Checkout, webhook verification with HMAC signatures, customer portal redirection, automatic tier upgrading, and fail-closed security.
+              </p>
+              <div class="proj-tags">
+                <span>Node.js</span><span>Express</span><span>Stripe API</span><span>MySQL</span><span>HMAC Webhooks</span>
+              </div>
+            </div>
+
+            <div class="proj-preview-box">
+              <div class="preview-header">
+                <span>stripe-webhook // hmac-signed</span>
+                <span class="preview-tag">VERIFIED</span>
+              </div>
+              <div class="text-white/80">Header: stripe-signature verified with endpoint secret</div>
+              <div class="text-acid">Event: customer.subscription.created → Tenant Tier: "Enterprise"</div>
+              <div class="text-white/60">Idempotency check passed · DB record updated in 3ms</div>
+            </div>
+
+            <div class="proj-footer">
+              <button class="btn-case-modal" data-case="stripeapp">System Blueprint ↗</button>
+              <a class="btn-github-link" href="https://github.com/Haris-Khan-Durrani/Stripe-Subscription-App" target="_blank" rel="noopener">GitHub Repo ↗</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Technical Capabilities Marquee -->
+    <section class="skills-marquee" id="skills" aria-labelledby="skills-title">
+      <div class="max-w-[1360px] mx-auto px-6 mb-12">
+        <div class="section-eyebrow">05 / Technical Stack</div>
+        <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight m-0" id="skills-title">
+          Battle-tested across every layer.
+        </h2>
+      </div>
+
+      <!-- Marquee Row 1 -->
+      <div class="marquee-row">
+        <div class="marquee-track">
+          <div class="skill-group">
+            <span class="skill-pill">Solution Architecture</span>
+            <span class="skill-pill">React &amp; Next.js</span>
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">Node.js &amp; Express</span>
+            <span class="skill-pill">GoHighLevel API v2</span>
+            <span class="skill-pill">Zoho CRM &amp; Automation</span>
+            <span class="skill-pill">3CX Cloud PBX</span>
+            <span class="skill-pill">WhatsApp Business API</span>
+            <span class="skill-pill">PostgreSQL &amp; MySQL</span>
+            <span class="skill-pill">Docker &amp; Containers</span>
+            <span class="skill-pill">Prisma ORM</span>
+            <span class="skill-pill">Socket.IO &amp; WebSockets</span>
+          </div>
+          <div class="skill-group" aria-hidden="true">
+            <span class="skill-pill">Solution Architecture</span>
+            <span class="skill-pill">React &amp; Next.js</span>
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">Node.js &amp; Express</span>
+            <span class="skill-pill">GoHighLevel API v2</span>
+            <span class="skill-pill">Zoho CRM &amp; Automation</span>
+            <span class="skill-pill">3CX Cloud PBX</span>
+            <span class="skill-pill">WhatsApp Business API</span>
+            <span class="skill-pill">PostgreSQL &amp; MySQL</span>
+            <span class="skill-pill">Docker &amp; Containers</span>
+            <span class="skill-pill">Prisma ORM</span>
+            <span class="skill-pill">Socket.IO &amp; WebSockets</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee Row 2 (Reverse) -->
+      <div class="marquee-row reverse">
+        <div class="marquee-track">
+          <div class="skill-group">
+            <span class="skill-pill">Laravel &amp; PHP</span>
+            <span class="skill-pill">WordPress Custom Plugins</span>
+            <span class="skill-pill">Shopify &amp; WooCommerce</span>
+            <span class="skill-pill">Three.js &amp; GSAP</span>
+            <span class="skill-pill">n8n / Make / Zapier</span>
+            <span class="skill-pill">Stripe Payments &amp; Webhooks</span>
+            <span class="skill-pill">Nginx &amp; PM2</span>
+            <span class="skill-pill">Linux VPS Hardening</span>
+            <span class="skill-pill">OAuth 2.0 &amp; JWT</span>
+            <span class="skill-pill">Multi-Tenant SaaS</span>
+            <span class="skill-pill">REST &amp; WebRTC</span>
+            <span class="skill-pill">AES-256 Encryption</span>
+          </div>
+          <div class="skill-group" aria-hidden="true">
+            <span class="skill-pill">Laravel &amp; PHP</span>
+            <span class="skill-pill">WordPress Custom Plugins</span>
+            <span class="skill-pill">Shopify &amp; WooCommerce</span>
+            <span class="skill-pill">Three.js &amp; GSAP</span>
+            <span class="skill-pill">n8n / Make / Zapier</span>
+            <span class="skill-pill">Stripe Payments &amp; Webhooks</span>
+            <span class="skill-pill">Nginx &amp; PM2</span>
+            <span class="skill-pill">Linux VPS Hardening</span>
+            <span class="skill-pill">OAuth 2.0 &amp; JWT</span>
+            <span class="skill-pill">Multi-Tenant SaaS</span>
+            <span class="skill-pill">REST &amp; WebRTC</span>
+            <span class="skill-pill">AES-256 Encryption</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Pillars (4 Systems Layers) -->
+    <section class="architecture" id="architecture" aria-labelledby="architecture-title">
+      <div class="arch-head">
+        <div>
+          <div class="section-eyebrow">06 / System Architecture</div>
+          <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight m-0" id="architecture-title">
+            The Full-Stack<br><span class="text-acid">Spectrum.</span>
+          </h2>
+        </div>
+        <div>
+          <p class="text-text-soft text-base leading-relaxed m-0">
+            My unique value is strongest where product strategy, engineering rigor, and operations meet. I navigate effortlessly between executive architectural decision-making and low-level code execution without losing context.
+          </p>
+        </div>
+      </div>
+
+      <div class="layers-container">
+        <!-- Layer 01 -->
+        <div class="layer-item">
+          <div class="layer-idx">01 / UX</div>
+          <div class="layer-title">Product &amp; UI Systems</div>
+          <div class="layer-desc">
+            Responsive enterprise dashboards, interactive component libraries, WebGL 3D visualizations, state management, role-based interfaces, and fast design systems built with React, Next.js, Vue, Tailwind CSS, Three.js, and GSAP.
+          </div>
+          <div class="text-xs font-mono text-acid font-bold tracking-widest uppercase">FRONTEND</div>
+        </div>
+
+        <!-- Layer 02 -->
+        <div class="layer-item">
+          <div class="layer-idx">02 / APP</div>
+          <div class="layer-title">Distributed Backend &amp; Logic</div>
+          <div class="layer-desc">
+            RESTful microservices, WebSocket clusters, event buses, OAuth 2.0 authentication, rate limiting, and business domain workflows developed using Node.js, Express, TypeScript, Laravel, and Python.
+          </div>
+          <div class="text-xs font-mono text-acid font-bold tracking-widest uppercase">APIS &amp; LOGIC</div>
+        </div>
+
+        <!-- Layer 03 -->
+        <div class="layer-item">
+          <div class="layer-idx">03 / CRM</div>
+          <div class="layer-title">CRM, Telephony &amp; Automation</div>
+          <div class="layer-desc">
+            Zoho CRM and GoHighLevel API integrations, 3CX PBX telephony gateways, WhatsApp Business API hubs, n8n automations, and payment pipelines across PostgreSQL, MySQL, MSSQL, Prisma, and Redis.
+          </div>
+          <div class="text-xs font-mono text-acid font-bold tracking-widest uppercase">INTEGRATIONS</div>
+        </div>
+
+        <!-- Layer 04 -->
+        <div class="layer-item">
+          <div class="layer-idx">04 / OPS</div>
+          <div class="layer-title">Cloud, Infra &amp; Security</div>
+          <div class="layer-desc">
+            Dockerized container environments, Nginx reverse proxies with SSL termination, PM2 process management, automated database disaster recovery, Linux VPS hardening, and fail-closed security protocols (JWT/RBAC).
+          </div>
+          <div class="text-xs font-mono text-acid font-bold tracking-widest uppercase">DEVOPS &amp; CLOUD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Terminal Console Section -->
+    <section class="terminal-section" id="terminal">
+      <div class="max-w-[1180px] mx-auto mb-6 flex items-center justify-between">
+        <div>
+          <div class="section-eyebrow">07 / Interactive System Shell</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight m-0">Live Architecture Console</h2>
+        </div>
+        <div class="text-xs font-mono text-white/50 hidden sm:block">STATUS: ONLINE · LATENCY: 12MS</div>
+      </div>
+
+      <div class="terminal-container">
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span class="term-dot red"></span>
+            <span class="term-dot yellow"></span>
+            <span class="term-dot green"></span>
+          </div>
+          <div class="terminal-title">haris@durrani-architect-box: ~ (bash / zsh)</div>
+          <div class="text-[10px] text-acid font-bold tracking-widest uppercase">NODE v20.x</div>
+        </div>
+
+        <div class="terminal-body" id="terminalOutput">
+          <div class="term-output">
+            <span class="text-acid font-bold">Haris Khan Durrani — Architecture Engine v5.0.0</span><br>
+            <span class="text-white/60">Type a command or click one of the quick chips below to inspect systems, repos, or CV details.</span><br>
+            <span class="text-white/40">Try: <code>experience</code>, <code>proposal</code>, <code>ebms</code>, <code>3cx</code>, <code>projects</code>, <code>skills</code>, <code>contact</code>, <code>help</code></span>
+          </div>
+        </div>
+
+        <div class="terminal-chips">
+          <span class="text-[10px] font-bold text-white/40 self-center uppercase tracking-wider mr-2">Quick Run:</span>
+          <button class="term-chip" data-cmd="experience">experience</button>
+          <button class="term-chip" data-cmd="proposal">proposal-saas</button>
+          <button class="term-chip" data-cmd="ebms">ebms-portal</button>
+          <button class="term-chip" data-cmd="3cx">3cx-telephony</button>
+          <button class="term-chip" data-cmd="school">school-erp</button>
+          <button class="term-chip" data-cmd="tablehub">tablehub</button>
+          <button class="term-chip" data-cmd="pgvault">pgvault</button>
+          <button class="term-chip" data-cmd="skills">skills</button>
+          <button class="term-chip" data-cmd="contact">contact</button>
+          <button class="term-chip" data-cmd="clear">clear</button>
+        </div>
+
+        <div class="p-4 bg-[#090a0f] border-t border-white/10 flex items-center">
+          <span class="term-prompt">hkd@dubai:~$</span>
+          <input type="text" id="terminalInput" class="terminal-input" placeholder="Type command here and press Enter..." autocomplete="off" spellcheck="false" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Consultation Section -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div>
+        <div class="section-eyebrow">08 / Engage &amp; Collaborate</div>
+        <h2 id="contact-title">
+          Let's build<br>
+          <span class="outline">something</span><br>
+          serious.
+        </h2>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>
+              Available for Technology Leadership, Solution Architecture advisory, fractional CTO roles, and high-impact enterprise system deliveries in Dubai, the UAE, and globally. Let's discuss your engineering bottlenecks and platforms.
+            </p>
+
+            <div class="direct-reach-cards">
+              <a class="reach-card" href="tel:+971551651588">
+                <small>Direct Phone / WhatsApp</small>
+                <strong>+971 55 1651588</strong>
+              </a>
+
+              <a class="reach-card" href="mailto:haris.khan5117@gmail.com">
+                <small>Direct Email</small>
+                <strong>haris.khan5117@gmail.com</strong>
+              </a>
+
+              <a class="reach-card" href="https://linkedin.com/in/Haris-Khan-Durrani" target="_blank" rel="noopener">
+                <small>LinkedIn Network</small>
+                <strong>/in/Haris-Khan-Durrani ↗</strong>
+              </a>
+
+              <a class="reach-card" href="https://github.com/Haris-Khan-Durrani" target="_blank" rel="noopener">
+                <small>GitHub Profile</small>
+                <strong>@Haris-Khan-Durrani ↗</strong>
+              </a>
+
+              <div class="reach-card cursor-pointer" id="copyEmailCard">
+                <small>Quick Copy</small>
+                <strong id="copyEmailText">Click to Copy Email 📋</strong>
+              </div>
+
+              <div class="reach-card">
+                <small>Location &amp; Domain</small>
+                <strong>Dubai, UAE · hariskhandurrani.com</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Consultation Request Card -->
+          <div class="bg-surface p-8 sm:p-10 rounded-[28px] border border-white/10 shadow-2xl">
+            <h3 class="text-xl font-bold uppercase tracking-tight m-0 mb-4 text-white">Start a Conversation</h3>
+            <p class="text-xs text-white/60 mb-6 leading-relaxed">
+              Have an enterprise project or leadership opportunity in mind? Send a direct dispatch to my inbox.
+            </p>
+
+            <form id="contactForm" onsubmit="event.preventDefault(); window.location.href='mailto:haris.khan5117@gmail.com?subject=' + encodeURIComponent(document.getElementById('subjectField').value || 'Consultation Inquiry') + '&body=' + encodeURIComponent(document.getElementById('msgField').value);">
+              <div class="mb-4">
+                <label class="block text-[10px] font-mono uppercase tracking-widest text-acid mb-2" for="subjectField">Subject / Topic</label>
+                <input type="text" id="subjectField" class="w-full bg-[#07080c] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-acid" placeholder="e.g. Solution Architecture / CRM &amp; Telephony Project" required />
+              </div>
+
+              <div class="mb-5">
+                <label class="block text-[10px] font-mono uppercase tracking-widest text-acid mb-2" for="msgField">Project Context &amp; Objectives</label>
+                <textarea id="msgField" rows="4" class="w-full bg-[#07080c] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-acid resize-none" placeholder="Tell me about your business goals, timeline, and current system bottlenecks..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-hero-primary w-full justify-center">
+                Send Dispatch ↗
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RareUI Floating Bottom Scroll Progress Dock -->
+  <nav class="rare-scroll-dock" id="scrollDock" aria-label="Quick Section Navigation">
+    <div class="dock-progress-wrap">
+      <div class="dock-progress-bar-bg">
+        <div class="dock-progress-fill" id="dockProgressFill"></div>
+      </div>
+      <span id="dockPercentLabel">0%</span>
+    </div>
+    <div class="dock-nav-items">
+      <a href="#hero" class="dock-nav-link active">Home</a>
+      <a href="#experience" class="dock-nav-link">Experience</a>
+      <a href="#dossiers" class="dock-nav-link">Blueprints</a>
+      <a href="#work" class="dock-nav-link">Systems</a>
+      <a href="#codeplay" class="dock-nav-link">Code</a>
+      <a href="#terminal" class="dock-nav-link">Shell</a>
+      <a href="#contact" class="dock-nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <strong>Haris Khan Durrani</strong> · Dubai, UAE · +971 55 1651588
+    </div>
+    <div>
+      Head of IT · Solution Architecture · Full-Stack Systems · Telephony · DevOps
+    </div>
+    <div>
+      &copy; 2026 All Rights Reserved · hariskhandurrani.com
+    </div>
+  </footer>
+
+  <!-- Blueprint Modal Dialog -->
+  <div class="custom-modal-backdrop" id="caseModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="custom-modal-panel">
+      <div class="modal-head">
+        <div>
+          <span class="text-xs font-mono text-acid font-bold tracking-widest uppercase" id="modalCategory">SYSTEM BLUEPRINT</span>
+          <h2 id="modalTitle">Project Title</h2>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <div class="modal-content-scroll" id="modalContent">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Email copied to clipboard!</div>
+
+  <!-- External Script Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+  <script>
+  (() => {
+    'use strict';
+
+    // 1. Live Dubai GST Clock
+    function updateDubaiClock() {
+      const clockEl = document.getElementById('dubaiClock');
+      const mobileClockEl = document.getElementById('mobileDubaiClock');
+      const now = new Date();
+      const options = { timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+      const timeStr = now.toLocaleTimeString('en-GB', options) + ' GST';
+      if (clockEl) clockEl.textContent = timeStr;
+      if (mobileClockEl) mobileClockEl.textContent = timeStr;
+    }
+    setInterval(updateDubaiClock, 1000);
+    updateDubaiClock();
+
+    // 2. Persistent Theme Controller
+    const themeToggle = document.getElementById('themeToggle');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    function currentTheme() { return document.documentElement.dataset.theme || 'dark'; }
+    function setTheme(theme, save = true) {
+      document.documentElement.dataset.theme = theme;
+      if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#f6f6f2' : '#060608');
+      if (save) localStorage.setItem('hkd-theme', theme);
+      if (window.updateThreeSceneColors) window.updateThreeSceneColors(theme);
+    }
+    const savedTheme = localStorage.getItem('hkd-theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    setTheme(savedTheme, false);
+
+    themeToggle?.addEventListener('click', () => {
+      setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+    });
+
+    // 3. Mobile Navigation Drawer
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMobileMenu(open) {
+      document.body.classList.toggle('menu-open', open);
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+    }
+    menuToggle?.addEventListener('click', () => toggleMobileMenu(!document.body.classList.contains('menu-open')));
+    mobileMenu?.querySelectorAll('[data-menu-close]').forEach(el => el.addEventListener('click', () => toggleMobileMenu(false)));
+
+    // 4. Interactive Three.js Cybernetic Architecture Core
+    const canvas = document.getElementById('webgl');
+    let renderer, scene, camera, world, coreLines, corePoints, innerGeo, ringA, ringB, particles, satelliteMesh;
+    const isMobile = window.innerWidth < 900;
+
+    if (window.THREE && canvas) {
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(36, window.innerWidth / window.innerHeight, 0.1, 100);
+      camera.position.set(0, 0, isMobile ? 13 : 11);
+
+      renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: !isMobile, powerPreference: 'high-performance' });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.25 : 1.7));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      world = new THREE.Group();
+      world.position.set(isMobile ? 0 : 3.2, 0.1, 0);
+      scene.add(world);
+
+      // A. Outer Geometric Hologram (Icosahedron Wireframe)
+      const icoGeo = new THREE.IcosahedronGeometry(2.35, 1);
+      const wireEdges = new THREE.WireframeGeometry(icoGeo);
+      coreLines = new THREE.LineSegments(
+        wireEdges,
+        new THREE.LineBasicMaterial({ color: 0xc8ff3d, transparent: true, opacity: 0.45 })
+      );
+      world.add(coreLines);
+
+      // B. Glowing Vertex Points
+      corePoints = new THREE.Points(
+        icoGeo,
+        new THREE.PointsMaterial({ size: 0.08, color: 0x38bdf8, transparent: true, opacity: 0.9 })
+      );
+      world.add(corePoints);
+
+      // C. Inner Refined Crystal Core (Octahedron with dark metallic luster)
+      const octGeo = new THREE.OctahedronGeometry(1.25, 0);
+      const octMat = new THREE.MeshStandardMaterial({
+        color: 0x070912,
+        roughness: 0.15,
+        metalness: 0.95,
+        wireframe: false
+      });
+      innerGeo = new THREE.Mesh(octGeo, octMat);
+      world.add(innerGeo);
+
+      const innerWire = new THREE.LineSegments(
+        new THREE.WireframeGeometry(octGeo),
+        new THREE.LineBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.6 })
+      );
+      innerGeo.add(innerWire);
+
+      // D. Orbital Data Rings
+      ringA = new THREE.Mesh(
+        new THREE.TorusGeometry(3.35, 0.012, 16, 180),
+        new THREE.MeshBasicMaterial({ color: 0xc8ff3d, transparent: true, opacity: 0.55 })
+      );
+      ringA.rotation.x = Math.PI * 0.58;
+      ringA.rotation.y = Math.PI * 0.12;
+      world.add(ringA);
+
+      ringB = new THREE.Mesh(
+        new THREE.TorusGeometry(3.85, 0.009, 16, 160),
+        new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.35 })
+      );
+      ringB.rotation.x = Math.PI * 0.22;
+      ringB.rotation.z = Math.PI * 0.38;
+      world.add(ringB);
+
+      // Satellite Node
+      satelliteMesh = new THREE.Mesh(
+        new THREE.SphereGeometry(0.06, 12, 12),
+        new THREE.MeshBasicMaterial({ color: 0xc8ff3d })
+      );
+      world.add(satelliteMesh);
+
+      // E. Atmospheric Particle Dust
+      const count = isMobile ? 200 : 500;
+      const positions = new Float32Array(count * 3);
+      for (let i = 0; i < count; i++) {
+        const r = 4.0 + Math.random() * 6.5;
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.acos((Math.random() * 2) - 1);
+        positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+        positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+        positions[i * 3 + 2] = r * Math.cos(phi);
+      }
+      const partGeo = new THREE.BufferGeometry();
+      partGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      const partMat = new THREE.PointsMaterial({ size: 0.022, color: 0xf4f4f0, transparent: true, opacity: 0.32 });
+      particles = new THREE.Points(partGeo, partMat);
+      world.add(particles);
+
+      // F. Point Lights
+      const light1 = new THREE.PointLight(0xc8ff3d, 45, 22);
+      light1.position.set(4, 5, 5);
+      scene.add(light1);
+
+      const light2 = new THREE.PointLight(0x38bdf8, 30, 18);
+      light2.position.set(-5, -3, 4);
+      scene.add(light2);
+
+      scene.add(new THREE.AmbientLight(0xffffff, 0.45));
+
+      window.updateThreeSceneColors = function(theme) {
+        const isLight = theme === 'light';
+        const c = isLight ? 0x0e1017 : 0xf4f4f0;
+        if (particles) particles.material.color.setHex(c);
+        if (coreLines) coreLines.material.color.setHex(isLight ? 0x65a30d : 0xc8ff3d);
+      };
+      window.updateThreeSceneColors(currentTheme());
+
+      let mouseTargetX = 0, mouseTargetY = 0;
+      window.addEventListener('pointermove', e => {
+        mouseTargetX = (e.clientX / window.innerWidth) * 2 - 1;
+        mouseTargetY = -((e.clientY / window.innerHeight) * 2 - 1);
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        if (!renderer || !camera) return;
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      }, { passive: true });
+
+      const clock = new THREE.Clock();
+      function renderLoop() {
+        const t = clock.getElapsedTime();
+        coreLines.rotation.x += 0.0015;
+        coreLines.rotation.y += 0.0022;
+        corePoints.rotation.x += 0.0015;
+        corePoints.rotation.y += 0.0022;
+        innerGeo.rotation.x -= 0.003;
+        innerGeo.rotation.y -= 0.004;
+        ringA.rotation.z += 0.0018;
+        ringB.rotation.y -= 0.0012;
+        particles.rotation.y += 0.00015;
+
+        const orbitAngle = t * 0.8;
+        satelliteMesh.position.set(
+          Math.cos(orbitAngle) * 3.35,
+          Math.sin(orbitAngle) * 0.4,
+          Math.sin(orbitAngle) * 3.35 * 0.6
+        );
+
+        world.rotation.x += ((mouseTargetY * 0.12) - world.rotation.x) * 0.025;
+        world.rotation.y += ((mouseTargetX * 0.18) - world.rotation.y) * 0.025;
+        world.position.y += ((Math.sin(t * 0.7) * 0.08 + 0.1) - world.position.y) * 0.02;
+
+        renderer.render(scene, camera);
+        requestAnimationFrame(renderLoop);
+      }
+      renderLoop();
+    }
+
+    // 5. GSAP Entrance Animations & Animated Counters
+    if (window.gsap) {
+      gsap.from('.hero-kicker-pill', { y: 20, opacity: 0, duration: 0.8, delay: 0.1, ease: 'power3.out' });
+      gsap.from('.hero-title', { y: 35, opacity: 0, duration: 1.0, delay: 0.25, ease: 'power4.out' });
+      gsap.from('.hero-desc', { y: 20, opacity: 0, duration: 0.85, delay: 0.4, ease: 'power3.out' });
+      gsap.from('.hero-stat-card', { y: 20, opacity: 0, stagger: 0.08, duration: 0.75, delay: 0.55, ease: 'power3.out' });
+      gsap.from('.hero-actions', { y: 20, opacity: 0, duration: 0.8, delay: 0.7, ease: 'power3.out' });
+    }
+
+    // Animated Count-Up Counters
+    const statCards = document.querySelectorAll('.hero-stat-num');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10);
+          if (!isNaN(target)) {
+            let current = 0;
+            const step = Math.max(1, Math.floor(target / 30));
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              const suffix = el.innerHTML.includes('%') ? '<span>%</span>' :
+                             el.innerHTML.includes('Users') ? '<span> Users</span>' : '<span>+</span>';
+              el.innerHTML = current + suffix;
+            }, 30);
+          }
+          obs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    statCards.forEach(card => observer.observe(card));
+
+    // 6. RareUI Floating Bottom Scroll Progress Dock Tracker
+    const dockProgressBar = document.getElementById('dockProgressFill');
+    const dockPercentLabel = document.getElementById('dockPercentLabel');
+    const dockNavLinks = document.querySelectorAll('.dock-nav-link');
+
+    function onScrollProgress() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? Math.min(100, Math.max(0, Math.round((scrollTop / docHeight) * 100))) : 0;
+
+      if (dockProgressBar) dockProgressBar.style.width = progress + '%';
+      if (dockPercentLabel) dockPercentLabel.textContent = progress + '%';
+
+      // Update active nav link based on section
+      const sections = ['hero', 'experience', 'dossiers', 'work', 'codeplay', 'terminal', 'contact'];
+      let currentSection = 'hero';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= window.innerHeight * 0.4 && rect.bottom >= window.innerHeight * 0.2) {
+            currentSection = id;
+          }
+        }
+      });
+
+      dockNavLinks.forEach(link => {
+        if (link.getAttribute('href') === '#' + currentSection) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', onScrollProgress, { passive: true });
+    onScrollProgress();
+
+    // 7. RareUI Single-Accent Code Snippet Inspector Tabs
+    const codeSnippets = {
+      telephony: `// 3CX Call Control & AI Auto-Dialer Gateway
+import { CallControlClient } from '@3cx/call-control-api';
+import WebSocket from 'ws';
+
+export class AutoDialerEngine {
+  constructor(config) {
+    this.client = new CallControlClient({
+      host: config.pbxHost,
+      apiKey: process.env.PBX_API_SECRET
+    });
+    this.ws = new WebSocket(config.streamUrl);
+  }
+
+  async dispatchCampaignCall(lead) {
+    // Initiate WebRTC call bridge between PBX queue and destination
+    const session = await this.client.makeCall({
+      destination: lead.phone,
+      callerId: '+9714XXXXXXX',
+      queue: 'DXB_SALES_EXT_102'
+    });
+    
+    // Broadcast real-time call telemetry to CRM agent widget
+    this.ws.send(JSON.stringify({
+      event: 'CALL_ENGAGED',
+      callId: session.id,
+      leadId: lead.id,
+      timestamp: Date.now()
+    }));
+    return session;
+  }
+}`,
+      portal: `// EBMS Sister Company Portal & GoHighLevel v2 OAuth
+import { Router, Request, Response } from 'express';
+import { GHLClient } from './services/ghl';
+
+export const portalRouter = Router();
+
+portalRouter.post('/api/v2/contacts/sync', async (req: Request, res: Response) => {
+  const { tenantId, contactPayload, signature } = req.body;
+  
+  // Verify HMAC signature against EBMS sister company secret
+  if (!verifyTenantHMAC(signature, req.body, tenantId)) {
+    return res.status(401).json({ error: 'UNAUTHORIZED_TENANT_ACCESS' });
+  }
+
+  const ghl = new GHLClient({ tenantId });
+  const result = await ghl.upsertContactWithCustomFields({
+    ...contactPayload,
+    tags: ['EBMS_GROUP_VERIFIED', 'PROPOSAL_AUTOMATED']
+  });
+
+  return res.status(200).json({ status: 'SYNCED', contactId: result.id });
+});`,
+      whatsapp: `// WATI Meta Template & Transactional OTP Dispatcher
+const axios = require('axios');
+const crypto = require('crypto');
+
+async function dispatchWhatsAppOTP(recipientPhone, templateName = 'auth_otp_v2') {
+  const otpCode = crypto.randomInt(100000, 999999).toString();
+  
+  const payload = {
+    template_name: templateName,
+    broadcast_name: \`OTP_\${Date.now()}\`,
+    parameters: [
+      { name: 'code', value: otpCode },
+      { name: 'validity_minutes', value: '10' }
+    ]
+  };
+
+  const response = await axios.post(
+    \`\${process.env.WATI_API_ENDPOINT}/api/v1/sendTemplateMessage?whatsappNumber=\${recipientPhone}\`,
+    payload,
+    { headers: { Authorization: \`Bearer \${process.env.WATI_ACCESS_TOKEN}\` } }
+  );
+
+  return { success: response.status === 200, otpCode, messageId: response.data.id };
+}`,
+      backup: `// PGVault Core: High-Efficiency Streamed PostgreSQL Backup
+import { spawn } from 'child_process';
+import { createGzip, createCipheriv } from 'crypto';
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+
+export async function runEncryptedStreamDump(dbConfig: DBConfig, s3Target: S3Target) {
+  // Stream pg_dump directly through Gzip and AES-256-GCM cipher (Zero Disk Memory Leak)
+  const dumpProc = spawn('pg_dump', ['-h', dbConfig.host, '-U', dbConfig.user, dbConfig.database]);
+  const gzip = createGzip({ level: 9 });
+  const cipher = createCipheriv('aes-256-gcm', process.env.ENCRYPTION_KEY!, process.env.IV!);
+
+  const stream = dumpProc.stdout.pipe(gzip).pipe(cipher);
+  
+  const upload = new PutObjectCommand({
+    Bucket: s3Target.bucket,
+    Key: \`backups/\${dbConfig.database}-\${Date.now()}.sql.gz.enc\`,
+    Body: stream
+  });
+
+  await s3Client.send(upload);
+  return { status: 'DISASTER_RECOVERY_SEALED', timestamp: new Date().toISOString() };
+}`
+    };
+
+    const codeEditorContent = document.getElementById('codeEditorContent');
+    const codeTabBtns = document.querySelectorAll('.code-tab-btn');
+    const btnCopyCode = document.getElementById('btnCopyCode');
+    const copyCodeLabel = document.getElementById('copyCodeLabel');
+    let activeSnippetKey = 'telephony';
+
+    function renderCodeSnippet(key) {
+      activeSnippetKey = key;
+      const raw = codeSnippets[key] || '';
+      // Escape HTML
+      const escaped = raw
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+
+      // Format lines with clean syntax highlights
+      const formatted = escaped
+        .replace(/(\/\/[^\n]*)/g, '<span class="code-comment">$1</span>')
+        .replace(/('(?:\\'|[^'\n])*'|"(?:\\"|[^"\n])*")/g, '<span class="code-str">$1</span>')
+        .replace(/\b(import|export|class|const|let|var|function|async|await|return|new|if)\b/g, '<span class="code-accent">$1</span>')
+        .replace(/\b(CallControlClient|WebSocket|AutoDialerEngine|GHLClient|S3Client|PutObjectCommand)\b/g, '<span class="code-cyan">$1</span>');
+
+      codeEditorContent.innerHTML = `<pre><code>${formatted}</code></pre>`;
+    }
+
+    renderCodeSnippet('telephony');
+
+    codeTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        codeTabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderCodeSnippet(btn.dataset.tab);
+      });
+    });
+
+    btnCopyCode?.addEventListener('click', () => {
+      const textToCopy = codeSnippets[activeSnippetKey] || '';
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        if (copyCodeLabel) copyCodeLabel.textContent = 'Copied! ✓';
+        setTimeout(() => { if (copyCodeLabel) copyCodeLabel.textContent = 'Copy Snippet'; }, 2000);
+      });
+    });
+
+    // 8. Interactive Terminal Console Engine
+    const termOutput = document.getElementById('terminalOutput');
+    const termInput = document.getElementById('terminalInput');
+    const termSection = document.getElementById('terminal');
+
+    document.getElementById('terminalToggleBtn')?.addEventListener('click', () => {
+      termSection?.scrollIntoView({ behavior: 'smooth' });
+      termInput?.focus();
+    });
+
+    const terminalCommands = {
+      help: () => `
+Available system commands:
+  <span class="text-acid">experience</span>    - Haris's career timeline (EBMS Head of IT, Capital Sands, Tecxone)
+  <span class="text-acid">proposal</span>      - Deep-dive into Proposal &amp; Contract Automation Platform (EBMS Group)
+  <span class="text-acid">ebms</span>          - Portal for EBMS &amp; Sister Companies (GoHighLevel v2)
+  <span class="text-acid">3cx</span>           - Inspect 3CX AI auto caller, dialer &amp; PBX pipeline
+  <span class="text-acid">school</span>        - Multi-tenant School ERP (sms.onesol.ae)
+  <span class="text-acid">tablehub</span>      - TableHub collaborative platform (tablehub.ai)
+  <span class="text-acid">pgvault</span>       - PGVault Core PostgreSQL disaster recovery daemon
+  <span class="text-acid">accounting</span>    - UAE FTA VAT 201 multi-tenant accounting platform
+  <span class="text-acid">whatsapp</span>      - WhatsApp Web API &amp; WATI automation service
+  <span class="text-acid">skills</span>        - Technical capabilities across stack
+  <span class="text-acid">contact</span>       - Direct communication channels in Dubai
+  <span class="text-acid">clear</span>         - Clear terminal output
+      `,
+      experience: () => `
+<span class="text-acid font-bold">[CAREER TIMELINE &amp; LEADERSHIP]</span>
+1. <span class="text-white font-bold">EBMS Business Services</span> (2020 — Present, Dubai UAE)
+   Role: Head of IT | Senior Full-Stack Developer | CRM &amp; Automation Specialist
+   • Head of IT leading engineering for systems serving 105 active users across 9 sister companies.
+   • Reduced duplicate tooling by 80% via shared API platform.
+   • Deep integrations: Zoho CRM, GoHighLevel, WhatsApp Business API, 3CX PBX.
+2. <span class="text-white font-bold">Capital Sands Financial Services</span> (2019 — 2020, UAE)
+   Role: Senior Web Developer
+   • Engineered financial business web apps &amp; integrations.
+3. <span class="text-white font-bold">Tecxone</span> (2018 — 2019, UAE)
+   Role: Senior Web Developer | Plugin Developer (Mymahd e-com)
+4. <span class="text-white font-bold">Netxsite</span> (2017 — 2018, UAE)
+   Role: Web Developer | Plugin Developer
+      `,
+      proposal: () => `
+<span class="text-acid font-bold">[SYSTEM SPEC: Proposal &amp; Contract Automation Platform]</span>
+Context: Enterprise sales automation adopted across EBMS and 9 sister companies.
+Client Adaptation: 360 Audit &amp; Business Setup Consultancy with custom workflows and dynamic templates.
+Tech: Node.js, Express.js, MySQL, PHP, mPDF, GrapesJS, REST APIs.
+Impact: Replaced inconsistent manual sales proposals with deterministic, print-ready digital contracts.
+Deployment: Enterprise private deployment.
+      `,
+      ebms: () => `
+<span class="text-acid font-bold">[SYSTEM SPEC: Portal for EBMS &amp; Sister Companies]</span>
+Tech: GoHighLevel OAuth 2.0, Node.js, Express, MySQL, Tailwind CSS, EJS.
+Function: White-label CRM portal deployed across multiple group companies, providing centralized multi-tenant access and real-time GoHighLevel data synchronization.
+Impact: Cut duplicate SaaS tool licensing costs by 80%.
+      `,
+      '3cx': () => `
+<span class="text-acid font-bold">[SYSTEM SPEC: 3CX AI Auto Caller, Dialer &amp; Website Widget]</span>
+Tech: Node.js, Express.js, 3CX Call Control API, WebSockets, WebRTC.
+Architecture: AI-assisted auto-calling and dialer platform with CRM integration, real-time call queue management, and a zero-dependency website-to-agent calling widget.
+      `,
+      school: () => `
+<span class="text-acid font-bold">[SYSTEM SPEC: School Management ERP]</span>
+Live URL: <a href="https://sms.onesol.ae/" target="_blank" class="underline text-cyan">https://sms.onesol.ae/</a>
+Tech: Next.js, Node.js, Prisma ORM, MySQL, REST APIs, JWT, RBAC, Docker, WhatsApp API.
+Function: Multi-tenant school ERP covering admissions, fee management, examinations, payroll, reporting, family billing, data imports, and automated WhatsApp notifications.
+      `,
+      tablehub: () => `
+<span class="text-acid font-bold">[SYSTEM SPEC: TableHub Database SaaS]</span>
+Live URL: <a href="https://tablehub.ai/" target="_blank" class="underline text-cyan">https://tablehub.ai/</a>
+Tech: Next.js, React, TypeScript, Prisma, MySQL, Socket.IO, Stripe.
+Function: Airtable-style multi-tenant SaaS with customizable databases, dashboards, workflow automation, real-time collaboration, role permissions, and Stripe subscription billing.
+      `,
+      pgvault: () => `
+<span class="text-acid font-bold">[SYSTEM SPEC: PGVault Core]</span>
+Repo: <a href="https://github.com/Haris-Khan-Durrani/PGVault-Core" target="_blank" class="underline text-cyan">https://github.com/Haris-Khan-Durrani/PGVault-Core</a>
+Tech: TypeScript · PostgreSQL · AWS S3 · Google Drive · AES-256 GCM · Docker.
+Function: Automated, encrypted database backup daemon with point-in-time recovery and Web UI management.
+      `,
+      skills: () => `
+<span class="text-acid font-bold">[CORE TECHNICAL PROFICIENCIES]</span>
+• Front End: React, Next.js, JavaScript, TypeScript, Tailwind CSS, Redux, Three.js, GSAP.
+• Back End: Node.js, Express.js, PHP, Laravel, Python, REST APIs, WebSockets.
+• CRM &amp; Telephony: Zoho CRM, GoHighLevel (GHL API v2), 3CX PBX, WhatsApp Business API.
+• Databases &amp; Cloud: MySQL, PostgreSQL, Prisma ORM, Docker, Linux, Nginx, PM2, AWS S3.
+      `,
+      contact: () => `
+<span class="text-acid font-bold">[HARIS KHAN DURRANI — DIRECT CHANNELS]</span>
+Phone/WhatsApp: <a href="tel:+971551651588" class="underline text-cyan">+971 55 1651588</a>
+Email: <a href="mailto:haris.khan5117@gmail.com" class="underline text-cyan">haris.khan5117@gmail.com</a>
+LinkedIn: <a href="https://linkedin.com/in/Haris-Khan-Durrani" target="_blank" class="underline text-cyan">linkedin.com/in/Haris-Khan-Durrani</a>
+GitHub: <a href="https://github.com/Haris-Khan-Durrani" target="_blank" class="underline text-cyan">github.com/Haris-Khan-Durrani</a>
+Website: <a href="https://hariskhandurrani.com" target="_blank" class="underline text-cyan">hariskhandurrani.com</a>
+Location: Dubai, United Arab Emirates
+      `,
+      clear: () => '__CLEAR__'
+    };
+
+    function executeCommand(rawCmd) {
+      const cmd = rawCmd.trim().toLowerCase();
+      if (!cmd) return;
+
+      if (cmd === 'clear') {
+        termOutput.innerHTML = '';
+        return;
+      }
+
+      const row = document.createElement('div');
+      row.className = 'term-output';
+      row.innerHTML = `<span class="term-prompt">hkd@dubai:~$</span> <span class="term-command">${cmd}</span>`;
+
+      const response = document.createElement('div');
+      response.className = 'text-white/80 my-1';
+
+      if (terminalCommands[cmd]) {
+        response.innerHTML = terminalCommands[cmd]();
+      } else {
+        response.innerHTML = `<span class="text-red-400">Command not found: "${cmd}". Type <code>help</code> for available commands.</span>`;
+      }
+
+      termOutput.appendChild(row);
+      termOutput.appendChild(response);
+      termOutput.scrollTop = termOutput.scrollHeight;
+    }
+
+    termInput?.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const val = termInput.value;
+        termInput.value = '';
+        executeCommand(val);
+      }
+    });
+
+    document.querySelectorAll('.term-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        executeCommand(chip.dataset.cmd);
+      });
+    });
+
+    // 9. Projects Filter Functionality
+    const filterPills = document.querySelectorAll('#projectFilterBar .filter-pill');
+    const projectCards = document.querySelectorAll('.proj-card');
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filter = pill.dataset.filter;
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 10. Comprehensive Blueprint Case Study Modal
+    const caseModal = document.getElementById('caseModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalContent = document.getElementById('modalContent');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+    const blueprints = {
+      proposal: {
+        category: 'Enterprise Document Automation',
+        title: 'Proposal & Contract Automation Platform (EBMS & 9 Sister Companies)',
+        role: 'Head of IT, Solution Architect, Full-Stack Lead Developer.',
+        github: '',
+        live: '',
+        problem: 'Inconsistent, manual sales documentation created formatting errors, untracked pricing variations, and lost hours across 105 team members and 9 group companies.',
+        stack: ['Node.js', 'Express.js', 'MySQL', 'PHP', 'mPDF Engine', 'GrapesJS WYSIWYG', 'REST APIs'],
+        flow: [
+          'Template Ingestion: Dynamic layouts customized for 360 Audit & Business Setup Consultancy.',
+          'Dynamic Data Binding: Auto-injects company details, packages, pricing schedules, and client terms.',
+          'Visual In-Browser Builder: Sales reps customize scope with enforced brand and disclosure guardrails.',
+          'Deterministic mPDF Render: Headless engine streams vector-crisp PDF documents in under 700ms.',
+          'Group Distribution: Deployed as the central sales contract engine across EBMS and 9 sister companies.'
+        ],
+        decisions: [
+          'Engineered strict server-side template validation to prevent sales agents from breaking legal compliance text.',
+          'Utilized mPDF headless rendering over heavy browser headless instances (Puppeteer) to maintain 99.9% uptime on lightweight Linux servers.',
+          'Centralized contract versioning in MySQL with cryptographic audit hash logging.'
+        ],
+        outcome: 'Adopted across EBMS and 9 sister companies, reducing proposal turnaround time by 85% and standardizing multi-company sales contracts.'
+      },
+      ebmsportal: {
+        category: 'White-Label CRM Portal & Multi-Tenant',
+        title: 'Portal for EBMS & Sister Companies',
+        role: 'Head of IT, Solution Architect, GoHighLevel Integration Specialist.',
+        github: '',
+        live: '',
+        problem: 'Group companies were running disparate CRM tools, leading to duplicated subscription expenses, fragmented client records, and manual re-entry.',
+        stack: ['GoHighLevel OAuth 2.0', 'Node.js', 'Express', 'MySQL', 'Tailwind CSS', 'EJS'],
+        flow: [
+          'OAuth 2.0 Group Authentication: Centralizes credentials for EBMS and multiple group subsidiaries.',
+          'Real-time Data Synchronization: Hooks into GoHighLevel API v2 webhooks to mirror contact and pipeline updates.',
+          'White-Label Interface: Serves tenant-tailored branding, permissions, and dashboards.',
+          'Operational Reporting: Aggregates conversion metrics and agent workloads across sister companies.'
+        ],
+        decisions: [
+          'Engineered a shared API layer allowing sister companies to leverage single GoHighLevel instances without cross-company data leakage.',
+          'Used Tailwind CSS and server-rendered EJS templates for lightning-fast loads and zero frontend hydration lag.',
+          'Integrated strict HMAC verification on incoming webhooks to ensure complete data security.'
+        ],
+        outcome: 'Reduced duplicate tooling overhead by 80% across the group while giving 105 active users unified real-time CRM visibility.'
+      },
+      school: {
+        category: 'Multi-Tenant Education ERP',
+        title: 'School Management ERP — Enterprise Multi-Tenant Platform',
+        role: 'Solution Architect, Lead Full-Stack Next.js Developer, RBAC Systems Designer.',
+        github: '',
+        live: 'https://sms.onesol.ae/',
+        problem: 'School networks struggle with fragmented legacy software that cannot scale across campuses, handle family billing, or automate communication with parents.',
+        stack: ['Next.js', 'Node.js', 'Prisma ORM', 'MySQL', 'JWT Authentication', 'RBAC Scopes', 'Docker', 'WhatsApp API'],
+        flow: [
+          'Multi-Tenant Tenant Isolation: Scopes database models by institution and campus.',
+          'Admissions & Fee Management: Tracks student enrollment, installments, fee reconciliations, and family billing ledgers.',
+          'Examinations & Grading: Processes grade curves, report cards, and faculty schedules.',
+          'Automated WhatsApp Alerts: Dispatches instant attendance notifications and fee reminders to parents.',
+          'Dockerized Cloud Deployment: Multi-container setup ensuring zero-downtime scaling.'
+        ],
+        decisions: [
+          'Enforced role-based access control (RBAC) at both API and ORM boundaries to protect confidential student and payroll records.',
+          'Implemented asynchronous WhatsApp notification queues to prevent slow cellular network timeouts from blocking web requests.',
+          'Containerized deployment using Docker Compose for reproducible production staging.'
+        ],
+        outcome: 'Live in production at sms.onesol.ae, powering admissions, examinations, and automated parent communication across institutions.'
+      },
+      tablehub: {
+        category: 'No-Code Database SaaS',
+        title: 'TableHub — Real-Time Collaborative Platform',
+        role: 'Lead Architect, Real-Time Full-Stack Developer, WebSocket Specialist.',
+        github: 'https://github.com/Haris-Khan-Durrani',
+        live: 'https://tablehub.ai/',
+        problem: 'Business teams outgrow static spreadsheets but find enterprise software rigid and expensive, needing custom databases with instant collaboration.',
+        stack: ['Next.js', 'React', 'TypeScript', 'Prisma ORM', 'MySQL', 'Socket.IO', 'Stripe Billing'],
+        flow: [
+          'Dynamic Schema Builder: Users define custom tables, column types (text, formula, relation, select), and dashboard views.',
+          'WebSocket Room Clustering: Syncs concurrent cell updates across team members in sub-10ms latency.',
+          'Automated Workflow Logic: Triggers external webhooks and internal field calculations when threshold rules are met.',
+          'Granular Role Permissions: Scopes read/write access per workspace, table, or column level.',
+          'Stripe Subscription Billing: Handles tier provisioning, customer portal self-service, and invoice receipts.'
+        ],
+        decisions: [
+          'Utilized optimistic UI updates on the frontend with server-side conflict resolution via timestamp reconciliation.',
+          'Streamlined Prisma queries with selective field fetches to maintain high throughput during high-concurrency editing.'
+        ],
+        outcome: 'Live in production at tablehub.ai, providing an Airtable-style collaborative operating system with enterprise RBAC and automated workflows.'
+      },
+      '3cx': {
+        category: 'AI Telephony & Call Control',
+        title: '3CX AI Auto Caller, Dialer & Website Call Widget',
+        role: 'Telephony Architect, Real-Time WebRTC Integration, PBX Integration Specialist.',
+        github: 'https://github.com/Haris-Khan-Durrani/maqsam',
+        live: '',
+        problem: 'Sales teams lose hot leads due to slow dialer response times, disconnect between web visitors and phone reps, and unlinked call recordings.',
+        stack: ['Node.js', 'Express.js', '3CX Call Control API', 'WebSockets', 'WebRTC', 'Docker'],
+        flow: [
+          'Website Call Widget: Zero-dependency embed allows visitors to request instant phone callbacks with 1 click.',
+          '3CX Call Control Bridging: Connects visitor phone numbers with available sales agent extensions in real time.',
+          'AI Auto-Dialer Engine: Runs outbound calling campaigns based on CRM pipeline priorities.',
+          'Webhook Lifecycle Broadcast: Emits call initiation, duration, and disposition events into Zoho CRM and GoHighLevel.',
+          'Signed Recording Delivery: Generates short-lived HMAC-signed S3 links for recording compliance reviews.'
+        ],
+        decisions: [
+          'Kept the frontend embed 100% vanilla to guarantee zero CSS/JS namespace collisions on client websites.',
+          'Protected 3CX PBX admin credentials behind a token-authenticated backend proxy gateway.',
+          'Implemented automatic timezone-aware office-hours routing with failover to voicemail.'
+        ],
+        outcome: 'Turned complex VoIP PBX telephony into a high-conversion website widget and automated calling pipeline with full CRM attribution.'
+      },
+      nexus: {
+        category: 'Interactive 3D Web & CMS',
+        title: 'Nexus Basketball — Interactive 3D Platform',
+        role: 'Full-Stack Developer, 3D WebGL Specialist, Custom WordPress Architect.',
+        github: '',
+        live: 'https://nexusbasketball.com/',
+        problem: 'A sports entertainment brand needed a visually arresting 3D experience that non-technical marketing staff could still easily edit from a standard CMS.',
+        stack: ['WordPress', 'PHP', 'Custom Plugin', 'Custom Theme', 'Three.js', 'GSAP', 'JavaScript'],
+        flow: [
+          'Custom Theme Architecture: Built from scratch without bloated commercial visual page builders.',
+          'Three.js 3D Court: Renders an interactive 3D basketball court and dynamic physics at 60 FPS.',
+          'GSAP Scroll Choreography: Coordinates camera angles and typography with visitor scroll position.',
+          'Plugin-Based Admin Layer: Allows marketing teams to manage player rosters, schedules, and dynamic content.',
+          'Performance Caching: Zero render blocking ensuring rapid first contentful paint.'
+        ],
+        decisions: [
+          'Replaced commercial page builders with lightweight custom Gutenberg blocks to keep page payload minimal.',
+          'Engineered Three.js render loops to pause when out of viewport, preserving mobile battery and CPU life.'
+        ],
+        outcome: 'Delivered a state-of-the-art interactive experience at nexusbasketball.com with seamless backend content management for non-technical staff.'
+      },
+      hammam: {
+        category: 'E-Commerce & Payments',
+        title: 'Home Of Hammam — Responsive Shopify Storefront',
+        role: 'E-Commerce Engineer, UX Specialist, Payment Gateway Integration.',
+        github: '',
+        live: 'https://homeofhammam.ae/',
+        problem: 'A luxury wellness brand required a bespoke digital shopping experience with local UAE payment processing and seamless mobile checkout.',
+        stack: ['Shopify', 'Liquid', 'Stripe', 'Responsive UX', 'CSS3', 'Payment Gateways'],
+        flow: [
+          'Catalog Architecture: Curated product taxonomy for luxury Moroccan bath and hammam goods.',
+          'Custom Liquid Optimization: Minimized asset weights and unneeded third-party apps.',
+          'Checkout Configuration: Configured Stripe and local payment gateways with multi-currency support.',
+          'Mobile UX Refinement: Streamlined one-thumb product exploration and cart drawer interactions.'
+        ],
+        decisions: [
+          'Avoided slow third-party Shopify apps in favor of native Liquid components to maintain fast Core Web Vitals.',
+          'Integrated clear trust badges and instant currency localization for GCC shoppers.'
+        ],
+        outcome: 'Successfully launched homeofhammam.ae with smooth mobile conversion rates and high checkout reliability.'
+      },
+      pgvault: {
+        category: 'Database & Cloud Operations',
+        title: 'PGVault Core — Automated PostgreSQL Disaster Recovery',
+        role: 'Tooling Architect, Node/TypeScript Core Engineer, Multi-Cloud Storage Designer.',
+        github: 'https://github.com/Haris-Khan-Durrani/PGVault-Core',
+        live: '',
+        problem: 'Database backups frequently fail in production due to unmaintained shell scripts, lack of compression, and absence of verified encryption.',
+        stack: ['TypeScript', 'Node.js', 'PostgreSQL', 'pg_dump', 'AWS S3', 'Google Drive API', 'AES-256 GCM', 'Docker'],
+        flow: [
+          'Target Database Handshake: Authenticates PostgreSQL connection and verifies privileges.',
+          'Atomic Stream Compression: Streams pg_dump output through gzip without exhausting local disk memory.',
+          'Cryptographic Envelope: Encrypts backup artifacts using AES-256 GCM with rotating keys.',
+          'Multi-Cloud Dispatch: Uploads artifacts asynchronously to AWS S3 and secondary Google Drive storage.',
+          'Health Telemetry & Retention: Prunes expired backups based on customizable retention rules.'
+        ],
+        decisions: [
+          'Avoid monolithic in-memory buffering by streaming directly from database process to encrypted storage.',
+          'Fail closed: emit instant webhook alerts if SHA-256 hash does not match cloud destination payload.',
+          'Provide both standalone CLI daemon mode and containerized Docker execution with zero host dependencies.'
+        ],
+        outcome: 'Reduced manual database administration overhead to zero while establishing a verifiable 5-minute recovery point objective (RPO).'
+      },
+      accounting: {
+        category: 'Enterprise SaaS & Finance',
+        title: 'Multi-Tenant Accounting & UAE VAT 201 Platform',
+        role: 'Solution Architect, Financial Logic Implementation, Multi-Tenant Database Engineer.',
+        github: 'https://github.com/Haris-Khan-Durrani/Free-Accounting-Application',
+        live: '',
+        problem: 'Commercial enterprises operating in the UAE require strict compliance with FTA VAT 201 tax filings, multi-currency invoicing, and tenant-isolated accounting ledgers without paying exorbitant enterprise licensing fees.',
+        stack: ['PHP 8.2', 'MySQL', 'Multi-Tenancy Architecture', 'UAE FTA VAT 201', 'mPDF Engine', 'RESTful APIs'],
+        flow: [
+          'Tenant Subdomain & Domain Resolution: Dynamically isolates corporate tenant context.',
+          'Double-Entry General Ledger: Enforces balanced debit/credit transactions with ACID compliance.',
+          'Automated VAT 201 Box Calculations: Segregates 5% standard rated, zero-rated, and exempt supplies.',
+          'Cryptographic Invoice Generation: Renders FTA-compliant tax invoices across 11 bespoke templates.',
+          'Export & Reporting Engine: Generates real-time P&L, balance sheets, and audit reports.'
+        ],
+        decisions: [
+          'Enforce strict tenant data boundaries at the ORM/query level to eliminate accidental cross-tenant data leaks.',
+          'Implement immutable journal entry tables where corrections require reversing entries rather than destructive updates.',
+          'Embed pre-calculated box tallies for UAE VAT 201 filing to prevent discrepancies during government audits.'
+        ],
+        outcome: 'Shipped a full-featured accounting SaaS capable of supporting high-volume invoice generation and audit-ready VAT filings.'
+      },
+      whatsapp: {
+        category: 'Messaging & Bot API',
+        title: 'WhatsApp Automation & WATI Template Hub',
+        role: 'Backend Architect, API Integration, Session Management Specialist.',
+        github: 'https://github.com/Haris-Khan-Durrani/Wati-send-template',
+        live: '',
+        problem: 'Businesses needed reliable WhatsApp messaging for transactional OTP authentication and marketing templates without paying steep third-party per-session markup fees.',
+        stack: ['Node.js', 'whatsapp-web.js', 'WATI REST API', 'PHP', 'MySQL', 'Webhooks'],
+        flow: [
+          'QR Code Auth & Session Persistence: Initializes Express server and saves WhatsApp web credentials.',
+          'Template Payload Validation: Formats customer parameters and language codes according to Meta standards.',
+          'WATI REST Dispatch: Sends verified template messages to customer phone numbers.',
+          'Inbound Hook Handler: Ingests incoming responses and triggers automated CRM actions.',
+          'Transactional OTP Engine: Generates time-sensitive tokens and verifies customer registration.'
+        ],
+        decisions: [
+          'Structure the Node.js server with automatic reconnection handlers to gracefully recover if WhatsApp Web disconnects.',
+          'Isolate sensitive customer phone numbers behind tokenized payloads before database logging.'
+        ],
+        outcome: 'Established a rock-solid, multi-device WhatsApp messaging backbone with automated OTP and CRM synchronization.'
+      },
+      centralpanel: {
+        category: 'Operational Dashboard',
+        title: 'Central Freezone Compliance & Checklist Hub',
+        role: 'Backend Architect, Operations Designer, MySQL Specialist.',
+        github: 'https://github.com/Haris-Khan-Durrani/centralpanel',
+        live: '',
+        problem: 'Navigating corporate setup across multiple Dubai Free Zones involves fragmented requirements and manual checklists that lead to compliance delays.',
+        stack: ['Node.js', 'Express', 'MySQL', 'Session Auth', 'Tailwind CSS'],
+        flow: [
+          'Unified Freezone Schema: Maps authority requirements into standardized operational stages.',
+          'Live Step Tracker: Guides corporate agents through visa quotas, trade licenses, and banking steps.',
+          'Automated Document Checklist: Verifies passport copies, board resolutions, and lease agreements.',
+          'Status Synchronization: Updates clients in real time as free zone approvals progress.'
+        ],
+        decisions: [
+          'Normalize differing free zone terminology into a unified workflow model.',
+          'Store step histories in immutable audit logs to resolve compliance disputes.'
+        ],
+        outcome: 'Reduced company formation cycle times by 40% across participating corporate legal teams.'
+      },
+      stripeapp: {
+        category: 'Billing & Security',
+        title: 'Stripe Multi-Tenant Billing Hub & Webhook Shield',
+        role: 'Security & Payment Engineer, Node.js Backend Developer.',
+        github: 'https://github.com/Haris-Khan-Durrani/Stripe-Subscription-App',
+        live: '',
+        problem: 'Flawed webhook handling in SaaS billing applications allows malicious actors to spoof payment success events or trigger cross-tenant account upgrades.',
+        stack: ['Node.js', 'Express', 'Stripe API', 'MySQL', 'HMAC Signatures'],
+        flow: [
+          'Session Provisioning: Creates Stripe Checkout sessions tied to immutable tenant IDs.',
+          'Cryptographic Verification: Validates Stripe webhook HMAC signatures before parsing event bodies.',
+          'Idempotency Guard: Verifies event IDs in MySQL to prevent double-crediting on network retries.',
+          'Subscription State Machine: Manages active, past_due, canceled, and grace-period transitions.'
+        ],
+        decisions: [
+          'Fail closed: Immediately reject any webhook that fails signature verification without executing DB updates.',
+          'Never trust browser redirect parameters for subscription fulfillment; rely solely on server-to-server webhooks.'
+        ],
+        outcome: 'Hardened SaaS billing pipeline against spoofing and duplicate transaction exploits.'
+      }
+    };
+
+    function openBlueprintModal(key) {
+      const b = blueprints[key];
+      if (!b) return;
+
+      modalCategory.textContent = b.category;
+      modalTitle.textContent = b.title;
+
+      modalContent.innerHTML = `
+        <div class="mb-8 p-6 bg-[#08090e] border border-white/10 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="text-[10px] font-mono text-acid uppercase tracking-wider mb-1">ENGINEERING ROLE</div>
+            <p class="text-sm text-white font-medium m-0">${b.role}</p>
+          </div>
+          <div class="flex items-center gap-3">
+            ${b.live ? `<a href="${b.live}" target="_blank" rel="noopener" class="btn-hero-primary py-2 px-5 text-[10px] whitespace-nowrap">Visit Live System ↗</a>` : ''}
+            ${b.github ? `<a href="${b.github}" target="_blank" rel="noopener" class="btn-hero-secondary py-2 px-5 text-[10px] whitespace-nowrap">View Source Code on GitHub ↗</a>` : ''}
+          </div>
+        </div>
+
+        <div class="modal-grid">
+          <div>
+            <div class="modal-block mb-8">
+              <h4>01 / The Architectural Problem</h4>
+              <p>${b.problem}</p>
+            </div>
+
+            <div class="modal-block mb-8">
+              <h4>02 / System Flow &amp; Lifecycle</h4>
+              <ul class="space-y-2">
+                ${b.flow.map(f => `<li>${f}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <div class="modal-block mb-8">
+              <h4>03 / Technology Stack</h4>
+              <div class="modal-stack">
+                ${b.stack.map(s => `<span>${s}</span>`).join('')}
+              </div>
+            </div>
+
+            <div class="modal-block mb-8">
+              <h4>04 / Engineering Decisions &amp; Tradeoffs</h4>
+              <ul class="space-y-2">
+                ${b.decisions.map(d => `<li>${d}</li>`).join('')}
+              </ul>
+            </div>
+
+            <div class="modal-block">
+              <h4>05 / Measurable Production Value</h4>
+              <p class="text-white font-medium">${b.outcome}</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      caseModal.classList.add('open');
+      document.body.classList.add('modal-open');
+    }
+
+    function closeBlueprintModal() {
+      caseModal.classList.remove('open');
+      document.body.classList.remove('modal-open');
+    }
+
+    document.querySelectorAll('[data-case]').forEach(btn => {
+      btn.addEventListener('click', () => openBlueprintModal(btn.dataset.case));
+    });
+
+    modalCloseBtn?.addEventListener('click', closeBlueprintModal);
+    caseModal?.addEventListener('click', e => {
+      if (e.target === caseModal) closeBlueprintModal();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && caseModal.classList.contains('open')) closeBlueprintModal();
+    });
+
+    // 11. Copy Email Toast Notification
+    const copyCard = document.getElementById('copyEmailCard');
+    const toast = document.getElementById('toast');
+    copyCard?.addEventListener('click', () => {
+      navigator.clipboard.writeText('haris.khan5117@gmail.com').then(() => {
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      });
+    });
+
+  })();
+  </script>
+</body>
+</html>

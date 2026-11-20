@@ -1,0 +1,164 @@
+import type { Metadata, Viewport } from 'next';
+import localFont from 'next/font/local';
+import { SITE_CONFIG } from '@/data/portfolio';
+import './globals.css';
+
+const plusJakarta = localFont({
+  src: [
+    {
+      path: '../../node_modules/@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2',
+      weight: '200 800',
+      style: 'normal',
+    },
+    {
+      path: '../../node_modules/@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-italic.woff2',
+      weight: '200 800',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-jakarta',
+  display: 'swap',
+  fallback: ['Inter', 'system-ui', 'sans-serif'],
+});
+
+const jetbrainsMono = localFont({
+  src: [
+    {
+      path: '../../node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2',
+      weight: '100 800',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-jetbrains',
+  display: 'swap',
+  fallback: ['ui-monospace', 'SFMono-Regular', 'monospace'],
+});
+
+const instrumentSerif = localFont({
+  src: [
+    {
+      path: '../../node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-instrument',
+  display: 'swap',
+  fallback: ['Georgia', 'serif'],
+});
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#060608' },
+    { media: '(prefers-color-scheme: light)', color: '#f5f5f0' },
+  ],
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.url),
+  title: {
+    default: 'Haris Khan Durrani — Head of IT | Senior Full-Stack Developer | Solution Architect',
+    template: '%s | Haris Khan Durrani — Head of IT & Solution Architect',
+  },
+  description:
+    'Dubai-based Head of IT, Senior Full-Stack Developer, and CRM & Automation Specialist with 9+ years of experience architecting enterprise SaaS, ERP/CRM, telephony, and cloud infrastructure.',
+  applicationName: 'Haris Khan Durrani Portfolio',
+  authors: [{ name: SITE_CONFIG.name, url: SITE_CONFIG.url }],
+  creator: SITE_CONFIG.name,
+  publisher: SITE_CONFIG.name,
+  keywords: [
+    'Haris Khan Durrani',
+    'Head of IT Dubai',
+    'Solution Architect UAE',
+    'Senior Full-Stack Developer Dubai',
+    'EBMS Business Services',
+    'GoHighLevel API v2',
+    'Zoho CRM Automation',
+    '3CX Cloud PBX Telephony',
+    'Next.js Architect',
+    'Node.js TypeScript',
+    'PostgreSQL',
+    'Docker DevOps',
+    'Laravel PHP',
+    'Multi-Tenant SaaS ERP',
+    'WhatsApp Business API',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: SITE_CONFIG.url,
+    siteName: SITE_CONFIG.name,
+    title: 'Haris Khan Durrani — Head of IT & Senior Full-Stack Developer',
+    description:
+      'Technology leader with 9+ years experience architecting enterprise SaaS, ERP/CRM, and workflow automation platforms across Dubai & global enterprises.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Haris Khan Durrani — Head of IT & Solution Architect',
+    description:
+      'Engineering systems that move businesses — from architecture through hands-on full-stack code, telephony, and DevOps.',
+  },
+  category: 'technology',
+};
+
+const themeInitScript = `
+(function(){
+  try {
+    var saved = localStorage.getItem('hkd-theme');
+    var theme = (saved === 'light' || saved === 'dark') ? saved : 'dark';
+    document.documentElement.dataset.theme = theme;
+  } catch (e) {
+    document.documentElement.dataset.theme = 'dark';
+  }
+})();
+`;
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      data-theme="dark"
+      suppressHydrationWarning
+      className={`${plusJakarta.variable} ${jetbrainsMono.variable} ${instrumentSerif.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body className="min-h-screen antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-[var(--acid)] focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:font-bold focus:text-[#060608]"
+        >
+          Skip to main content
+        </a>
+        {children}
+      </body>
+    </html>
+  );
+}

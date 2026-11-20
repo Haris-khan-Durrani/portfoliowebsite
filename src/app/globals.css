@@ -1,0 +1,354 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+  --font-serif: var(--font-instrument), "Instrument Serif", Georgia, serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
+  --color-acid: var(--acid);
+  --color-cyan-glow: var(--cyan);
+  --color-obsidian: #060608;
+  --color-page: var(--page-bg);
+  --color-ink: var(--page-text);
+  --color-surface: var(--surface);
+  --color-surface-card: var(--surface-card);
+  --color-soft: var(--text-soft);
+  --color-faint: var(--text-faint);
+}
+
+:root {
+  --ink: #060608;
+  --paper: #f6f6f2;
+  --acid: #c8ff3d;
+  --acid-dark: #a3db18;
+  --acid-glow: rgba(200, 255, 61, 0.35);
+  --acid-subtle: rgba(200, 255, 61, 0.08);
+  --cyan: #38bdf8;
+  --cyan-glow: rgba(56, 189, 248, 0.3);
+  --page-bg: #060608;
+  --page-text: #f4f4f0;
+  --surface: #0c0d13;
+  --surface-elevated: rgba(14, 16, 24, 0.88);
+  --surface-card: #10121b;
+  --header-bg: rgba(9, 10, 16, 0.78);
+  --header-border: rgba(255, 255, 255, 0.11);
+  --header-text: #f4f4f0;
+  --text-soft: rgba(244, 244, 240, 0.74);
+  --text-faint: rgba(244, 244, 240, 0.48);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-subtle: rgba(255, 255, 255, 0.055);
+  --shadow: rgba(0, 0, 0, 0.55);
+  --code-bg: #08090e;
+  --header-clear: 96px;
+}
+
+html[data-theme="light"] {
+  --page-bg: #f5f5f0;
+  --page-text: #0e1017;
+  --surface: #ffffff;
+  --surface-elevated: rgba(255, 255, 255, 0.92);
+  --surface-card: #f9f9f5;
+  --header-bg: rgba(245, 245, 240, 0.86);
+  --header-border: rgba(14, 16, 23, 0.12);
+  --header-text: #0e1017;
+  --text-soft: rgba(14, 16, 23, 0.76);
+  --text-faint: rgba(14, 16, 23, 0.52);
+  --line: rgba(14, 16, 23, 0.12);
+  --line-subtle: rgba(14, 16, 23, 0.06);
+  --shadow: rgba(20, 25, 35, 0.12);
+  --acid: #7ab800;
+  --acid-dark: #5f9100;
+  --acid-glow: rgba(122, 184, 0, 0.3);
+  --acid-subtle: rgba(122, 184, 0, 0.09);
+  --cyan: #0284c7;
+  --cyan-glow: rgba(2, 132, 199, 0.24);
+  --code-bg: #0b0d14;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page-bg);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--page-text);
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+::selection {
+  background: var(--acid);
+  color: #060608;
+}
+
+:focus-visible {
+  outline: 2px solid var(--acid);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* WebGL Gradient Veil & Blueprint Grid */
+.webgl-fade {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 76% 28%, rgba(200, 255, 61, 0.05), transparent 50%),
+    radial-gradient(circle at 18% 64%, rgba(56, 189, 248, 0.04), transparent 56%),
+    linear-gradient(90deg, rgba(6, 6, 8, 0.94) 0%, rgba(6, 6, 8, 0.64) 48%, rgba(6, 6, 8, 0.22) 88%);
+}
+
+html[data-theme="light"] .webgl-fade {
+  background:
+    radial-gradient(circle at 76% 28%, rgba(122, 184, 0, 0.06), transparent 50%),
+    radial-gradient(circle at 18% 64%, rgba(2, 132, 199, 0.05), transparent 56%),
+    linear-gradient(90deg, rgba(245, 245, 240, 0.96) 0%, rgba(245, 245, 240, 0.78) 48%, rgba(245, 245, 240, 0.35) 88%);
+}
+
+.arch-grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-size: 56px 56px;
+  background-image:
+    linear-gradient(to right, var(--line-subtle) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line-subtle) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 42%, black 22%, transparent 86%);
+  -webkit-mask-image: radial-gradient(circle at 50% 42%, black 22%, transparent 86%);
+}
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.03;
+  mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+}
+
+html[data-theme="light"] .grain-overlay {
+  opacity: 0.018;
+  mix-blend-mode: multiply;
+}
+
+/* Shimmering Text (Animate UI inspired) */
+@keyframes shimmer-sweep {
+  0% {
+    background-position: 180% 0;
+  }
+  100% {
+    background-position: -120% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    110deg,
+    var(--acid) 25%,
+    #ffffff 48%,
+    var(--cyan) 65%,
+    var(--acid) 85%
+  );
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-sweep 5s linear infinite;
+}
+
+html[data-theme="light"] .shimmer-text {
+  background: linear-gradient(
+    110deg,
+    #528200 20%,
+    #0284c7 50%,
+    #528200 80%
+  );
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hero Editorial Gradient Accent (Clean, zero clipped bounding box) */
+.hero-gradient-text {
+  background: linear-gradient(120deg, #d7ff62 0%, #c8ff3d 35%, #5eead4 72%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="light"] .hero-gradient-text {
+  background: linear-gradient(120deg, #4d7c0f 0%, #65a30d 45%, #0284c7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Monumental Contact Outline */
+.contact-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--page-text);
+  opacity: 0.72;
+}
+
+/* Animated Conic Beam Border (React Bits / Luxury Tech) */
+@property --beam-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes spin-beam {
+  to {
+    --beam-angle: 360deg;
+  }
+}
+
+.conic-beam {
+  position: relative;
+  isolation: isolate;
+}
+
+.conic-beam::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  z-index: 2;
+  background: conic-gradient(
+    from var(--beam-angle),
+    transparent 0deg,
+    transparent 265deg,
+    rgba(200, 255, 61, 0.85) 315deg,
+    rgba(56, 189, 248, 0.85) 342deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spin-beam 7s linear infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.65);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(0.92);
+    box-shadow: 0 0 0 7px rgba(34, 197, 94, 0);
+  }
+}
+
+.status-dot-pulse {
+  animation: pulse-dot 2.2s infinite ease-in-out;
+}
+
+/* Infinite Skills Marquee */
+@keyframes marquee-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+}
+
+.marquee-track-left {
+  animation: marquee-left 36s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track-right {
+  animation: marquee-right 42s linear infinite;
+  will-change: transform;
+}
+
+.marquee-group:hover .marquee-track-left,
+.marquee-group:hover .marquee-track-right {
+  animation-play-state: paused;
+}
+
+/* Hero 55 Map Packet Dash Animation */
+@keyframes route-flow {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+.route-dash-flow {
+  animation: route-flow 1.2s linear infinite;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--page-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--acid);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track-left,
+  .marquee-track-right,
+  .conic-beam::after,
+  .shimmer-text,
+  .status-dot-pulse,
+  .route-dash-flow {
+    animation: none !important;
+  }
+}

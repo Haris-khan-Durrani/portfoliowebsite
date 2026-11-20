@@ -1,0 +1,1544 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Haris Khan Durrani — Head of IT & Senior Full-Stack Developer, Dubai</title>
+  <meta name="description" content="Haris Khan Durrani — Head of IT, Senior Full-Stack Developer and CRM & Automation Specialist in Dubai. 9+ years architecting enterprise SaaS, CRM/ERP and workflow automation platforms." />
+  <meta name="author" content="Haris Khan Durrani" />
+  <link rel="canonical" href="https://hariskhandurrani.com/" />
+  <meta name="theme-color" content="#0a0a09" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Haris Khan Durrani — Head of IT & Senior Full-Stack Developer" />
+  <meta property="og:description" content="Enterprise SaaS, CRM/ERP, workflow automation and telephony platforms — architected and shipped from Dubai." />
+  <meta property="og:url" content="https://hariskhandurrani.com/" />
+  <meta property="og:image" content="https://hariskhandurrani.com/assets/proposal.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Haris Khan Durrani",
+    "jobTitle": "Head of IT | Senior Full-Stack Developer | CRM & Automation Specialist",
+    "worksFor": { "@type": "Organization", "name": "EBMS Business Services" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
+    "email": "mailto:haris.khan5117@gmail.com",
+    "telephone": "+971551651588",
+    "url": "https://hariskhandurrani.com/",
+    "sameAs": ["https://github.com/Haris-Khan-Durrani", "https://linkedin.com/in/Haris-Khan-Durrani"]
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       Design tokens & Base
+       ========================================================= */
+    :root {
+      --bg: #0a0a09;
+      --bg-2: #121110;
+      --card: #151413;
+      --card-2: #1c1b18;
+      --line: rgba(255, 255, 255, 0.08);
+      --line-2: rgba(255, 255, 255, 0.14);
+      --text: #f4f2ed;
+      --muted: #a6a096;
+      --dim: #736d65;
+      --lime: #c5ff41;
+      --lime-soft: rgba(197, 255, 65, 0.12);
+      --orange: #f46c38;
+      --sky: #7dd3fc;
+      --r-xl: 28px;
+      --r-lg: 22px;
+      --r-md: 16px;
+      --r-sm: 10px;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --sans: "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --serif: "Instrument Serif", Georgia, serif;
+      --mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html {
+      background: var(--bg);
+      color-scheme: dark;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15.5px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      width: 100%;
+    }
+    body.locked { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+    img { display: block; max-width: 100%; height: auto; }
+    h1, h2, h3, h4, p { margin: 0; }
+    ::selection { background: var(--lime); color: #0a0a09; }
+    em, .serif { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+    :focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; border-radius: 8px; }
+
+    /* Ambient background — orbs, grain, grid */
+    .ambient { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.45; will-change: transform; pointer-events: none; }
+    .orb.a { width: 540px; height: 540px; top: -200px; left: -140px; background: radial-gradient(circle, rgba(197,255,65,0.22), transparent 65%); }
+    .orb.b { width: 500px; height: 500px; top: 30%; right: -200px; background: radial-gradient(circle, rgba(244,108,56,0.16), transparent 65%); }
+    .orb.c { width: 460px; height: 460px; bottom: -200px; left: 20%; background: radial-gradient(circle, rgba(125,211,252,0.12), transparent 65%); }
+    .gridlines {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 35%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 35%, transparent 80%);
+    }
+    .progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; z-index: 90; background: linear-gradient(90deg, var(--lime), var(--sky)); box-shadow: 0 0 10px rgba(197,255,65,0.6); }
+
+    /* Fancy UI primitives */
+    @property --ang { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+    .beam { position: relative; isolation: isolate; }
+    .beam::after {
+      content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none; z-index: 3;
+      background: conic-gradient(from var(--ang), transparent 0deg, transparent 270deg, rgba(197,255,65,0.85) 318deg, rgba(125,211,252,0.85) 342deg, transparent 360deg);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      animation: beam 7s linear infinite;
+      opacity: var(--beam-o, 1); transition: opacity 0.4s var(--ease);
+    }
+    .beam.on-hover { --beam-o: 0; }
+    .beam.on-hover:hover { --beam-o: 1; }
+    @keyframes beam { to { --ang: 360deg; } }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      height: 44px; padding: 0 20px; border-radius: 999px;
+      font-size: 14px; font-weight: 500; letter-spacing: -0.01em; white-space: nowrap;
+      transition: background 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease), transform 0.2s var(--ease);
+      cursor: pointer; text-decoration: none;
+    }
+    .btn svg { width: 15px; height: 15px; transition: transform 0.3s var(--ease); flex: none; }
+    .btn:hover svg { transform: translate(2px, -2px); }
+    .btn:active { transform: scale(0.97); }
+    .btn-lime { background: var(--lime); color: #0b0b0a; font-weight: 600; box-shadow: 0 0 0 0 rgba(197,255,65,0.4); }
+    .btn-lime:hover { box-shadow: 0 10px 28px -6px rgba(197,255,65,0.5); }
+    .btn-ghost { border: 1px solid var(--line-2); background: rgba(255,255,255,0.03); color: var(--text); }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.07); }
+    .btn-sm { height: 36px; padding: 0 15px; font-size: 13px; }
+
+    .chip {
+      display: inline-flex; align-items: center; gap: 7px; height: 28px; padding: 0 11px; border-radius: 999px;
+      border: 1px solid var(--line-2); background: rgba(255,255,255,0.03);
+      font-family: var(--mono); font-size: 11.5px; color: var(--muted); letter-spacing: 0.02em; white-space: nowrap;
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 0 rgba(197,255,65,0.6); animation: ping 2s infinite; flex: none; }
+    @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(197,255,65,0.55); } 70% { box-shadow: 0 0 0 7px rgba(197,255,65,0); } 100% { box-shadow: 0 0 0 0 rgba(197,255,65,0); } }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags span {
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+      padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,0.03);
+      white-space: nowrap;
+    }
+
+    .shimmer {
+      background: linear-gradient(110deg, var(--muted) 35%, #fff 50%, var(--muted) 65%);
+      background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+      animation: shimmer 4s linear infinite;
+    }
+    @keyframes shimmer { from { background-position: 150% 0; } to { background-position: -100% 0; } }
+
+    /* =========================================================
+       Navigation — liquid glass pill
+       ========================================================= */
+    .nav {
+      position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 60;
+      display: flex; align-items: center; gap: 6px; padding: 5px 6px 5px 10px;
+      border-radius: 999px; border: 1px solid var(--line-2);
+      background: rgba(16, 15, 14, 0.75);
+      backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 20px 40px -15px rgba(0,0,0,0.7);
+      width: max-content; max-width: calc(100% - 24px);
+    }
+    .nav-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+    .nav-logo {
+      width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; flex: none;
+      background: radial-gradient(circle at 30% 25%, rgba(197,255,65,0.4), rgba(197,255,65,0.05) 60%), #171614;
+      border: 1px solid rgba(197,255,65,0.35);
+      font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--text); font-weight: 500;
+    }
+    .nav-brand-txt { font-size: 13.5px; font-weight: 600; letter-spacing: -0.01em; color: var(--text); white-space: nowrap; }
+    .nav-links { position: relative; display: flex; align-items: center; margin-left: 4px; }
+    .nav-links a { position: relative; z-index: 1; padding: 7px 13px; font-size: 13px; color: var(--muted); border-radius: 999px; transition: color 0.25s var(--ease); }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-ind { position: absolute; top: 0; bottom: 0; left: 0; width: 0; border-radius: 999px; background: rgba(255,255,255,0.09); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08); transition: left 0.35s var(--ease), width 0.35s var(--ease), opacity 0.25s; opacity: 0; }
+    .burger { display: none; width: 36px; height: 36px; border-radius: 50%; place-items: center; border: 1px solid var(--line-2); background: rgba(255,255,255,0.04); flex: none; }
+    .burger span { display: block; width: 14px; height: 1.5px; background: var(--text); position: relative; transition: transform 0.3s var(--ease), background 0.2s; }
+    .burger span::before, .burger span::after { content: ""; position: absolute; left: 0; width: 14px; height: 1.5px; background: var(--text); transition: transform 0.3s var(--ease); }
+    .burger span::before { top: -5px; } .burger span::after { top: 5px; }
+    body.menu .burger span { background: transparent; }
+    body.menu .burger span::before { transform: translateY(5px) rotate(45deg); }
+    body.menu .burger span::after { transform: translateY(-5px) rotate(-45deg); }
+
+    /* Mobile drawer menu */
+    .mmenu {
+      position: fixed; top: 66px; left: 12px; right: 12px; z-index: 59; padding: 10px;
+      max-width: 500px; margin: 0 auto;
+      border-radius: 20px; border: 1px solid var(--line-2); background: rgba(18,17,16,0.96);
+      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 25px 60px -15px rgba(0,0,0,0.85);
+      opacity: 0; transform: translateY(-8px) scale(0.98); pointer-events: none;
+      transition: opacity 0.3s var(--ease), transform 0.35s var(--ease);
+    }
+    body.menu .mmenu { opacity: 1; transform: none; pointer-events: auto; }
+    .mmenu-links { display: grid; gap: 3px; }
+    .mmenu a.m-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-radius: 12px; font-size: 15px; font-weight: 500; color: var(--text); text-decoration: none; }
+    .mmenu a.m-item:hover, .mmenu a.m-item:active { background: rgba(255,255,255,0.06); }
+    .mmenu a.m-item span { font-family: var(--mono); font-size: 11px; color: var(--dim); }
+    .mmenu-foot { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .mmenu-foot .btn { height: 38px; font-size: 13px; width: 100%; }
+
+    /* =========================================================
+       Layout
+       ========================================================= */
+    .wrap { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding: 110px 24px 0; }
+    .layout { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 64px; align-items: start; }
+    .main > section { padding: 0 0 110px; }
+    .main > section:first-child { padding-bottom: 80px; }
+
+    /* =========================================================
+       Profile card (desktop sticky)
+       ========================================================= */
+    .profile { position: sticky; top: 88px; }
+    .pcard {
+      border-radius: var(--r-xl); padding: 16px; background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01)), var(--card);
+      border: 1px solid var(--line); box-shadow: 0 25px 60px -25px rgba(0,0,0,0.8);
+    }
+    .avatar {
+      position: relative; aspect-ratio: 1 / 1.02; border-radius: 20px; overflow: hidden;
+      background:
+        radial-gradient(110% 80% at 15% 5%, rgba(197,255,65,0.32), transparent 55%),
+        radial-gradient(90% 80% at 100% 100%, rgba(244,108,56,0.3), transparent 60%),
+        #1b1a18;
+      display: grid; place-items: center;
+    }
+    .avatar-monogram {
+      font-family: var(--serif); font-style: italic; font-size: 88px; line-height: 1; color: var(--text);
+      letter-spacing: -0.04em; text-shadow: 0 12px 30px rgba(0,0,0,0.6); user-select: none;
+    }
+    .avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .avail {
+      position: absolute; left: 12px; bottom: 12px; z-index: 2;
+      display: inline-flex; align-items: center; gap: 7px; height: 30px; padding: 0 12px; border-radius: 999px;
+      background: rgba(10,10,9,0.7); border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      font-size: 11.5px; font-weight: 500;
+    }
+    .pinfo { padding: 18px 6px 4px; }
+    .pname { font-size: 24px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; }
+    .prole { margin-top: 5px; color: var(--muted); font-size: 13.5px; }
+    .pmeta { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+    .pbio { margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--line-2); color: var(--muted); font-size: 13.5px; line-height: 1.55; }
+
+    /* Dock socials */
+    .dock { display: flex; align-items: center; gap: 7px; margin-top: 16px; }
+    .dock a {
+      width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; flex: none;
+      background: var(--card-2); border: 1px solid var(--line); color: var(--muted);
+      transition: color 0.25s, border-color 0.25s, background 0.25s, transform 0.2s;
+    }
+    .dock a svg { width: 17px; height: 17px; }
+    .dock a:hover { color: var(--text); border-color: var(--line-2); background: #23221f; transform: translateY(-2px); }
+    .pbtns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+    .pbtns .btn { width: 100%; padding: 0 10px; }
+
+    /* =========================================================
+       Mobile Author Card (visible only on mobile/tablet <= 960px)
+       ========================================================= */
+    .mobile-author {
+      display: none;
+      border-radius: var(--r-lg); padding: 14px 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)), var(--card);
+      border: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    .mobile-author-top { display: flex; align-items: center; gap: 14px; }
+    .ma-avatar {
+      width: 58px; height: 58px; border-radius: 16px; flex: none; display: grid; place-items: center;
+      background: radial-gradient(circle at 30% 25%, rgba(197,255,65,0.4), rgba(197,255,65,0.08) 60%), #1a1917;
+      border: 1px solid rgba(197,255,65,0.3);
+      font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--text); font-weight: 500;
+    }
+    .ma-details { flex: 1; min-width: 0; }
+    .ma-name { font-size: 18px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; }
+    .ma-role { font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .ma-status { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-family: var(--mono); color: var(--lime); margin-top: 4px; }
+    .ma-bio { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+    .ma-dock { display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+    .ma-dock a {
+      width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
+      background: var(--card-2); border: 1px solid var(--line); color: var(--muted);
+    }
+    .ma-dock a svg { width: 16px; height: 16px; }
+
+    /* =========================================================
+       Hero
+       ========================================================= */
+    .hero { padding-top: 6px; }
+    .hero h1 {
+      margin-top: 20px; font-size: clamp(38px, 6vw, 84px); font-weight: 500; line-height: 1.02; letter-spacing: -0.045em;
+      word-break: break-word;
+    }
+    .hero h1 em { font-size: 1.08em; line-height: 0.8; background: linear-gradient(100deg, var(--lime), #e8ffb8 45%, var(--sky)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: 0.06em; }
+    .hero-lede { max-width: 620px; margin-top: 22px; color: var(--muted); font-size: 16px; line-height: 1.65; }
+    .hero-lede strong { color: var(--text); font-weight: 500; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+
+    /* Stats Grid */
+    .stats {
+      display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 48px;
+      border: 1px solid var(--line); border-radius: var(--r-md); background: var(--card);
+      overflow: hidden;
+    }
+    .stat { padding: 22px 18px; position: relative; }
+    .stat + .stat { border-left: 1px solid var(--line); }
+    .stat b { display: block; font-size: clamp(28px, 3.2vw, 44px); font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+    .stat b i { font-style: normal; color: var(--lime); }
+    .stat span { display: block; margin-top: 8px; font-size: 12.5px; color: var(--muted); line-height: 1.35; }
+
+    /* Marquee */
+    .marquee { margin-top: 36px; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+    .marquee-track { display: flex; gap: 36px; width: max-content; animation: marquee 34s linear infinite; }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    .marquee-item { display: flex; align-items: center; gap: 8px; color: var(--dim); font-size: 13.5px; font-weight: 500; white-space: nowrap; }
+    .marquee-item img { width: 18px; height: 18px; opacity: 0.55; flex: none; }
+    .marquee-item:hover { color: var(--text); }
+    .marquee-item:hover img { opacity: 1; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* =========================================================
+       Section heads
+       ========================================================= */
+    .sec-head { display: flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 11.5px; color: var(--dim); letter-spacing: 0.04em; text-transform: uppercase; }
+    .sec-head b { color: var(--lime); font-weight: 600; }
+    .sec-head .rule { flex: 1; height: 1px; background: linear-gradient(90deg, var(--line-2), transparent); }
+    .sec-head a { color: var(--muted); text-transform: none; letter-spacing: 0; transition: color 0.25s; }
+    .sec-head a:hover { color: var(--text); }
+    .sec-title { margin-top: 18px; font-size: clamp(30px, 4vw, 54px); font-weight: 500; letter-spacing: -0.04em; line-height: 1.05; word-break: break-word; }
+    .sec-title em { color: var(--lime); }
+    .sec-sub { margin-top: 12px; max-width: 560px; color: var(--muted); font-size: 15px; }
+
+    /* =========================================================
+       Projects
+       ========================================================= */
+    .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 40px; }
+    .pj {
+      border-radius: var(--r-lg); background: var(--card); border: 1px solid var(--line);
+      padding: 12px; cursor: pointer; display: flex; flex-direction: column;
+      transition: transform 0.4s var(--ease), border-color 0.3s var(--ease), box-shadow 0.4s var(--ease);
+      position: relative;
+    }
+    .pj:hover { transform: translateY(-4px); border-color: var(--line-2); box-shadow: 0 24px 60px -25px rgba(0,0,0,0.9); }
+    .pj.wide { grid-column: span 2; }
+    .pj-media { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 16 / 10; background: #1a1917; }
+    .pj.wide .pj-media { aspect-ratio: 16 / 8.5; }
+    .pj-media img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.8s var(--ease); }
+    .pj:hover .pj-media img { transform: scale(1.035); }
+    .pj-badge {
+      position: absolute; top: 10px; left: 10px; z-index: 2;
+      display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border-radius: 999px;
+      background: rgba(10,10,9,0.7); border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      font-size: 11px; font-weight: 500; color: var(--text);
+    }
+    .pj-go {
+      position: absolute; right: 10px; bottom: 10px; z-index: 2; width: 40px; height: 40px; border-radius: 50%;
+      display: grid; place-items: center; background: var(--lime); color: #0b0b0a;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s;
+    }
+    .pj-go svg { width: 16px; height: 16px; }
+    .pj:hover .pj-go { transform: scale(1.08) rotate(-45deg); box-shadow: 0 8px 20px rgba(197,255,65,0.4); }
+    .pj-body { padding: 16px 8px 6px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .pj-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11.5px; color: var(--dim); }
+    .pj-top .lnk { color: var(--muted); text-decoration: none; }
+    .pj-top .lnk:hover { color: var(--lime); }
+    .pj h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.25; }
+    .pj.wide h3 { font-size: 23px; }
+    .pj p { color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .pj .tags { margin-top: auto; padding-top: 8px; }
+
+    /* More builds rows */
+    .more { margin-top: 48px; }
+    .more-title { font-family: var(--mono); font-size: 11.5px; color: var(--dim); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+    .row {
+      position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr) auto 28px; align-items: center; gap: 14px;
+      padding: 18px 12px; border-bottom: 1px solid var(--line); cursor: pointer; border-radius: 6px;
+      transition: background 0.25s;
+    }
+    .row:hover { background: rgba(255,255,255,0.025); }
+    .row-n { font-family: var(--mono); font-size: 12px; color: var(--dim); }
+    .row-t { font-size: 16px; font-weight: 500; letter-spacing: -0.015em; }
+    .row-t small { display: block; font-size: 13px; font-weight: 400; color: var(--muted); margin-top: 2px; }
+    .row-s { font-family: var(--mono); font-size: 11.5px; color: var(--dim); text-align: right; white-space: nowrap; }
+    .row-a { width: 26px; height: 26px; display: grid; place-items: center; color: var(--dim); transition: transform 0.3s, color 0.25s; }
+    .row:hover .row-a { color: var(--lime); transform: rotate(-45deg); }
+
+    /* =========================================================
+       Experience accordion
+       ========================================================= */
+    .xp { margin-top: 36px; border-top: 1px solid var(--line); }
+    .xp-item { border-bottom: 1px solid var(--line); }
+    .xp-head { width: 100%; display: grid; grid-template-columns: 140px minmax(0, 1fr) 34px; align-items: center; gap: 16px; padding: 22px 4px; text-align: left; }
+    .xp-when { font-family: var(--mono); font-size: 12px; color: var(--dim); }
+    .xp-co { font-size: 19px; font-weight: 600; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; transition: color 0.25s; }
+    .xp-head:hover .xp-co { color: var(--lime); }
+    .xp-co .now { font-family: var(--mono); font-size: 10px; font-weight: 600; letter-spacing: 0.04em; color: #0b0b0a; background: var(--lime); padding: 2px 7px; border-radius: 999px; }
+    .xp-role { display: block; margin-top: 3px; font-size: 13.5px; color: var(--muted); font-weight: 400; letter-spacing: 0; width: 100%; }
+    .xp-ic { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line-2); display: grid; place-items: center; transition: transform 0.35s var(--ease), background 0.25s, border-color 0.25s; flex: none; }
+    .xp-ic svg { width: 13px; height: 13px; }
+    .xp-item.open .xp-ic { transform: rotate(45deg); background: var(--lime); border-color: var(--lime); color: #0b0b0a; }
+    .xp-body { display: none; }
+    .xp-item.open .xp-body { display: block; }
+    .xp-inner { padding: 4px 4px 24px 156px; }
+    .xp-inner ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .xp-inner li { position: relative; padding-left: 20px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .xp-inner li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 8px; height: 1px; background: var(--lime); }
+    .xp-inner li strong { color: var(--text); font-weight: 500; }
+    .xp-inner .tags { margin-top: 16px; }
+
+    .edu { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 36px; }
+    .edu-card { border-radius: var(--r-md); padding: 20px; background: var(--card); border: 1px solid var(--line); }
+    .edu-card small { font-family: var(--mono); font-size: 11px; color: var(--dim); }
+    .edu-card h3 { margin-top: 10px; font-size: 16px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.3; }
+    .edu-card p { margin-top: 6px; font-size: 13px; color: var(--muted); }
+    .langs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+
+    /* =========================================================
+       Services & Process
+       ========================================================= */
+    .services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 36px; }
+    .svc {
+      border-radius: var(--r-lg); padding: 24px; background: var(--card); border: 1px solid var(--line);
+      display: flex; flex-direction: column; gap: 12px; min-height: 240px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .svc:hover { border-color: var(--line-2); transform: translateY(-3px); }
+    .svc-ic { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: var(--lime-soft); border: 1px solid rgba(197,255,65,0.25); color: var(--lime); }
+    .svc-ic svg { width: 20px; height: 20px; }
+    .svc h3 { font-size: 19px; font-weight: 600; letter-spacing: -0.02em; margin-top: 8px; }
+    .svc p { color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .svc .tags { margin-top: auto; }
+
+    .process { margin-top: 36px; border-radius: var(--r-lg); border: 1px solid var(--line); background: var(--card); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); overflow: hidden; }
+    .step { padding: 22px 18px 24px; position: relative; }
+    .step + .step { border-left: 1px solid var(--line); }
+    .step-n { font-family: var(--mono); font-size: 11.5px; color: var(--lime); font-weight: 600; }
+    .step h3 { margin-top: 28px; font-size: 17px; font-weight: 600; letter-spacing: -0.015em; }
+    .step p { margin-top: 6px; font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* =========================================================
+       Stack
+       ========================================================= */
+    .tabs-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-top: 28px; padding-bottom: 4px; }
+    .tabs-wrapper::-webkit-scrollbar { display: none; }
+    .tabs { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); min-width: max-content; }
+    .tab { height: 34px; padding: 0 15px; border-radius: 999px; font-size: 13px; color: var(--muted); transition: color 0.25s, background 0.25s; cursor: pointer; white-space: nowrap; }
+    .tab.active { background: var(--lime); color: #0b0b0a; font-weight: 600; }
+    .stack { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 20px; }
+    .tool {
+      display: flex; align-items: center; gap: 10px; padding: 12px; border-radius: 14px;
+      background: var(--card); border: 1px solid var(--line);
+      transition: border-color 0.25s, background 0.25s, transform 0.25s;
+    }
+    .tool:hover { border-color: var(--line-2); background: var(--card-2); transform: translateY(-2px); }
+    .tool.off { display: none; }
+    .ic { width: 34px; height: 34px; flex: none; border-radius: 9px; display: grid; place-items: center; background: #1f1e1b; border: 1px solid var(--line); }
+    .ic img { width: 17px; height: 17px; opacity: 0.85; }
+    .tool:hover .ic img { opacity: 1; }
+    .ic.fb::after { content: attr(data-fb); font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--lime); }
+    .tool b { display: block; font-size: 13px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+    .tool span { display: block; font-size: 11px; color: var(--dim); margin-top: 1px; }
+
+    /* =========================================================
+       Contact
+       ========================================================= */
+    .contact-title { margin-top: 18px; font-size: clamp(34px, 5.5vw, 80px); font-weight: 500; letter-spacing: -0.045em; line-height: 1.02; }
+    .contact-title em { color: var(--lime); }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 20px; margin-top: 40px; align-items: start; }
+    .clist { border-top: 1px solid var(--line); }
+    .clink { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 4px; border-bottom: 1px solid var(--line); transition: padding-left 0.3s; text-decoration: none; }
+    .clink:hover { padding-left: 8px; }
+    .clink small { display: block; font-family: var(--mono); font-size: 11px; color: var(--dim); }
+    .clink b { display: block; margin-top: 2px; font-size: 15px; font-weight: 500; }
+    .clink svg { width: 16px; height: 16px; color: var(--dim); transition: transform 0.3s, color 0.25s; flex: none; }
+    .clink:hover svg { color: var(--lime); transform: rotate(-45deg); }
+    .form { border-radius: var(--r-xl); padding: 24px; background: var(--card); border: 1px solid var(--line); }
+    .form h3 { font-size: 19px; font-weight: 600; letter-spacing: -0.015em; }
+    .form > p { margin-top: 4px; color: var(--muted); font-size: 13.5px; }
+    .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: 12px; color: var(--muted); }
+    .field input, .field textarea, .field select {
+      width: 100%; font: inherit; font-size: 15px; color: var(--text);
+      background: #0f0e0d; border: 1px solid var(--line-2); border-radius: 12px; padding: 12px 13px; outline: none;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .field textarea { resize: vertical; min-height: 110px; }
+    .field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23a39d94' stroke-width='1.6'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+    .field input:focus, .field textarea:focus, .field select:focus { border-color: rgba(197,255,65,0.6); box-shadow: 0 0 0 3px rgba(197,255,65,0.12); }
+    .form .btn { width: 100%; margin-top: 14px; height: 46px; }
+
+    footer { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding: 32px 24px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid var(--line); color: var(--dim); font-size: 13px; }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.25s; }
+    footer a:hover { color: var(--text); }
+    .foot-links { display: flex; gap: 18px; flex-wrap: wrap; }
+
+    /* =========================================================
+       Case-study modal & Bottom sheet
+       ========================================================= */
+    .modal { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: 20px; pointer-events: none; }
+    .modal-bg { position: absolute; inset: 0; background: rgba(5,5,4,0.78); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); opacity: 0; transition: opacity 0.35s var(--ease); }
+    .modal-panel {
+      position: relative; width: min(920px, 100%); max-height: calc(100vh - 40px); overflow-y: auto; overscroll-behavior: contain;
+      border-radius: var(--r-xl); background: var(--bg-2); border: 1px solid var(--line-2);
+      box-shadow: 0 40px 100px -20px rgba(0,0,0,0.9);
+      opacity: 0; transform: translateY(24px) scale(0.98); transition: opacity 0.35s var(--ease), transform 0.4s var(--ease);
+    }
+    .modal.open { pointer-events: auto; }
+    .modal.open .modal-bg { opacity: 1; }
+    .modal.open .modal-panel { opacity: 1; transform: none; }
+    .modal-x { position: sticky; top: 12px; margin-left: auto; margin-right: 12px; margin-bottom: -52px; z-index: 5; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: rgba(10,10,9,0.75); border: 1px solid var(--line-2); backdrop-filter: blur(10px); transition: transform 0.3s, background 0.25s; }
+    .modal-x:hover { transform: rotate(90deg); background: var(--lime); color: #0b0b0a; }
+    .modal-x svg { width: 15px; height: 15px; }
+    .m-hero { margin: 12px; border-radius: 18px; overflow: hidden; aspect-ratio: 16 / 8.5; background: #1a1917; }
+    .m-hero img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .m-hero.none { aspect-ratio: auto; height: 140px; background: radial-gradient(80% 120% at 10% 0%, rgba(197,255,65,0.25), transparent 60%), radial-gradient(80% 120% at 100% 100%, rgba(244,108,56,0.2), transparent 60%), #1a1917; display: grid; place-items: center; font-family: var(--serif); font-style: italic; font-size: 56px; color: var(--text); }
+    .m-content { padding: 16px 32px 36px; }
+    .m-cat { font-family: var(--mono); font-size: 11.5px; color: var(--lime); font-weight: 500; }
+    .m-title { margin-top: 8px; font-size: clamp(24px, 3.4vw, 38px); font-weight: 600; letter-spacing: -0.035em; line-height: 1.1; }
+    .m-lede { margin-top: 12px; color: var(--muted); font-size: 15.5px; line-height: 1.6; max-width: 680px; }
+    .m-meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 24px; border-radius: 16px; overflow: hidden; background: var(--line); border: 1px solid var(--line); }
+    .m-meta > div { background: var(--card); padding: 14px 16px; }
+    .m-meta small { display: block; font-family: var(--mono); font-size: 10.5px; color: var(--dim); text-transform: uppercase; letter-spacing: 0.04em; }
+    .m-meta b { display: block; margin-top: 4px; font-size: 13.5px; font-weight: 500; line-height: 1.4; }
+    .m-meta a { color: var(--lime); text-decoration: none; }
+    .m-sec { margin-top: 28px; }
+    .m-sec h4 { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .m-sec p { color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+    .m-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .m-list li { display: flex; gap: 10px; padding: 12px 14px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+    .m-list li b { color: var(--text); font-weight: 500; }
+    .m-list li::before { content: ""; flex: none; width: 16px; height: 16px; margin-top: 2px; border-radius: 50%; background: var(--lime-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' fill='none' stroke='%23c5ff41' stroke-width='2'%3E%3Cpath d='M1.5 4.8l2 2 4-4'/%3E%3C/svg%3E") center no-repeat; border: 1px solid rgba(197,255,65,0.25); }
+    .m-impact { display: grid; gap: 8px; }
+    .m-impact div { padding: 14px 16px; border-radius: 12px; border: 1px solid rgba(197,255,65,0.22); background: linear-gradient(90deg, rgba(197,255,65,0.08), transparent); font-size: 14px; line-height: 1.5; }
+    .m-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--line); }
+
+    /* Toast */
+    .toast { position: fixed; left: 50%; bottom: 24px; z-index: 95; transform: translate(-50%, 20px); opacity: 0; pointer-events: none; display: flex; align-items: center; gap: 9px; height: 40px; padding: 0 16px; border-radius: 999px; background: var(--text); color: var(--bg); font-size: 13.5px; font-weight: 500; box-shadow: 0 16px 40px -10px rgba(0,0,0,0.6); transition: opacity 0.3s var(--ease), transform 0.35s var(--ease); }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    /* Safe reveals on scroll */
+    .rv { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: no-preference) {
+      .js .rv { opacity: 0; transform: translateY(18px); transition: opacity 0.65s var(--ease), transform 0.65s var(--ease); will-change: opacity, transform; }
+      .js .rv.in { opacity: 1; transform: none; }
+    }
+
+    /* =========================================================
+       RESPONSIVE BREAKPOINTS (Mobile & Tablet Perfection)
+       ========================================================= */
+    @media (max-width: 1080px) {
+      .layout { grid-template-columns: 290px minmax(0, 1fr); gap: 40px; }
+      .wrap { padding-top: 96px; }
+      .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .step + .step { border-left: 0; }
+      .step { border-bottom: 1px solid var(--line); }
+      .step:nth-child(even) { border-left: 1px solid var(--line); }
+      .step:last-child { grid-column: 1 / -1; border-bottom: 0; }
+    }
+
+    @media (max-width: 960px) {
+      /* Mobile header bar */
+      .nav {
+        left: 12px; right: 12px; transform: none; width: auto; max-width: 520px;
+        justify-content: space-between; padding: 5px 8px 5px 12px;
+      }
+      .nav-links, .nav > .btn { display: none; }
+      .burger { display: grid; }
+
+      .wrap { padding: 84px 18px 0; }
+      .layout { grid-template-columns: 1fr; gap: 0; }
+      .profile { display: none; } /* On mobile, the executive author card is in the hero! */
+      .mobile-author { display: block; }
+
+      .main > section { padding-bottom: 80px; }
+      .hero { padding-top: 0; }
+    }
+
+    @media (max-width: 720px) {
+      body { font-size: 15px; }
+      .wrap { padding: 76px 14px 0; }
+      .main > section { padding-bottom: 72px; }
+
+      .hero h1 { font-size: clamp(34px, 9vw, 48px); }
+      .hero-lede { font-size: 15px; margin-top: 16px; }
+      .hero-ctas { margin-top: 22px; width: 100%; }
+      .hero-ctas .btn { flex: 1; min-width: 130px; }
+
+      /* 2x2 Stats Grid on Mobile */
+      .stats { grid-template-columns: repeat(2, 1fr); margin-top: 36px; }
+      .stat:nth-child(even) { border-left: 1px solid var(--line); }
+      .stat:nth-child(3) { border-left: 0; }
+      .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+      .stat { padding: 16px 14px; }
+      .stat b { font-size: 32px; }
+      .stat span { font-size: 11.5px; }
+
+      /* Projects single column on mobile */
+      .projects { grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
+      .pj.wide { grid-column: auto; }
+      .pj.wide .pj-media, .pj-media { aspect-ratio: 16 / 10; }
+      .pj h3 { font-size: 18px; }
+      .pj.wide h3 { font-size: 19px; }
+
+      /* More builds rows */
+      .row { grid-template-columns: 28px minmax(0, 1fr) 24px; gap: 10px; padding: 14px 6px; }
+      .row-s { display: none; }
+      .row-t { font-size: 15px; }
+      .row-t small { font-size: 12.5px; }
+
+      /* Experience on mobile - fixes the squished padding */
+      .xp-head { grid-template-columns: minmax(0, 1fr) 32px; gap: 6px 12px; padding: 18px 2px; }
+      .xp-when { grid-column: 1 / -1; order: -1; font-size: 11.5px; }
+      .xp-co { font-size: 17px; }
+      .xp-inner { padding: 0 4px 20px 4px; }
+
+      .edu, .services, .contact-grid { grid-template-columns: 1fr; }
+      .process { grid-template-columns: 1fr; }
+      .step:nth-child(even) { border-left: 0; }
+      .step h3 { margin-top: 16px; }
+
+      .stack { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .tool { padding: 10px; }
+
+      .fgrid { grid-template-columns: 1fr; }
+      .field input, .field textarea, .field select { font-size: 16px; } /* Prevents iOS auto-zoom on input focus */
+
+      /* Case study modal as a native bottom sheet */
+      .modal { padding: 0; align-items: flex-end; }
+      .modal-panel {
+        width: 100%; max-height: 88vh; border-radius: 22px 22px 0 0; border-bottom: 0;
+        transform: translateY(100%);
+      }
+      .modal.open .modal-panel { transform: translateY(0); }
+      .m-content { padding: 12px 18px 32px; }
+      .m-meta { grid-template-columns: 1fr; }
+      .m-list { grid-template-columns: 1fr; }
+      .m-title { font-size: 24px; }
+
+      footer { flex-direction: column; align-items: flex-start; padding: 28px 14px 36px; gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="gridlines"></div>
+    <div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav-brand" aria-label="Haris Khan Durrani — home">
+      <span class="nav-logo">H</span>
+      <span class="nav-brand-txt">Haris Khan Durrani</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <span class="nav-ind" id="navInd"></span>
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#services">Services</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-lime btn-sm">Let's talk</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mmenu" id="mmenu">
+    <div class="mmenu-links">
+      <a href="#home" class="m-item"><span>01</span> Home</a>
+      <a href="#work" class="m-item"><span>02</span> Work (12 platforms)</a>
+      <a href="#experience" class="m-item"><span>03</span> Experience</a>
+      <a href="#services" class="m-item"><span>04</span> Services</a>
+      <a href="#stack" class="m-item"><span>05</span> Tech Stack</a>
+      <a href="#contact" class="m-item"><span>06</span> Contact</a>
+    </div>
+    <div class="mmenu-foot">
+      <a href="https://wa.me/971551651588" target="_blank" rel="noopener" class="btn btn-lime btn-sm">WhatsApp</a>
+      <a href="tel:+971551651588" class="btn btn-ghost btn-sm">Call</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- ===================== DESKTOP PROFILE SIDEBAR ===================== -->
+      <aside class="profile" aria-label="Profile">
+        <div class="pcard beam">
+          <div class="avatar">
+            <span class="avatar-monogram">HK</span>
+            <!-- If assets/haris.jpg exists, it displays automatically -->
+            <img src="assets/haris.jpg" alt="Haris Khan Durrani" onerror="this.remove()" />
+            <span class="avail"><span class="dot"></span>Available for work</span>
+          </div>
+          <div class="pinfo">
+            <h2 class="pname">Haris Khan Durrani</h2>
+            <p class="prole">Head of IT · Senior Full-Stack Developer</p>
+            <div class="pmeta">
+              <span class="chip">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                Dubai, UAE
+              </span>
+              <span class="chip" id="clock">--:-- GST</span>
+            </div>
+            <p class="pbio">I architect enterprise SaaS, CRM/ERP and workflow automation platforms that replace manual work — and I stay hands-on in code.</p>
+
+            <div class="dock" id="dock">
+              <a href="https://github.com/Haris-Khan-Durrani" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.37-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.23 10.23 0 0 0 22 12.23C22 6.58 17.52 2 12 2z"/></svg></a>
+              <a href="https://linkedin.com/in/Haris-Khan-Durrani" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+              <a href="mailto:haris.khan5117@gmail.com" aria-label="Email" title="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></a>
+              <a href="https://wa.me/971551651588" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.39 9.39 0 0 1-1.44-5.01c0-5.19 4.23-9.42 9.43-9.42a9.37 9.37 0 0 1 9.41 9.43c0 5.2-4.23 9.42-9.43 9.42zm8.02-17.44A11.27 11.27 0 0 0 12.05.75C5.8.75.72 5.83.72 12.08c0 2 .52 3.95 1.52 5.67L.62 23.25l5.63-1.48a11.3 11.3 0 0 0 5.8 1.48c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.31-8z"/></svg></a>
+              <a href="tel:+971551651588" aria-label="Call" title="Call">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+            </div>
+
+            <div class="pbtns">
+              <a href="#contact" class="btn btn-lime btn-sm">Hire me</a>
+              <button class="btn btn-ghost btn-sm" data-copy="haris.khan5117@gmail.com">Copy email</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ===================== MAIN CONTENT ===================== -->
+      <main class="main">
+
+        <!-- HERO -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+          <!-- Mobile Executive Author Card (visible on mobile only) -->
+          <div class="mobile-author">
+            <div class="mobile-author-top">
+              <div class="ma-avatar">HK</div>
+              <div class="ma-details">
+                <div class="ma-name">Haris Khan Durrani</div>
+                <div class="ma-role">Head of IT · Senior Full-Stack Developer</div>
+                <div class="ma-status"><span class="dot"></span> Available for work · Dubai</div>
+              </div>
+            </div>
+            <p class="ma-bio">Architecting enterprise SaaS, CRM/ERP and workflow automation platforms across UAE companies — hands-on in code.</p>
+            <div class="ma-dock">
+              <a href="https://github.com/Haris-Khan-Durrani" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.37-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.23 10.23 0 0 0 22 12.23C22 6.58 17.52 2 12 2z"/></svg></a>
+              <a href="https://linkedin.com/in/Haris-Khan-Durrani" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+              <a href="https://wa.me/971551651588" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.39 9.39 0 0 1-1.44-5.01c0-5.19 4.23-9.42 9.43-9.42a9.37 9.37 0 0 1 9.41 9.43c0 5.2-4.23 9.42-9.43 9.42zm8.02-17.44A11.27 11.27 0 0 0 12.05.75C5.8.75.72 5.83.72 12.08c0 2 .52 3.95 1.52 5.67L.62 23.25l5.63-1.48a11.3 11.3 0 0 0 5.8 1.48c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.31-8z"/></svg></a>
+              <a href="mailto:haris.khan5117@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></a>
+              <button class="btn btn-ghost btn-sm" data-copy="haris.khan5117@gmail.com" style="margin-left:auto;height:34px;font-size:12px;">Copy email</button>
+            </div>
+          </div>
+
+          <span class="chip"><span class="dot"></span><span class="shimmer">Head of IT @ EBMS Business Services · Dubai</span></span>
+          <h1 id="hero-title">
+            Building systems<br />
+            that <em>move</em><br />
+            <span style="color:var(--dim)">businesses.</span>
+          </h1>
+          <p class="hero-lede">
+            Technology leader and Senior Full-Stack Developer with <strong>9+ years</strong> architecting enterprise SaaS, CRM/ERP and workflow automation platforms — leading engineering &amp; IT teams while staying hands-on in <strong>React, Next.js, Node.js, PHP/Laravel</strong>, with deep integrations across <strong>Zoho CRM, GoHighLevel, WhatsApp Business API and 3CX</strong>.
+          </p>
+          <div class="hero-ctas">
+            <a href="#work" class="btn btn-lime">See my work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            <a href="#experience" class="btn btn-ghost">Experience &amp; CV</a>
+            <a href="https://wa.me/971551651588" target="_blank" rel="noopener" class="btn btn-ghost" style="color:var(--lime);border-color:rgba(197,255,65,0.3)">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.39 9.39 0 0 1-1.44-5.01c0-5.19 4.23-9.42 9.43-9.42a9.37 9.37 0 0 1 9.41 9.43c0 5.2-4.23 9.42-9.43 9.42zm8.02-17.44A11.27 11.27 0 0 0 12.05.75C5.8.75.72 5.83.72 12.08c0 2 .52 3.95 1.52 5.67L.62 23.25l5.63-1.48a11.3 11.3 0 0 0 5.8 1.48c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.31-8z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+
+          <div class="stats rv">
+            <div class="stat"><b><span data-count="9">9</span><i>+</i></b><span>Years building production software</span></div>
+            <div class="stat"><b><span data-count="105">105</span></b><span>Internal users on systems I run</span></div>
+            <div class="stat"><b><span data-count="10">10</span></b><span>Group companies on one platform</span></div>
+            <div class="stat"><b><span data-count="80">80</span><i>%</i></b><span>Less duplicate tooling</span></div>
+          </div>
+
+          <div class="marquee" aria-label="Technologies">
+            <div class="marquee-track" id="marquee"></div>
+          </div>
+        </section>
+
+        <!-- WORK -->
+        <section id="work" aria-labelledby="work-title">
+          <div class="sec-head"><b>01</b> Selected work <span class="rule"></span><a href="https://github.com/Haris-Khan-Durrani" target="_blank" rel="noopener">GitHub ↗</a></div>
+          <h2 class="sec-title" id="work-title">Platforms I've <em>architected</em> &amp; shipped</h2>
+          <p class="sec-sub">Enterprise systems running real operations — tap any project to view the full architectural case study.</p>
+
+          <div class="projects">
+            <!-- 1. Proposal Platform -->
+            <article class="pj wide beam on-hover rv" data-case="proposal" tabindex="0" role="button" aria-label="Open case study: Proposal & Contract Automation Platform">
+              <div class="pj-media">
+                <img src="assets/proposal.jpg" alt="Proposal & Contract Automation Platform" loading="lazy" />
+                <span class="pj-badge"><span class="dot"></span>In production · EBMS + 9 companies</span>
+                <span class="pj-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-top"><span>Document automation · Enterprise</span><span>Private deployment</span></div>
+                <h3>Proposal &amp; Contract Automation Platform</h3>
+                <p>A multi-tenant document generation platform that replaced manual sales documentation across EBMS and nine sister companies — with a drag-and-drop template builder, dynamic data binding and pixel-perfect PDF rendering.</p>
+                <div class="tags"><span>Node.js</span><span>Express.js</span><span>MySQL</span><span>PHP</span><span>mPDF</span><span>GrapesJS</span><span>REST APIs</span></div>
+              </div>
+            </article>
+
+            <!-- 2. Portal -->
+            <article class="pj beam on-hover rv" data-case="portal" tabindex="0" role="button" aria-label="Open case study: EBMS Group Portal">
+              <div class="pj-media">
+                <img src="assets/portal.jpg" alt="White-label CRM portal for EBMS group" loading="lazy" />
+                <span class="pj-badge">White-label CRM</span>
+                <span class="pj-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-top"><span>CRM · Multi-company</span><span>Private</span></div>
+                <h3>Portal for EBMS &amp; Sister Companies</h3>
+                <p>White-label CRM portal deployed across group companies with centralized access, RBAC and real-time GoHighLevel data sync.</p>
+                <div class="tags"><span>GHL OAuth 2.0</span><span>Node.js</span><span>MySQL</span><span>Tailwind</span><span>EJS</span></div>
+              </div>
+            </article>
+
+            <!-- 3. School ERP -->
+            <article class="pj beam on-hover rv" data-case="school" tabindex="0" role="button" aria-label="Open case study: School Management ERP">
+              <div class="pj-media">
+                <img src="assets/school.jpg" alt="School Management ERP dashboard" loading="lazy" />
+                <span class="pj-badge"><span class="dot"></span>Live</span>
+                <span class="pj-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-top"><span>Multi-tenant SaaS</span><a class="lnk" href="https://sms.onesol.ae/" target="_blank" rel="noopener" data-stop>sms.onesol.ae ↗</a></div>
+                <h3>School Management ERP</h3>
+                <p>Admissions, fees, exams, payroll, family billing, bulk imports and automated WhatsApp notifications — multi-tenant.</p>
+                <div class="tags"><span>Next.js</span><span>Prisma</span><span>MySQL</span><span>RBAC</span><span>Docker</span><span>WhatsApp API</span></div>
+              </div>
+            </article>
+
+            <!-- 4. TableHub -->
+            <article class="pj beam on-hover rv" data-case="tablehub" tabindex="0" role="button" aria-label="Open case study: TableHub">
+              <div class="pj-media">
+                <img src="assets/tablehub.jpg" alt="TableHub no-code database interface" loading="lazy" />
+                <span class="pj-badge"><span class="dot"></span>Live</span>
+                <span class="pj-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-top"><span>No-code SaaS</span><a class="lnk" href="https://tablehub.ai/" target="_blank" rel="noopener" data-stop>tablehub.ai ↗</a></div>
+                <h3>TableHub</h3>
+                <p>Airtable-style multi-tenant SaaS: custom databases, dashboards, automations, real-time collaboration and Stripe billing.</p>
+                <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Socket.IO</span><span>Prisma</span><span>Stripe</span></div>
+              </div>
+            </article>
+
+            <!-- 5. 3CX AI Dialer -->
+            <article class="pj beam on-hover rv" data-case="dialer" tabindex="0" role="button" aria-label="Open case study: 3CX AI Auto Caller">
+              <div class="pj-media">
+                <img src="assets/dialer.jpg" alt="3CX AI auto-dialer interface" loading="lazy" />
+                <span class="pj-badge"><span class="dot" style="background:var(--orange)"></span>In production</span>
+                <span class="pj-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-top"><span>Telephony · AI</span><span>2026</span></div>
+                <h3>3CX AI Auto Caller, Dialer &amp; Call Widget</h3>
+                <p>AI-assisted outbound dialer with CRM integration, real-time call control and a website-to-agent calling widget.</p>
+                <div class="tags"><span>Node.js</span><span>3CX Call Control API</span><span>WebSockets</span><span>CRM Sync</span></div>
+              </div>
+            </article>
+
+            <!-- 6. Nexus Basketball -->
+            <article class="pj beam on-hover rv" data-case="nexus" tabindex="0" role="button" aria-label="Open case study: Nexus Basketball">
+              <div class="pj-media">
+                <img src="assets/nexus.jpg" alt="Nexus Basketball interactive website" loading="lazy" />
+                <span class="pj-badge"><span class="dot"></span>Live</span>
+                <span class="pj-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-top"><span>Interactive web · CMS</span><a class="lnk" href="https://nexusbasketball.com/" target="_blank" rel="noopener" data-stop>nexusbasketball.com ↗</a></div>
+                <h3>Nexus Basketball</h3>
+                <p>Fully custom WordPress theme + plugin admin layer with Three.js and GSAP interactions that staff can still manage.</p>
+                <div class="tags"><span>WordPress</span><span>PHP</span><span>Three.js</span><span>GSAP</span></div>
+              </div>
+            </article>
+
+            <!-- 7. Home of Hammam -->
+            <article class="pj beam on-hover rv" data-case="hammam" tabindex="0" role="button" aria-label="Open case study: Home Of Hammam">
+              <div class="pj-media">
+                <img src="assets/hammam.jpg" alt="Home Of Hammam Shopify storefront" loading="lazy" />
+                <span class="pj-badge"><span class="dot"></span>Live</span>
+                <span class="pj-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-top"><span>E-commerce</span><a class="lnk" href="https://homeofhammam.ae/" target="_blank" rel="noopener" data-stop>homeofhammam.ae ↗</a></div>
+                <h3>Home Of Hammam</h3>
+                <p>Responsive Shopify storefront — product catalogue, checkout configuration and mobile UX improvements.</p>
+                <div class="tags"><span>Shopify</span><span>Liquid</span><span>Stripe</span></div>
+              </div>
+            </article>
+
+            <!-- 8. PGVault Core -->
+            <article class="pj wide beam on-hover rv" data-case="pgvault" tabindex="0" role="button" aria-label="Open case study: PGVault Core">
+              <div class="pj-media">
+                <img src="assets/pgvault.jpg" alt="PGVault PostgreSQL backup dashboard" loading="lazy" />
+                <span class="pj-badge">Open source</span>
+                <span class="pj-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-top"><span>DevOps · Disaster recovery</span><a class="lnk" href="https://github.com/Haris-Khan-Durrani/PGVault-Core" target="_blank" rel="noopener" data-stop>GitHub ↗</a></div>
+                <h3>PGVault Core</h3>
+                <p>Automated, encrypted PostgreSQL backups to S3, Google Drive or local storage — scheduled, compressed, AES-256 sealed, with a web UI and one-click restore.</p>
+                <div class="tags"><span>TypeScript</span><span>PostgreSQL</span><span>AWS S3</span><span>Google Drive</span><span>Docker</span></div>
+              </div>
+            </article>
+          </div>
+
+          <!-- More builds list -->
+          <div class="more">
+            <div class="more-title">More production builds</div>
+            <div class="row rv" data-case="accounting" tabindex="0" role="button">
+              <span class="row-n">09</span>
+              <span class="row-t">Accounting &amp; UAE VAT 201 SaaS<small>Multi-tenant billing &amp; accounting, 20+ modules, FTA-ready</small></span>
+              <span class="row-s">PHP · MySQL</span>
+              <span class="row-a"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+            <div class="row rv" data-case="whatsapp" tabindex="0" role="button">
+              <span class="row-n">10</span>
+              <span class="row-t">WhatsApp &amp; WATI Automation Hub<small>Template dispatch, OTP login and webhook sync</small></span>
+              <span class="row-s">Node.js · WATI</span>
+              <span class="row-a"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+            <div class="row rv" data-case="central" tabindex="0" role="button">
+              <span class="row-n">11</span>
+              <span class="row-t">Central Freezone Compliance Hub<small>One dashboard for UAE free-zone licensing workflows</small></span>
+              <span class="row-s">Express · MySQL</span>
+              <span class="row-a"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+            <div class="row rv" data-case="stripe" tabindex="0" role="button">
+              <span class="row-n">12</span>
+              <span class="row-t">Stripe Subscription Billing<small>Checkout, signed webhooks and tenant tier upgrades</small></span>
+              <span class="row-s">Node.js · Stripe</span>
+              <span class="row-a"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" aria-labelledby="xp-title">
+          <div class="sec-head"><b>02</b> Experience <span class="rule"></span></div>
+          <h2 class="sec-title" id="xp-title">Nine years, <em>four</em> companies</h2>
+          <p class="sec-sub">From engineering WordPress plugins to directing IT &amp; full-stack delivery for a group of companies in Dubai.</p>
+
+          <div class="xp">
+            <div class="xp-item open rv">
+              <button class="xp-head" aria-expanded="true">
+                <span class="xp-when">2020 — Present</span>
+                <span class="xp-co">EBMS Business Services <span class="now">NOW</span>
+                  <span class="xp-role">Head of IT · Senior Full-Stack Developer · CRM &amp; Automation Specialist — Dubai</span></span>
+                <span class="xp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+              </button>
+              <div class="xp-body">
+                <div class="xp-inner">
+                  <ul>
+                    <li>Spearheaded technology strategy, solution architecture and engineering delivery, owning hands-on development and infrastructure for systems serving <strong>105 users</strong>.</li>
+                    <li>Architected enterprise SaaS, ERP, CRM, proposal automation and white-label portal platforms — a shared API-driven foundation for EBMS and related companies that <strong>cut duplicate tooling by 80%</strong>.</li>
+                    <li>Automated sales and operations by integrating <strong>Zoho CRM, GoHighLevel, WhatsApp</strong> and internal systems through APIs, eliminating repetitive manual work.</li>
+                    <li>Lead and mentor development &amp; IT teams while managing Linux/Docker servers, databases, deployments, security and availability.</li>
+                  </ul>
+                  <div class="tags"><span>Leadership</span><span>Solution Architecture</span><span>Next.js</span><span>Node.js</span><span>GoHighLevel</span><span>Zoho CRM</span><span>3CX</span><span>Docker</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="xp-item rv">
+              <button class="xp-head" aria-expanded="false">
+                <span class="xp-when">2019 — 2020</span>
+                <span class="xp-co">Capital Sands Financial Services
+                  <span class="xp-role">Senior Web Developer — UAE</span></span>
+                <span class="xp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+              </button>
+              <div class="xp-body">
+                <div class="xp-inner">
+                  <ul>
+                    <li>Engineered and maintained business web applications, API integrations and internal tools as a senior member of the development team.</li>
+                  </ul>
+                  <div class="tags"><span>PHP</span><span>Laravel</span><span>JavaScript</span><span>MySQL</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="xp-item rv">
+              <button class="xp-head" aria-expanded="false">
+                <span class="xp-when">2018 — 2019</span>
+                <span class="xp-co">Tecxone
+                  <span class="xp-role">Senior Web Developer · Plugin Developer — UAE</span></span>
+                <span class="xp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+              </button>
+              <div class="xp-body">
+                <div class="xp-inner">
+                  <ul>
+                    <li>Senior developer on <strong>Mymahd</strong>, an e-commerce platform for a regional brand.</li>
+                  </ul>
+                  <div class="tags"><span>WooCommerce</span><span>WordPress</span><span>Custom Plugins</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="xp-item rv">
+              <button class="xp-head" aria-expanded="false">
+                <span class="xp-when">2017 — 2018</span>
+                <span class="xp-co">Netxsite
+                  <span class="xp-role">Web Developer · Plugin Developer — UAE</span></span>
+                <span class="xp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+              </button>
+              <div class="xp-body">
+                <div class="xp-inner">
+                  <ul>
+                    <li>Developed and maintained WordPress websites, custom plugins and client-facing web solutions.</li>
+                  </ul>
+                  <div class="tags"><span>WordPress</span><span>PHP</span><span>jQuery</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu">
+            <div class="edu-card"><small>2014 — 2017</small><h3>ACCP — Aptech Certified Computer Programmer</h3><p>Software Engineering · Aptech Computer Education</p></div>
+            <div class="edu-card"><small>2017</small><h3>BS Computer Science</h3><p>Coursework through 5th semester · NICE, Pakistan</p></div>
+            <div class="edu-card"><small>2017</small><h3>Graphic Design Certification</h3><p>Arena Multimedia</p>
+              <div class="langs"><span class="chip">English · Professional</span><span class="chip">Urdu · Native</span></div></div>
+          </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" aria-labelledby="svc-title">
+          <div class="sec-head"><b>03</b> What I do <span class="rule"></span></div>
+          <h2 class="sec-title" id="svc-title">From architecture to <em>production</em></h2>
+
+          <div class="services">
+            <div class="svc beam on-hover rv">
+              <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><path d="M14 17.5h7M17.5 14v7"/></svg></div>
+              <h3>Enterprise SaaS &amp; ERP</h3>
+              <p>Multi-tenant platforms with clean data models, RBAC, JWT auth and the admin tooling operations teams actually rely on.</p>
+              <div class="tags"><span>Next.js</span><span>Node.js</span><span>Laravel</span><span>Prisma</span></div>
+            </div>
+            <div class="svc beam on-hover rv">
+              <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h4l3-8 4 16 3-8h2"/></svg></div>
+              <h3>CRM &amp; Workflow Automation</h3>
+              <p>Zoho CRM and GoHighLevel integrations, n8n/Make/Zapier flows and WhatsApp messaging that eliminate repetitive manual work.</p>
+              <div class="tags"><span>Zoho CRM</span><span>GoHighLevel</span><span>n8n</span><span>WhatsApp API</span></div>
+            </div>
+            <div class="svc beam on-hover rv">
+              <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+              <h3>Telephony &amp; Real-time</h3>
+              <p>3CX Call Control, auto-dialers, website call widgets and WebSocket-driven dashboards wired straight into the CRM pipeline.</p>
+              <div class="tags"><span>3CX</span><span>WebSockets</span><span>Socket.IO</span><span>REST APIs</span></div>
+            </div>
+            <div class="svc beam on-hover rv">
+              <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></div>
+              <h3>Infrastructure &amp; IT Leadership</h3>
+              <p>Linux, Docker, Nginx and PM2 deployments, automated backups and security — plus leading the technical teams that deliver.</p>
+              <div class="tags"><span>Docker</span><span>Linux</span><span>Nginx</span><span>AWS</span></div>
+            </div>
+          </div>
+
+          <div class="process rv">
+            <div class="step"><span class="step-n">01</span><h3>Discover</h3><p>Map the real business workflow, users, edge cases and manual bottlenecks.</p></div>
+            <div class="step"><span class="step-n">02</span><h3>Architect</h3><p>Design data schema, API contracts, RBAC security and failover paths first.</p></div>
+            <div class="step"><span class="step-n">03</span><h3>Build</h3><p>Ship clean, tested vertical slices early — not detached layers.</p></div>
+            <div class="step"><span class="step-n">04</span><h3>Integrate</h3><p>Wire CRM, telephony, WhatsApp and billing with idempotent webhooks.</p></div>
+            <div class="step"><span class="step-n">05</span><h3>Own</h3><p>Deploy with Docker/PM2, monitor uptime, maintain backups and iterate.</p></div>
+          </div>
+        </section>
+
+        <!-- STACK -->
+        <section id="stack" aria-labelledby="stack-title">
+          <div class="sec-head"><b>04</b> Stack <span class="rule"></span></div>
+          <h2 class="sec-title" id="stack-title">Tools I <em>trust</em> in production</h2>
+
+          <div class="tabs-wrapper">
+            <div class="tabs" id="tabs" role="tablist">
+              <button class="tab active" data-f="all" role="tab">All</button>
+              <button class="tab" data-f="fe" role="tab">Frontend</button>
+              <button class="tab" data-f="be" role="tab">Backend</button>
+              <button class="tab" data-f="db" role="tab">Database</button>
+              <button class="tab" data-f="crm" role="tab">CRM &amp; Automation</button>
+              <button class="tab" data-f="cms" role="tab">CMS &amp; Commerce</button>
+              <button class="tab" data-f="ops" role="tab">DevOps &amp; Cloud</button>
+            </div>
+          </div>
+          <div class="stack" id="stackGrid"></div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" aria-labelledby="contact-title">
+          <div class="sec-head"><b>05</b> Contact <span class="rule"></span></div>
+          <h2 class="contact-title" id="contact-title">Let's build something <em>serious.</em></h2>
+
+          <div class="contact-grid">
+            <div class="clist">
+              <a class="clink" href="mailto:haris.khan5117@gmail.com"><span><small>Direct Email</small><b>haris.khan5117@gmail.com</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="clink" href="https://wa.me/971551651588" target="_blank" rel="noopener"><span><small>WhatsApp · Instant</small><b>+971 55 1651588</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="clink" href="tel:+971551651588"><span><small>Direct Call</small><b>+971 55 1651588</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="clink" href="https://linkedin.com/in/Haris-Khan-Durrani" target="_blank" rel="noopener"><span><small>LinkedIn</small><b>in/Haris-Khan-Durrani</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="clink" href="https://github.com/Haris-Khan-Durrani" target="_blank" rel="noopener"><span><small>GitHub</small><b>@Haris-Khan-Durrani</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <div class="clink"><span><small>Location &amp; Timezone</small><b>Dubai, UAE · <span id="clock2">--:--</span> GST</b></span></div>
+            </div>
+
+            <form class="form beam" id="contactForm">
+              <h3>Start a conversation</h3>
+              <p>Tell me about your platform or engineering requirements — I respond promptly.</p>
+              <div class="fgrid">
+                <div class="field"><label for="fName">Name</label><input id="fName" name="name" required autocomplete="name" placeholder="Your name" /></div>
+                <div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" required autocomplete="email" placeholder="you@company.com" /></div>
+                <div class="field full"><label for="fType">Project scope</label>
+                  <select id="fType" name="type">
+                    <option>SaaS, ERP or Custom Platform Build</option>
+                    <option>Full-Time Engineering / IT Leadership Role</option>
+                    <option>CRM, WhatsApp &amp; 3CX Telephony Automation</option>
+                    <option>Architecture &amp; Code Review</option>
+                    <option>General Inquiry</option>
+                  </select></div>
+                <div class="field full"><label for="fMsg">Message</label><textarea id="fMsg" name="message" required placeholder="What are you building, and where do you need an architect?"></textarea></div>
+              </div>
+              <button type="submit" class="btn btn-lime">Send message
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer>
+    <span>© <span id="year">2026</span> Haris Khan Durrani · Head of IT · Dubai, UAE</span>
+    <div class="foot-links">
+      <a href="https://github.com/Haris-Khan-Durrani" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/Haris-Khan-Durrani" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:haris.khan5117@gmail.com">Email</a>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Case-study modal / Mobile Bottom Sheet -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-bg" data-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="modal-x" data-close aria-label="Close case study"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <div id="mBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span class="dot"></span><span id="toastTxt">Copied</span></div>
+
+  <script>
+  (() => {
+    'use strict';
+    const $ = (s, c = document) => c.querySelector(s);
+    const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+    /* Enable JS class for progressive enhancement */
+    document.documentElement.classList.add('js');
+
+    /* Dubai real-time clock */
+    const fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', hour12: false });
+    function tick() {
+      const t = fmt.format(new Date());
+      if ($('#clock')) $('#clock').textContent = t + ' GST';
+      if ($('#clock2')) $('#clock2').textContent = t;
+      if ($('#clock-m')) $('#clock-m').textContent = t + ' GST';
+    }
+    tick(); setInterval(tick, 15000);
+    if ($('#year')) $('#year').textContent = new Date().getFullYear();
+
+    /* Safe reveals on scroll — with immediate fallback */
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.05, rootMargin: '100px 0px 100px 0px' });
+    $$('.rv').forEach(el => io.observe(el));
+
+    // Fallback: Ensure everything is revealed in case intersection observer is slow
+    setTimeout(() => {
+      $$('.rv').forEach(el => el.classList.add('in'));
+    }, 400);
+
+    /* Scroll progress bar */
+    const bar = $('#progress');
+    const onScroll = () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* Nav active link indicator */
+    const navLinks = $$('#navLinks a'), ind = $('#navInd');
+    function moveInd(a) {
+      if (!a || !ind) return;
+      ind.style.left = a.offsetLeft + 'px';
+      ind.style.width = a.offsetWidth + 'px';
+      ind.style.opacity = 1;
+      navLinks.forEach(l => l.classList.toggle('active', l === a));
+    }
+    const sio = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          const match = navLinks.find(l => l.getAttribute('href') === '#' + en.target.id);
+          if (match) moveInd(match);
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    $$('main section[id]').forEach(s => sio.observe(s));
+    if (navLinks.length) moveInd(navLinks[0]);
+
+    /* Mobile menu drawer toggle */
+    const burger = $('#burger');
+    function toggleMenu(open) {
+      document.body.classList.toggle('menu', open);
+      if (burger) burger.setAttribute('aria-expanded', String(open));
+    }
+    if (burger) burger.addEventListener('click', () => toggleMenu(!document.body.classList.contains('menu')));
+
+    // Close menu when clicking any nav link
+    $$('.mmenu a, a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      toggleMenu(false);
+    }));
+
+    /* Tech Stack Directory */
+    const icon = slug => `https://cdn.simpleicons.org/${slug}/ededed`;
+    const tools = [
+      ['React', 'react', 'fe', 'UI library'], ['Next.js', 'nextdotjs', 'fe', 'React framework'], ['TypeScript', 'typescript', 'fe', 'Typed JS'],
+      ['JavaScript', 'javascript', 'fe', 'Language'], ['Tailwind CSS', 'tailwindcss', 'fe', 'Styling'], ['Redux', 'redux', 'fe', 'State'],
+      ['Three.js', 'threedotjs', 'fe', '3D / WebGL'], ['GSAP', 'greensock', 'fe', 'Animation'],
+      ['Node.js', 'nodedotjs', 'be', 'Runtime'], ['Express', 'express', 'be', 'API framework'], ['PHP', 'php', 'be', 'Language'],
+      ['Laravel', 'laravel', 'be', 'PHP framework'], ['Python', 'python', 'be', 'Language'], ['.NET', 'dotnet', 'be', 'Framework'],
+      ['Socket.IO', 'socketdotio', 'be', 'Real-time'],
+      ['MySQL', 'mysql', 'db', 'Relational DB'], ['PostgreSQL', 'postgresql', 'db', 'Relational DB'], ['MongoDB', 'mongodb', 'db', 'Document DB'], ['Prisma', 'prisma', 'db', 'ORM'],
+      ['GoHighLevel', '', 'crm', 'CRM · OAuth 2.0', 'GHL'], ['Zoho CRM', 'zoho', 'crm', 'Enterprise CRM'], ['3CX', '', 'crm', 'Telephony', '3CX'],
+      ['WhatsApp API', 'whatsapp', 'crm', 'Messaging'], ['n8n', 'n8n', 'crm', 'Automation'], ['Make', 'make', 'crm', 'Automation'],
+      ['Stripe', 'stripe', 'crm', 'Payments'],
+      ['WordPress', 'wordpress', 'cms', 'CMS'], ['WooCommerce', 'woocommerce', 'cms', 'Commerce'], ['Shopify', 'shopify', 'cms', 'Commerce'],
+      ['Docker', 'docker', 'ops', 'Containers'], ['Linux', 'linux', 'ops', 'Servers'], ['Nginx', 'nginx', 'ops', 'Web server'], ['PM2', 'pm2', 'ops', 'Process manager'],
+      ['AWS', '', 'ops', 'Cloud', 'AWS'], ['Git & GitHub', 'github', 'ops', 'Version control']
+    ];
+
+    const icHtml = (slug, fb) => slug
+      ? `<span class="ic" data-fb="${fb || ''}"><img src="${icon(slug)}" alt="" loading="lazy" onerror="this.parentNode.classList.add('fb');this.parentNode.dataset.fb=this.parentNode.dataset.fb||'•';this.remove()"></span>`
+      : `<span class="ic fb" data-fb="${fb}"></span>`;
+
+    const grid = $('#stackGrid');
+    if (grid) {
+      grid.innerHTML = tools.map(([n, s, c, d, fb]) => `<div class="tool" data-c="${c}">${icHtml(s, fb || n.slice(0, 2))}<div><b>${n}</b><span>${d}</span></div></div>`).join('');
+    }
+
+    const mq = tools.filter(t => t[1]).slice(0, 20);
+    const mqHtml = mq.map(([n, s]) => `<span class="marquee-item"><img src="${icon(s)}" alt="" loading="lazy" onerror="this.remove()">${n}</span>`).join('');
+    if ($('#marquee')) $('#marquee').innerHTML = mqHtml + mqHtml;
+
+    /* Stack Tabs Filter */
+    const tabs = $$('#tabs .tab');
+    tabs.forEach(t => t.addEventListener('click', () => {
+      tabs.forEach(x => x.classList.toggle('active', x === t));
+      const f = t.dataset.f;
+      $$('.tool', grid).forEach(el => {
+        const show = f === 'all' || el.dataset.c === f;
+        el.classList.toggle('off', !show);
+      });
+    }));
+
+    /* Experience Accordion */
+    $$('.xp-item').forEach(item => {
+      const head = $('.xp-head', item);
+      if (head) {
+        head.addEventListener('click', () => {
+          const open = !item.classList.contains('open');
+          item.classList.toggle('open', open);
+          head.setAttribute('aria-expanded', String(open));
+        });
+      }
+    });
+
+    /* Copy Email + Toast */
+    const toast = $('#toast'), toastTxt = $('#toastTxt');
+    let tt;
+    function showToast(msg) {
+      if (!toast) return;
+      toastTxt.textContent = msg; toast.classList.add('show');
+      clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+    $$('[data-copy]').forEach(b => b.addEventListener('click', () => {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(b.dataset.copy).then(() => showToast('Email copied to clipboard: ' + b.dataset.copy));
+      } else {
+        showToast(b.dataset.copy);
+      }
+    }));
+
+    /* Contact Form Mailto Handler */
+    const form = $('#contactForm');
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const f = e.target;
+        const subject = `${f.type.value} — Inquiry from ${f.name.value}`;
+        const body = `${f.message.value}\n\n—\nName: ${f.name.value}\nEmail: ${f.email.value}`;
+        window.location.href = `mailto:haris.khan5117@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        showToast('Opening your email client…');
+      });
+    }
+
+    /* Architectural Case Studies Data */
+    const GH = 'https://github.com/Haris-Khan-Durrani';
+    const cases = {
+      proposal: {
+        cat: 'Document automation · Enterprise SaaS', title: 'Proposal & Contract Automation Platform', img: 'assets/proposal.jpg',
+        lede: 'An internal platform that transformed sales documentation from manual copy-paste errors into a governed, data-driven workflow — now the standard across EBMS and nine sister companies in Dubai.',
+        role: 'Solution Architect & Lead Developer', status: 'In production · EBMS Group',
+        stack: 'Node.js, Express.js, MySQL, PHP, mPDF, GrapesJS, REST APIs',
+        problem: 'Group companies produced proposals and contracts by hand in Word and Canva. Branding drifted, pricing was frequently mistyped, versions got lost in email threads, and there was zero central visibility over what was sent to clients.',
+        built: [
+          '<b>Visual template builder</b> on GrapesJS with locked corporate branding and legal disclaimer regions.',
+          '<b>Multi-company branding</b> — each sister company receives its own tailored templates, letterheads, brand colors and legal terms.',
+          '<b>Dynamic data binding</b> — client data, packages and pricing injected dynamically via variables instead of retyping.',
+          '<b>Service catalogue</b> with real-time VAT calculation, discount policies and automated itemization.',
+          '<b>Server-side PDF generation</b> via mPDF with pixel-perfect headers, footers and page break guarantees.',
+          '<b>Proposal → Contract conversion</b> — accepted proposals automatically convert into contracts without re-keying.',
+          '<b>Custom workflows for 360 Audit & Business Setup</b> — specialized regulatory and audit compliance document flows.'
+        ],
+        impact: ['Adopted across EBMS and 9 sister companies as the unified document engine.', 'Reduced proposal turnaround from 2 hours to under 5 minutes.', '100% elimination of manual pricing calculation errors.'],
+        live: '', repo: ''
+      },
+      portal: {
+        cat: 'CRM · Multi-company SaaS', title: 'Portal for EBMS & Sister Companies', img: 'assets/portal.jpg',
+        lede: 'A white-label CRM and client operations portal giving every group company a unified, secure dashboard connected directly to GoHighLevel data in real time.',
+        role: 'Solution Architect & Full-Stack Developer', status: 'In production · EBMS Group',
+        stack: 'GoHighLevel OAuth 2.0, Node.js, Express, MySQL, Tailwind CSS, EJS',
+        problem: 'Sister companies needed CRM access tailored to their respective brands and role-based access permissions, without paying for redundant standalone software subscriptions.',
+        built: [
+          '<b>GoHighLevel OAuth 2.0</b> multi-tenant app with secure token storage and automated refresh.',
+          '<b>White-label theming</b> per group company — custom logo, color scheme, domain and notifications.',
+          '<b>Real-time bi-directional sync</b> of leads, pipeline stages, notes and tasks via webhooks and REST endpoints.',
+          '<b>Centralized RBAC</b> allowing managers to govern multi-company access from one master account.'
+        ],
+        impact: ['Unified portal deployed across all group companies.', 'Part of the platform that slashed duplicate software tooling by 80%.'],
+        live: '', repo: ''
+      },
+      school: {
+        cat: 'Multi-tenant SaaS · Education', title: 'School Management ERP', img: 'assets/school.jpg',
+        lede: 'A production multi-tenant ERP platform running education operations end-to-end — from student admissions and grading to payroll and automated WhatsApp parent communication.',
+        role: 'Solution Architect & Lead Developer', status: 'Live in production',
+        stack: 'Next.js, Node.js, Prisma ORM, MySQL, JWT, RBAC, Docker, WhatsApp API',
+        problem: 'Educational institutions juggle disparate tools for admissions, fee collection, gradebooks and HR, while staff manually chase parents by phone for attendance and fees.',
+        built: [
+          '<b>Multi-tenant architecture</b> with isolated database scoping per school.',
+          '<b>Admissions & student records</b> with bulk CSV migration and digital documents.',
+          '<b>Fee management & family billing</b> — supporting sibling discounts, installment plans and digital receipts.',
+          '<b>Automated WhatsApp notifications</b> triggered via webhooks for fee reminders, attendance alerts and school bulletins.',
+          '<b>Teacher and parent portals</b> with role-based access control and real-time report cards.'
+        ],
+        impact: ['Unified administration, academics, accounting and parent communication.', 'Live in active production at sms.onesol.ae.'],
+        live: 'https://sms.onesol.ae/', repo: ''
+      },
+      tablehub: {
+        cat: 'No-code Database SaaS', title: 'TableHub — Collaborative Database & Automations', img: 'assets/tablehub.jpg',
+        lede: 'An Airtable-style platform where businesses build custom databases, interactive dashboards and automated workflows with real-time multi-user collaboration.',
+        role: 'Architect & Full-Stack Developer', status: 'Live SaaS product',
+        stack: 'Next.js, React, TypeScript, Prisma, MySQL, Socket.IO, Stripe',
+        problem: 'Teams outgrow basic spreadsheets but find custom enterprise software slow and expensive to commission.',
+        built: [
+          '<b>Custom database engine</b> with dynamic column types, views (Grid, Kanban) and relational lookups.',
+          '<b>Real-time collaboration</b> with presence detection and cell-level locks over Socket.IO.',
+          '<b>Automation builder</b> allowing users to trigger webhooks, emails and record updates on data events.',
+          '<b>Stripe metered subscription billing</b> with team tier upgrades and customer portal.'
+        ],
+        impact: ['Live SaaS platform running at tablehub.ai.'],
+        live: 'https://tablehub.ai/', repo: ''
+      },
+      dialer: {
+        cat: 'Telephony & AI Integration', title: '3CX AI Auto Caller, Dialer & Web Widget', img: 'assets/dialer.jpg',
+        lede: 'An intelligent outbound dialer and real-time telephony platform built on top of the 3CX PBX Call Control API — featuring CRM screen pops, call analytics and website click-to-call.',
+        role: 'Architect & Developer', status: 'In production',
+        stack: 'Node.js, Express.js, 3CX Call Control API, WebSockets, WebRTC',
+        problem: 'Sales agents dial numbers manually, lead call outcomes are rarely logged into the CRM, and website visitors have to dial manually.',
+        built: [
+          '<b>Automated outbound campaign dialer</b> working through prioritized CRM lead queues.',
+          '<b>3CX Call Control API</b> integration for placing, bridging, recording and transferring calls programmatically.',
+          '<b>Real-time agent dashboard</b> over WebSockets showing active queues, talk time and call recordings.',
+          '<b>Embeddable web-to-agent widget</b> allowing high-intent website visitors to connect to an agent instantly.'
+        ],
+        impact: ['Connected telephony, CRM and inbound web leads into a closed-loop system.'],
+        live: '', repo: ''
+      },
+      nexus: {
+        cat: 'Interactive Web · Custom CMS', title: 'Nexus Basketball', img: 'assets/nexus.jpg',
+        lede: 'A bespoke interactive web platform combining Three.js 3D visuals and GSAP scroll motion with a custom WordPress plugin admin layer for non-technical editors.',
+        role: 'Full-Stack WordPress Developer', status: 'Live',
+        stack: 'WordPress, PHP, Three.js, GSAP, Custom Plugin & Theme',
+        problem: 'The client required cutting-edge motion and 3D interactivity that commercial page builders cannot deliver, without sacrificing admin CMS ease.',
+        built: [
+          '<b>Bespoke theme from scratch</b> with zero third-party bloated builder dependencies.',
+          '<b>Custom admin dashboard</b> allowing staff to manage dynamic schedules, roster data and media.',
+          '<b>Optimized 3D rendering</b> with Three.js ensuring 60fps performance across mobile devices.'
+        ],
+        impact: ['Award-winning visual design running live at nexusbasketball.com.'],
+        live: 'https://nexusbasketball.com/', repo: ''
+      },
+      hammam: {
+        cat: 'E-commerce', title: 'Home Of Hammam', img: 'assets/hammam.jpg',
+        lede: 'A high-converting, mobile-optimized Shopify e-commerce platform for a premium UAE wellness and lifestyle brand.',
+        role: 'Shopify Developer', status: 'Live', stack: 'Shopify, Liquid, Stripe',
+        problem: 'The brand needed a high-performance storefront with fast mobile checkout, local currency conversions and inventory tracking.',
+        built: ['Custom Liquid storefront development.', 'Product variant architecture and multi-tier collections.', 'Frictionless checkout optimization.'],
+        impact: ['Live e-commerce storefront at homeofhammam.ae.'],
+        live: 'https://homeofhammam.ae/', repo: ''
+      },
+      pgvault: {
+        cat: 'DevOps & Disaster Recovery', title: 'PGVault Core', img: 'assets/pgvault.jpg',
+        lede: 'Automated, AES-256 encrypted PostgreSQL backup engine that streams compressed snapshots to S3, Google Drive or local storage with automated retention and one-click restores.',
+        role: 'Open-Source Author', status: 'Open Source', stack: 'TypeScript, PostgreSQL, AWS S3, Google Drive, Docker',
+        problem: 'Database backups frequently rely on fragile bash scripts that go unmonitored until a critical disaster recovery restore is needed.',
+        built: ['Scheduled compression via pg_dump.', 'Client-side AES-256 encryption before transfer.', 'Multi-cloud destinations (AWS S3, Google Drive, local).', 'Web management UI and health check webhooks.'],
+        impact: ['Zero-maintenance backup and restore automation running in Docker.'],
+        live: '', repo: GH + '/PGVault-Core'
+      },
+      accounting: {
+        cat: 'FinTech · UAE Compliance', title: 'Accounting & UAE VAT 201 SaaS', img: '',
+        lede: 'A multi-tenant accounting and billing platform tailored specifically for UAE businesses with automated FTA VAT 201 return reporting.',
+        role: 'Author & Architect', status: 'Open Source', stack: 'PHP, MySQL, Multi-tenant, PDF Engine',
+        problem: 'UAE small businesses need FTA VAT-compliant tax invoicing and automated tax returns without prohibitive enterprise licensing costs.',
+        built: ['20+ financial accounting modules.', '11 customizable tax invoice templates with bilingual Arabic/English support.', 'Automated UAE VAT 201 filing report generation.'],
+        impact: ['Complete open-source accounting engine available on GitHub.'],
+        live: '', repo: GH + '/Free-Accounting-Application'
+      },
+      whatsapp: {
+        cat: 'Messaging & Webhooks', title: 'WhatsApp & WATI Automation Hub', img: '',
+        lede: 'Microservices for dispatching verified WhatsApp templates, handling OTP logins, and synchronizing customer conversations into relational databases.',
+        role: 'Author', status: 'Open Source', stack: 'Node.js, WATI API, WhatsApp Business API, MySQL',
+        problem: 'Operations needed programmatic WhatsApp document dispatch and verification without costly manual agent intervention.',
+        built: ['WATI template dispatch microservice with dynamic parameters.', 'WhatsApp OTP verification flow.', 'Webhook synchronization into relational databases.'],
+        impact: ['Core building block used across group CRM platforms.'],
+        live: '', repo: GH + '/Wati-send-template'
+      },
+      central: {
+        cat: 'Operations & Compliance', title: 'Central Freezone Compliance Hub', img: '',
+        lede: 'A unified operations console to track company formation, immigration and trade license lifecycle stages across major UAE free zones.',
+        role: 'Author', status: 'Internal tool', stack: 'Node.js, Express, MySQL, Tailwind CSS',
+        problem: 'Every UAE free zone operates unique procedural requirements, leading to fragmented tracking across disparate spreadsheets.',
+        built: ['Standardized multi-authority compliance model.', 'Stage-by-stage document and milestone tracking.', 'Automated expiration alerts for renewals.'],
+        impact: ['Eliminated compliance oversights across hundreds of corporate clients.'],
+        live: '', repo: GH + '/centralpanel'
+      },
+      stripe: {
+        cat: 'FinTech · Billing', title: 'Stripe Multi-Tenant Billing Hub', img: '',
+        lede: 'A production-grade subscription billing orchestrator supporting multi-tenant tiered plans, customer portal self-service and HMAC signature-verified webhooks.',
+        role: 'Author', status: 'Open Source', stack: 'Node.js, Express, Stripe API, MySQL',
+        problem: 'SaaS platforms require resilient billing lifecycles with payment failure recovery and automated tier adjustments.',
+        built: ['Stripe Checkout session orchestration.', 'Idempotent webhook handlers with HMAC verification.', 'Customer billing portal integration.'],
+        impact: ['Reliable subscription engine deployed across commercial SaaS products.'],
+        live: '', repo: GH + '/Stripe-Subscription-App'
+      }
+    };
+
+    /* Modal open/close handlers */
+    const modal = $('#modal'), mBody = $('#mBody');
+    let lastFocus = null;
+
+    function openCase(key) {
+      const c = cases[key];
+      if (!c || !mBody) return;
+      const links = [];
+      if (c.live) links.push(`<a class="btn btn-lime" href="${c.live}" target="_blank" rel="noopener">Visit live platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>`);
+      if (c.repo) links.push(`<a class="btn ${c.live ? 'btn-ghost' : 'btn-lime'}" href="${c.repo}" target="_blank" rel="noopener">View GitHub Repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>`);
+      links.push(`<a class="btn btn-ghost" href="#contact" data-close>Discuss similar project</a>`);
+
+      mBody.innerHTML = `
+        ${c.img ? `<div class="m-hero"><img src="${c.img}" alt="${c.title}"></div>` : `<div class="m-hero none">${c.title.split(' ')[0]}</div>`}
+        <div class="m-content">
+          <div class="m-cat">${c.cat}</div>
+          <h2 class="m-title" id="mTitle">${c.title}</h2>
+          <p class="m-lede">${c.lede}</p>
+          <div class="m-meta">
+            <div><small>Role</small><b>${c.role}</b></div>
+            <div><small>Status</small><b>${c.status}</b></div>
+            <div><small>Stack</small><b>${c.stack}</b></div>
+          </div>
+          <div class="m-sec"><h4>Business Challenge</h4><p>${c.problem}</p></div>
+          <div class="m-sec"><h4>Architecture &amp; Features</h4><ul class="m-list">${c.built.map(b => `<li><span>${b}</span></li>`).join('')}</ul></div>
+          <div class="m-sec"><h4>Measurable Impact</h4><div class="m-impact">${c.impact.map(i => `<div>${i}</div>`).join('')}</div></div>
+          <div class="m-actions">${links.join('')}</div>
+        </div>`;
+
+      lastFocus = document.activeElement;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('locked');
+      $('.modal-panel').scrollTop = 0;
+      setTimeout(() => $('.modal-x').focus(), 50);
+
+      $$('[data-close]', mBody).forEach(el => el.addEventListener('click', e => {
+        closeCase();
+      }));
+    }
+
+    function closeCase() {
+      if (!modal) return;
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('locked');
+      if (lastFocus) lastFocus.focus({ preventScroll: true });
+    }
+
+    $$('[data-case]').forEach(el => {
+      el.addEventListener('click', e => {
+        if (e.target.closest('[data-stop]')) return;
+        openCase(el.dataset.case);
+      });
+      el.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openCase(el.dataset.case);
+        }
+      });
+    });
+
+    $$('.modal > [data-close], .modal-x').forEach(el => el.addEventListener('click', closeCase));
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        if (modal.classList.contains('open')) closeCase();
+        toggleMenu(false);
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
