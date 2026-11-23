@@ -1,26 +1,14 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import dynamic from 'next/dynamic';
 import { AnimatePresence, motion } from 'motion/react';
 import gsap from 'gsap';
 import { ArrowDown, ArrowUpRight, Github, MapPin } from 'lucide-react';
 import { HERO_STATS, SITE_CONFIG } from '@/data/portfolio';
+import { HeroSculpture3D } from '@/components/three/HeroSculpture3D';
 import { Magnet } from '@/components/reactbits/Magnet';
 import { SlidingNumber } from '@/components/animate-ui/SlidingNumber';
 import { LiquidButton } from '@/components/animate-ui/LiquidButton';
-
-const HeroSculpture3D = dynamic(
-  () => import('@/components/three/HeroSculpture3D').then((m) => m.HeroSculpture3D),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex h-[400px] w-full items-center justify-center sm:h-[470px] lg:h-[530px]">
-        <div className="h-40 w-40 animate-pulse rounded-3xl border border-[var(--acid)]/25 bg-[radial-gradient(circle,rgba(200,255,61,0.12),transparent_70%)]" />
-      </div>
-    ),
-  }
-);
 
 const ROTATING_DOMAINS = [
   'Enterprise SaaS & ERP',

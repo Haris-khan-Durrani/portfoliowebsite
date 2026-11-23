@@ -10,6 +10,16 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // Prevent CDN / reverse-proxy from serving stale HTML that references old chunk hashes after a new build
+        source: '/((?!_next/static|_next/image|assets|uploads|favicon.ico).*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },

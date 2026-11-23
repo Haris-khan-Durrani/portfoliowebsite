@@ -158,6 +158,16 @@ const themeInitScript = `
   } catch (e) {
     document.documentElement.dataset.theme = 'dark';
   }
+  window.addEventListener('error', function(e) {
+    var msg = (e && e.message) || '';
+    if (msg.indexOf('ChunkLoadError') !== -1 || msg.indexOf('Loading chunk') !== -1) {
+      var key = 'hkd_chunk_reload';
+      if (!sessionStorage.getItem(key)) {
+        sessionStorage.setItem(key, '1');
+        window.location.reload();
+      }
+    }
+  }, true);
 })();
 `;
 

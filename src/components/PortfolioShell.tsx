@@ -1,10 +1,10 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import dynamic from 'next/dynamic';
 import { AnimatePresence, motion } from 'motion/react';
 import { getProjectBySlug, type ProjectItem } from '@/data/portfolio';
 import { CursorFollow } from '@/components/animate-ui/CursorFollow';
+import CyberneticCoreCanvas from '@/components/three/CyberneticCoreCanvas';
 import { Navbar } from '@/components/sections/Navbar';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { ExperienceSection } from '@/components/sections/ExperienceSection';
@@ -20,11 +20,6 @@ import { ContactSection } from '@/components/sections/ContactSection';
 import { FloatingDock } from '@/components/sections/FloatingDock';
 import { BlueprintModal } from '@/components/sections/BlueprintModal';
 import { Footer } from '@/components/sections/Footer';
-
-const CyberneticCoreCanvas = dynamic(
-  () => import('@/components/three/CyberneticCoreCanvas'),
-  { ssr: false }
-);
 
 const TRACKED_SECTIONS = [
   'hero',
