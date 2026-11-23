@@ -162,8 +162,19 @@ export default function BlogAdminStudioPage() {
       const mediaData = await mediaRes.json();
 
       if (postsData.success) {
-        setPosts(postsData.posts || []);
+        const fetchedPosts: BlogPost[] = postsData.posts || [];
+        setPosts(fetchedPosts);
         if (postsData.storage) setStorageInfo(postsData.storage);
+
+        // If arrived via /blog/admin?edit=<slug>, automatically open that post in the editor
+        const params = new URLSearchParams(window.location.search);
+        const editTarget = params.get('edit');
+        if (editTarget) {
+          const found = fetchedPosts.find((p) => p.slug === editTarget);
+          if (found) {
+            handleLoadPostForEdit(found);
+          }
+        }
       }
       if (mediaData.success) {
         setMediaList(mediaData.media || []);

@@ -52,17 +52,11 @@ export function Footer({ posts = INITIAL_BLOG_POSTS }: FooterProps) {
             <Link href="/blog" className="text-[var(--acid)] hover:underline">
               Blog
             </Link>
-            <Link href="/blog/admin" className="text-[var(--text-soft)] hover:text-[var(--acid)]">
-              CMS
-            </Link>
             <a href="/sitemap.xml" className="text-[var(--acid)] hover:underline">
               Sitemap.xml
             </a>
             <a href="/rss.xml" className="text-[var(--cyan)] hover:underline">
               RSS.xml
-            </a>
-            <a href="/llms.txt" className="text-[var(--acid)] hover:underline">
-              llms.txt
             </a>
           </div>
         </div>

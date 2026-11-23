@@ -8,13 +8,15 @@ import {
   ArrowRight,
   CheckCircle2,
   Clock,
+  Edit3,
   HelpCircle,
   Layers,
   ShieldCheck,
   Sparkles,
   Table2,
 } from 'lucide-react';
-import { evaluateSeoAeoGeoScore, getAllBlogPosts, getBlogPostBySlug } from '@/lib/db';
+import { isRequestAdminAuthenticated } from '@/lib/admin-auth';
+import { getAllBlogPosts, getBlogPostBySlug } from '@/lib/db';
 import { SITE_CONFIG } from '@/data/portfolio';
 import { BlogArticleJsonLd } from '@/components/seo/BlogJsonLd';
 import { ArticleActionsBar } from '@/components/blog/ArticleActionsBar';
@@ -261,11 +263,15 @@ export default async function BlogArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const [post, allPosts] = await Promise.all([getBlogPostBySlug(slug), getAllBlogPosts()]);
+  const [post, allPosts, auth] = await Promise.all([
+    getBlogPostBySlug(slug),
+    getAllBlogPosts(),
+    isRequestAdminAuthenticated(),
+  ]);
   if (!post) notFound();
 
   const canonicalUrl = post.canonicalUrl || `${SITE_CONFIG.url}/blog/${post.slug}`;
-  const score = evaluateSeoAeoGeoScore(post);
+  const isAdmin = auth.authenticated;
   const { headings, elements } = renderMarkdownBlocks(post.content);
 
   const currentIndex = allPosts.findIndex((p) => p.slug === post.slug);
@@ -297,17 +303,17 @@ export default async function BlogArticlePage({
             </Link>
           </div>
 
-          <div className="flex items-center gap-2.5">
-            <span className="rounded-full border border-[var(--acid)]/40 bg-[var(--acid)]/10 px-3 py-1 font-mono text-[10px] font-bold text-[var(--acid)]">
-              SEO · AEO · GEO Score: {score.total}/100
-            </span>
-            <Link
-              href="/blog/admin"
-              className="rounded-full border border-[var(--line)] bg-[var(--surface)] px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--text-soft)] hover:border-[var(--acid)] hover:text-[var(--acid)]"
-            >
-              Edit in CMS
-            </Link>
-          </div>
+          {isAdmin && (
+            <div className="flex items-center gap-2.5">
+              <Link
+                href={`/blog/admin?edit=${encodeURIComponent(post.slug)}`}
+                className="inline-flex items-center gap-1.5 rounded-full bg-[var(--acid)] px-4 py-1.5 font-mono text-[10.5px] font-black uppercase tracking-[0.1em] text-[#060608] shadow-[0_4px_18px_var(--acid-glow)]"
+              >
+                <Edit3 className="h-3.5 w-3.5" />
+                <span>Edit This Article</span>
+              </Link>
+            </div>
+          )}
         </div>
       </header>
 
@@ -582,60 +588,19 @@ export default async function BlogArticlePage({
                 </div>
               )}
 
-              {/* SEO / AEO / GEO Readiness Breakdown */}
-              <div className="rounded-[22px] border border-[var(--line)] bg-[var(--surface)] p-5">
-                <div className="mb-3 flex items-center justify-between">
-                  <span className="font-mono text-[10.5px] font-bold uppercase tracking-[0.16em] text-[var(--acid)]">
-                    Search &amp; AI Indexing Score
-                  </span>
-                  <span className="font-mono text-sm font-black text-[var(--acid)]">
-                    {score.total}/100
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-3 gap-2 text-center font-mono text-xs">
-                  <div className="rounded-xl border border-[var(--line)] bg-[var(--surface-card)] p-2.5">
-                    <div className="text-[10px] text-[var(--text-faint)]">SEO</div>
-                    <div className="mt-0.5 font-extrabold text-[var(--acid)]">{score.seo}%</div>
-                  </div>
-                  <div className="rounded-xl border border-[var(--line)] bg-[var(--surface-card)] p-2.5">
-                    <div className="text-[10px] text-[var(--text-faint)]">AEO</div>
-                    <div className="mt-0.5 font-extrabold text-[var(--cyan)]">{score.aeo}%</div>
-                  </div>
-                  <div className="rounded-xl border border-[var(--line)] bg-[var(--surface-card)] p-2.5">
-                    <div className="text-[10px] text-[var(--text-faint)]">GEO</div>
-                    <div className="mt-0.5 font-extrabold text-emerald-400">{score.geo}%</div>
-                  </div>
-                </div>
-
-                <ul className="mt-4 space-y-2 pl-0 list-none text-[11.5px] text-[var(--text-soft)]">
-                  {score.checks.map((c, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--acid)]" />
-                      <span>
-                        <strong className="font-mono text-[10px] text-[var(--page-text)]">
-                          [{c.pillar}]
-                        </strong>{' '}
-                        {c.label}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* GEO Knowledge Graph Entities */}
+              {/* Topics & Knowledge Graph Entities */}
               <div className="rounded-[22px] border border-[var(--line)] bg-[var(--surface)] p-5">
                 <div className="mb-3 flex items-center gap-1.5 font-mono text-[10.5px] font-bold uppercase tracking-[0.16em] text-[var(--cyan)]">
                   <Layers className="h-3.5 w-3.5" />
-                  <span>GEO Knowledge Graph Entities</span>
+                  <span>Topics &amp; Technologies</span>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
-                  {post.geoEntities.map((entity) => (
+                  {post.tags.map((tag) => (
                     <span
-                      key={entity}
+                      key={tag}
                       className="rounded-full border border-[var(--line)] bg-[var(--surface-card)] px-2.5 py-1 font-mono text-[10px] text-[var(--page-text)]"
                     >
-                      {entity}
+                      {tag}
                     </span>
                   ))}
                 </div>

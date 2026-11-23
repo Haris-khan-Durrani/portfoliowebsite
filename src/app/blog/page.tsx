@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { getAllBlogPosts, getStorageEngineStatus } from '@/lib/db';
+import { isRequestAdminAuthenticated } from '@/lib/admin-auth';
+import { getAllBlogPosts } from '@/lib/db';
 import { SITE_CONFIG } from '@/data/portfolio';
 import { BlogListJsonLd } from '@/components/seo/BlogJsonLd';
 import { BlogHubClient } from '@/components/blog/BlogHubClient';
@@ -8,7 +9,7 @@ import { Footer } from '@/components/sections/Footer';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Architecture & Engineering Journal (SEO · AEO · GEO Blueprints)',
+  title: 'Architecture & Engineering Journal',
   description:
     'Deep production engineering case studies by Haris Khan Durrani (Head of IT & Solution Architect, Dubai) covering GoHighLevel OAuth 2.0, 3CX AI Telephony, Next.js Multi-Tenant ERPs, and PostgreSQL Disaster Recovery.',
   alternates: {
@@ -27,16 +28,16 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogIndexPage() {
-  const [posts, storageStatus] = await Promise.all([
+  const [posts, auth] = await Promise.all([
     getAllBlogPosts(),
-    getStorageEngineStatus(),
+    isRequestAdminAuthenticated(),
   ]);
 
   return (
     <>
       <BlogListJsonLd posts={posts} />
-      <BlogHubClient initialPosts={posts} storageStatus={storageStatus} />
-      <Footer />
+      <BlogHubClient initialPosts={posts} isAdmin={auth.authenticated} />
+      <Footer posts={posts} />
     </>
   );
 }

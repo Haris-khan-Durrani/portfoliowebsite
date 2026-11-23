@@ -54,22 +54,6 @@ export function BlogPreviewSection({ posts = INITIAL_BLOG_POSTS }: BlogPreviewSe
                 <span>Explore All Articles ({posts.length})</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
-              <Link
-                href="/blog/admin"
-                className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--surface)] px-4 py-2.5 font-mono text-[10.5px] font-bold uppercase tracking-[0.1em] text-[var(--page-text)] transition-colors hover:border-[var(--acid)] hover:text-[var(--acid)]"
-              >
-                <PlusCircle className="h-3.5 w-3.5 text-[var(--acid)]" />
-                <span>CMS Studio</span>
-              </Link>
-              <a
-                href="/llms.txt"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--surface)] px-3.5 py-2.5 font-mono text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--text-soft)] transition-colors hover:border-[var(--cyan)] hover:text-[var(--cyan)]"
-              >
-                <Bot className="h-3.5 w-3.5 text-[var(--cyan)]" />
-                <span>llms.txt</span>
-              </a>
             </div>
           </div>
         </div>

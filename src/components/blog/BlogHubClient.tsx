@@ -22,14 +22,10 @@ import { cn } from '@/lib/utils';
 
 interface BlogHubClientProps {
   initialPosts: BlogPost[];
-  storageStatus: {
-    engine: 'mysql' | 'json-fallback';
-    connected: boolean;
-    database: string;
-  };
+  isAdmin?: boolean;
 }
 
-export function BlogHubClient({ initialPosts, storageStatus }: BlogHubClientProps) {
+export function BlogHubClient({ initialPosts, isAdmin = false }: BlogHubClientProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
@@ -84,23 +80,6 @@ export function BlogHubClient({ initialPosts, storageStatus }: BlogHubClientProp
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5">
-            <span className="hidden items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--surface)] px-3 py-1 font-mono text-[10px] text-[var(--text-soft)] sm:inline-flex">
-              <Database className="h-3 w-3 text-[var(--acid)]" />
-              <span>
-                {storageStatus.engine === 'mysql' ? 'MySQL Connected' : 'MySQL Ready · Hybrid Store'}
-              </span>
-            </span>
-
-            <a
-              href="/llms.txt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--surface)] px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--cyan)] hover:border-[var(--cyan)]"
-            >
-              <Bot className="h-3.5 w-3.5" />
-              <span>llms.txt</span>
-            </a>
-
             <a
               href="/rss.xml"
               target="_blank"
@@ -108,16 +87,18 @@ export function BlogHubClient({ initialPosts, storageStatus }: BlogHubClientProp
               className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--surface)] px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--text-soft)] hover:border-[var(--acid)] hover:text-[var(--acid)]"
             >
               <Rss className="h-3.5 w-3.5" />
-              <span>RSS</span>
+              <span>RSS Feed</span>
             </a>
 
-            <Link
-              href="/blog/admin"
-              className="inline-flex items-center gap-1.5 rounded-full bg-[var(--acid)] px-4 py-1.5 font-mono text-[10.5px] font-extrabold uppercase tracking-[0.1em] text-[#060608]"
-            >
-              <PlusCircle className="h-3.5 w-3.5" />
-              <span>Write / Manage</span>
-            </Link>
+            {isAdmin && (
+              <Link
+                href="/blog/admin"
+                className="inline-flex items-center gap-1.5 rounded-full bg-[var(--acid)] px-4 py-1.5 font-mono text-[10.5px] font-extrabold uppercase tracking-[0.1em] text-[#060608]"
+              >
+                <PlusCircle className="h-3.5 w-3.5" />
+                <span>Write / Manage</span>
+              </Link>
+            )}
           </div>
         </div>
       </header>
@@ -255,15 +236,14 @@ export function BlogHubClient({ initialPosts, storageStatus }: BlogHubClientProp
                     </div>
 
                     <div className="flex items-center gap-2.5">
-                      <a
-                        href={`/api/blog/${heroPost.slug}?format=md`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 rounded-full border border-[var(--line)] px-3.5 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--text-soft)] hover:border-[var(--cyan)] hover:text-[var(--cyan)]"
-                      >
-                        <FileCode2 className="h-3.5 w-3.5" />
-                        <span>Raw .MD</span>
-                      </a>
+                      {isAdmin && (
+                        <Link
+                          href={`/blog/admin?edit=${encodeURIComponent(heroPost.slug)}`}
+                          className="inline-flex items-center gap-1 rounded-full border border-[var(--acid)]/45 bg-[var(--acid)]/10 px-3.5 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--acid)] hover:bg-[var(--acid)] hover:text-[#060608]"
+                        >
+                          <span>Edit Post</span>
+                        </Link>
+                      )}
                       <Link
                         href={`/blog/${heroPost.slug}`}
                         className="inline-flex items-center gap-1.5 rounded-full bg-[var(--acid)] px-5 py-2.5 font-mono text-[10.5px] font-black uppercase tracking-[0.12em] text-[#060608]"
@@ -335,13 +315,23 @@ export function BlogHubClient({ initialPosts, storageStatus }: BlogHubClientProp
                       <span className="font-mono text-[10px] text-[var(--text-faint)]">
                         {post.faqs.length} FAQs · {post.keyTakeaways.length} Takeaways
                       </span>
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="inline-flex items-center gap-1 font-mono text-[10.5px] font-extrabold uppercase tracking-[0.1em] text-[var(--acid)]"
-                      >
-                        <span>Inspect</span>
-                        <ArrowUpRight className="h-3.5 w-3.5" />
-                      </Link>
+                      <div className="flex items-center gap-3">
+                        {isAdmin && (
+                          <Link
+                            href={`/blog/admin?edit=${encodeURIComponent(post.slug)}`}
+                            className="font-mono text-[10px] font-bold uppercase text-[var(--cyan)] hover:underline"
+                          >
+                            Edit
+                          </Link>
+                        )}
+                        <Link
+                          href={`/blog/${post.slug}`}
+                          className="inline-flex items-center gap-1 font-mono text-[10.5px] font-extrabold uppercase tracking-[0.1em] text-[var(--acid)]"
+                        >
+                          <span>Read</span>
+                          <ArrowUpRight className="h-3.5 w-3.5" />
+                        </Link>
+                      </div>
                     </div>
                   </SpotlightCard>
                 ))}
