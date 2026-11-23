@@ -6,6 +6,8 @@ import {
   getStorageEngineStatus,
   upsertBlogPost,
 } from '@/lib/db';
+import { pingIndexNow } from '@/lib/indexnow';
+import { SITE_CONFIG } from '@/data/portfolio';
 
 export const runtime = 'nodejs';
 
@@ -119,6 +121,16 @@ export async function POST(request: Request) {
     });
 
     const score = evaluateSeoAeoGeoScore(post);
+
+    // Auto-ping IndexNow (Bing, ChatGPT Search, Copilot, Yandex) on publish
+    if (post.published) {
+      void pingIndexNow([
+        `${SITE_CONFIG.url}/blog/${post.slug}`,
+        `${SITE_CONFIG.url}/blog`,
+        `${SITE_CONFIG.url}/sitemap.xml`,
+        `${SITE_CONFIG.url}/llms.txt`,
+      ]);
+    }
 
     return NextResponse.json({
       success: true,

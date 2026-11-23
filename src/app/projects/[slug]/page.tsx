@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ArrowRight, ExternalLink, Github, Lock } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, ExternalLink, Github, Lock } from 'lucide-react';
+import { INITIAL_BLOG_POSTS } from '@/data/blog-seed';
 import { getProjectBySlug, PROJECTS, SITE_CONFIG } from '@/data/portfolio';
 import { ProjectJsonLd } from '@/components/seo/JsonLd';
 import { Footer } from '@/components/sections/Footer';
@@ -225,6 +226,41 @@ export default async function ProjectBlueprintPage({
             </div>
           </section>
         </div>
+
+        {/* Automated Bi-Directional Topic Cluster: Related Architecture Blog Articles */}
+        <section
+          aria-label="Related Architecture Articles"
+          className="mt-10 rounded-[24px] border border-[var(--line)] bg-[var(--surface)] p-6 sm:p-8"
+        >
+          <div className="mb-4 flex items-center justify-between gap-2">
+            <span className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.16em] text-[var(--acid)]">
+              <BookOpen className="h-4 w-4" />
+              <span>Related Engineering &amp; Architecture Journal Deep-Dives</span>
+            </span>
+            <Link
+              href="/blog"
+              className="font-mono text-xs font-bold text-[var(--cyan)] hover:underline"
+            >
+              All Articles →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            {INITIAL_BLOG_POSTS.slice(0, 3).map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group rounded-2xl border border-[var(--line)] bg-[var(--surface-card)] p-4 transition-colors hover:border-[var(--acid)]"
+              >
+                <div className="mb-1 font-mono text-[9.5px] uppercase text-[var(--acid)]">
+                  {post.category}
+                </div>
+                <div className="line-clamp-2 text-xs font-extrabold text-[var(--page-text)] group-hover:text-[var(--acid)]">
+                  {post.title}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         {/* Next / Prev System Navigation */}
         <nav

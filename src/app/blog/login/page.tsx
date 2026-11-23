@@ -3,12 +3,12 @@
 import { useState, type FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Eye, EyeOff, KeyRound, Lock, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowLeft, Eye, EyeOff, Lock, ShieldCheck } from 'lucide-react';
 import { SITE_CONFIG } from '@/data/portfolio';
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [identifier, setIdentifier] = useState('haris.khan5117@gmail.com');
+  const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -74,18 +74,17 @@ export default function AdminLoginPage() {
             </div>
             <div>
               <div className="font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--acid)]">
-                ADMINISTRATION PORTAL
+                RESTRICTED ACCESS
               </div>
               <h1 className="m-0 text-2xl font-extrabold tracking-[-0.03em] text-[var(--page-text)]">
-                Blog &amp; Media Studio
+                Admin Authentication
               </h1>
             </div>
           </div>
 
           <p className="mb-6 text-xs leading-relaxed text-[var(--text-soft)]">
-            Sign in as <strong className="text-[var(--page-text)]">{SITE_CONFIG.name}</strong> to
-            create, edit, or delete MySQL blog articles, upload media assets to the server, and
-            manage SEO, AEO &amp; GEO indexing.
+            Authorized administrator access only. Sign in to manage articles, media assets, and
+            search indexing.
           </p>
 
           {error && (
@@ -111,7 +110,7 @@ export default function AdminLoginPage() {
                 required
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
-                placeholder="haris.khan5117@gmail.com"
+                placeholder="Enter admin email or username"
                 autoComplete="username"
                 className="w-full rounded-xl border border-[var(--line)] bg-[var(--surface-card)] px-4 py-3 text-sm text-[var(--page-text)] focus:border-[var(--acid)] focus:outline-none"
               />
@@ -131,7 +130,7 @@ export default function AdminLoginPage() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter admin password..."
+                  placeholder="Enter admin password"
                   autoComplete="current-password"
                   className="w-full rounded-xl border border-[var(--line)] bg-[var(--surface-card)] py-3 pl-4 pr-11 text-sm text-[var(--page-text)] focus:border-[var(--acid)] focus:outline-none"
                 />
@@ -152,43 +151,14 @@ export default function AdminLoginPage() {
               className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--acid)] py-3.5 font-mono text-xs font-black uppercase tracking-[0.14em] text-[#060608] shadow-[0_10px_28px_var(--acid-glow)] transition-transform hover:-translate-y-0.5 cursor-pointer disabled:opacity-50"
             >
               <ShieldCheck className="h-4 w-4" />
-              <span>{loading ? 'Authenticating...' : 'Sign In to CMS Studio'}</span>
+              <span>{loading ? 'Authenticating...' : 'Sign In'}</span>
             </button>
           </form>
-
-          {/* Quick Local Dev Credential Fill Helper */}
-          <div className="mt-6 rounded-2xl border border-[var(--line)] bg-[var(--surface-card)] p-3.5">
-            <div className="mb-1.5 flex items-center justify-between font-mono text-[10px] text-[var(--text-faint)]">
-              <span className="inline-flex items-center gap-1.5 text-[var(--acid)]">
-                <KeyRound className="h-3 w-3" />
-                Default Admin Credentials (.env configurable)
-              </span>
-              <button
-                type="button"
-                onClick={() => {
-                  setIdentifier('haris.khan5117@gmail.com');
-                  setPassword('HKD-Architect-2026!');
-                }}
-                className="inline-flex items-center gap-1 rounded-full border border-[var(--acid)]/40 bg-[var(--acid)]/10 px-2.5 py-0.5 font-bold text-[var(--acid)] hover:bg-[var(--acid)] hover:text-[#060608] cursor-pointer"
-              >
-                <Sparkles className="h-2.5 w-2.5" />
-                <span>Auto-Fill</span>
-              </button>
-            </div>
-            <div className="font-mono text-[11px] text-[var(--text-soft)]">
-              <div>
-                Email: <code className="text-[var(--page-text)]">haris.khan5117@gmail.com</code>
-              </div>
-              <div>
-                Pass: <code className="text-[var(--page-text)]">HKD-Architect-2026!</code>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
 
       <footer className="relative z-10 text-center font-mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--text-faint)]">
-        HMAC-SHA256 Signed HttpOnly Session · {SITE_CONFIG.domain}
+        Protected Session · {SITE_CONFIG.domain}
       </footer>
     </div>
   );

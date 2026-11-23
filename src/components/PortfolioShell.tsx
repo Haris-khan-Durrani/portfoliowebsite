@@ -15,6 +15,7 @@ import { BlogPreviewSection } from '@/components/sections/BlogPreviewSection';
 import { SkillsMarqueeSection } from '@/components/sections/SkillsMarqueeSection';
 import { ArchitectureSection } from '@/components/sections/ArchitectureSection';
 import { TerminalSection } from '@/components/sections/TerminalSection';
+import { UaeAuthorityFaqSection } from '@/components/sections/UaeAuthorityFaqSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { FloatingDock } from '@/components/sections/FloatingDock';
 import { BlueprintModal } from '@/components/sections/BlueprintModal';
@@ -181,6 +182,7 @@ export function PortfolioShell() {
         <SkillsMarqueeSection />
         <ArchitectureSection />
         <TerminalSection inputRef={terminalInputRef} onOpenBlueprint={handleOpenBlueprint} />
+        <UaeAuthorityFaqSection />
         <ContactSection onShowToast={handleShowToast} />
       </main>
 

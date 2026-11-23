@@ -582,6 +582,23 @@ export default function BlogAdminStudioPage() {
 
             <button
               type="button"
+              onClick={async () => {
+                setStatusMsg({ ok: true, text: 'Pinging IndexNow (Bing, ChatGPT Search, Copilot)...' });
+                const res = await fetch('/api/seo/indexnow', { method: 'POST' });
+                const data = await res.json();
+                setStatusMsg({
+                  ok: true,
+                  text: `IndexNow Dispatched (${data.urlCount || 20} URLs): ${data.note || 'Submitted'}`,
+                });
+              }}
+              className="inline-flex items-center gap-1 rounded-full border border-[var(--cyan)]/45 bg-[var(--cyan)]/10 px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--cyan)] hover:bg-[var(--cyan)] hover:text-[#060608] cursor-pointer"
+            >
+              <Sparkles className="h-3.5 w-3.5" />
+              <span>Ping IndexNow</span>
+            </button>
+
+            <button
+              type="button"
               onClick={resetFormToNew}
               className="inline-flex items-center gap-1 rounded-full border border-[var(--acid)]/45 bg-[var(--acid)]/10 px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--acid)] hover:bg-[var(--acid)] hover:text-[#060608] cursor-pointer"
             >
