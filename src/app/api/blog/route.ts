@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { isRequestAdminAuthenticated } from '@/lib/admin-auth';
 import {
   evaluateSeoAeoGeoScore,
   getAllBlogPosts,
@@ -36,15 +37,16 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const auth = await isRequestAdminAuthenticated(request);
+  if (!auth.authenticated) {
+    return NextResponse.json(
+      { success: false, error: 'Unauthorized. Please log in at /blog/login.' },
+      { status: 401 }
+    );
+  }
+
   try {
     const body = await request.json();
-    const adminKey = process.env.BLOG_ADMIN_KEY;
-    if (adminKey && body.adminKey && body.adminKey !== adminKey) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid BLOG_ADMIN_KEY.' },
-        { status: 401 }
-      );
-    }
 
     const title = String(body.title || '').trim();
     const slug = slugify(String(body.slug || title));
@@ -107,6 +109,7 @@ export async function POST(request: Request) {
       geoEntities,
       metaTitle: body.metaTitle ? String(body.metaTitle).trim() : undefined,
       metaDescription: body.metaDescription ? String(body.metaDescription).trim() : undefined,
+      canonicalUrl: body.canonicalUrl ? String(body.canonicalUrl).trim() : undefined,
       authorName: String(body.authorName || 'Haris Khan Durrani').trim(),
       authorRole: String(
         body.authorRole || 'Head of IT | Senior Full-Stack Developer | Solution Architect'

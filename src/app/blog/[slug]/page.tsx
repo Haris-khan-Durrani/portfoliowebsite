@@ -153,6 +153,31 @@ function renderMarkdownBlocks(markdown: string): {
       continue;
     }
 
+    // Standalone Markdown Image ![alt](url)
+    const imgMatch = line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (imgMatch) {
+      elements.push(
+        <figure
+          key={`img-${key++}`}
+          className="my-7 overflow-hidden rounded-2xl border border-[var(--line)] bg-[#07080d]"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={imgMatch[2]}
+            alt={imgMatch[1] || 'Article architectural figure'}
+            className="max-h-[540px] w-full object-cover"
+          />
+          {imgMatch[1] && (
+            <figcaption className="border-t border-[var(--line-subtle)] bg-[var(--surface)] px-4 py-2.5 text-center font-mono text-[11px] text-[var(--text-soft)]">
+              {imgMatch[1]}
+            </figcaption>
+          )}
+        </figure>
+      );
+      i++;
+      continue;
+    }
+
     // H2
     if (line.startsWith('## ')) {
       const text = line.slice(3).trim();

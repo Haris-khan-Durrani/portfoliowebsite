@@ -1,8 +1,10 @@
 import { NextResponse } from 'next/server';
+import { isRequestAdminAuthenticated } from '@/lib/admin-auth';
 import {
   deleteBlogPostBySlug,
   evaluateSeoAeoGeoScore,
   getBlogPostBySlug,
+  upsertBlogPost,
 } from '@/lib/db';
 import { SITE_CONFIG } from '@/data/portfolio';
 
@@ -19,7 +21,6 @@ export async function GET(
   }
 
   const { searchParams } = new URL(request.url);
-  // GEO raw markdown mode for AI agents & LLM citation extraction (?format=md)
   if (searchParams.get('format') === 'md') {
     const md = [
       `# ${post.title}`,
@@ -56,10 +57,54 @@ export async function GET(
   });
 }
 
-export async function DELETE(
-  _request: Request,
+// Quick partial update (toggle published / featured / etc.)
+export async function PATCH(
+  request: Request,
   { params }: { params: Promise<{ slug: string }> }
 ) {
+  const auth = await isRequestAdminAuthenticated(request);
+  if (!auth.authenticated) {
+    return NextResponse.json(
+      { success: false, error: 'Unauthorized. Please log in at /blog/login.' },
+      { status: 401 }
+    );
+  }
+
+  const { slug } = await params;
+  const existing = await getBlogPostBySlug(slug);
+  if (!existing) {
+    return NextResponse.json({ success: false, error: 'Article not found.' }, { status: 404 });
+  }
+
+  const patch = await request.json();
+  const { post, engine } = await upsertBlogPost({
+    ...existing,
+    featured: typeof patch.featured === 'boolean' ? patch.featured : existing.featured,
+    published: typeof patch.published === 'boolean' ? patch.published : existing.published,
+    title: patch.title ?? existing.title,
+    category: patch.category ?? existing.category,
+    coverImage: patch.coverImage ?? existing.coverImage,
+  });
+
+  return NextResponse.json({
+    success: true,
+    engine,
+    post,
+  });
+}
+
+export async function DELETE(
+  request: Request,
+  { params }: { params: Promise<{ slug: string }> }
+) {
+  const auth = await isRequestAdminAuthenticated(request);
+  if (!auth.authenticated) {
+    return NextResponse.json(
+      { success: false, error: 'Unauthorized. Please log in at /blog/login.' },
+      { status: 401 }
+    );
+  }
+
   const { slug } = await params;
   await deleteBlogPostBySlug(slug);
   return NextResponse.json({ success: true, deletedSlug: slug });
