@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { getProjectBySlug, type ProjectItem } from '@/data/portfolio';
+import { INITIAL_BLOG_POSTS, type BlogPost } from '@/data/blog-seed';
 import { CursorFollow } from '@/components/animate-ui/CursorFollow';
 import CyberneticCoreCanvas from '@/components/three/CyberneticCoreCanvas';
 import { Navbar } from '@/components/sections/Navbar';
@@ -47,7 +48,11 @@ function formatDubaiTime(): string {
   );
 }
 
-export function PortfolioShell() {
+interface PortfolioShellProps {
+  initialBlogPosts?: BlogPost[];
+}
+
+export function PortfolioShell({ initialBlogPosts = INITIAL_BLOG_POSTS }: PortfolioShellProps) {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [dubaiTime, setDubaiTime] = useState<string>('--:--:-- GST');
   const [scrollProgress, setScrollProgress] = useState<number>(0);
@@ -173,7 +178,7 @@ export function PortfolioShell() {
         <DossiersSection onOpenBlueprint={handleOpenBlueprint} />
         <CodePlaygroundSection onShowToast={handleShowToast} />
         <ProjectsSection onOpenBlueprint={handleOpenBlueprint} />
-        <BlogPreviewSection />
+        <BlogPreviewSection posts={initialBlogPosts} />
         <SkillsMarqueeSection />
         <ArchitectureSection />
         <TerminalSection inputRef={terminalInputRef} onOpenBlueprint={handleOpenBlueprint} />
@@ -185,7 +190,7 @@ export function PortfolioShell() {
       <FloatingDock scrollProgress={scrollProgress} activeSection={activeSection} />
 
       {/* Footer */}
-      <Footer />
+      <Footer posts={initialBlogPosts} />
 
       {/* System Blueprint Modal Dialog */}
       <BlueprintModal project={activeBlueprint} onClose={() => setActiveBlueprint(null)} />

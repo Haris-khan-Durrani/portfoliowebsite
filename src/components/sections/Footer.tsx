@@ -1,8 +1,12 @@
 import Link from 'next/link';
-import { INITIAL_BLOG_POSTS } from '@/data/blog-seed';
+import { INITIAL_BLOG_POSTS, type BlogPost } from '@/data/blog-seed';
 import { PROJECTS, SITE_CONFIG } from '@/data/portfolio';
 
-export function Footer() {
+interface FooterProps {
+  posts?: BlogPost[];
+}
+
+export function Footer({ posts = INITIAL_BLOG_POSTS }: FooterProps) {
   return (
     <footer className="relative z-10 border-t border-[var(--line)] bg-[var(--surface)] px-[clamp(16px,4vw,72px)] pb-24 pt-10 lg:pb-24">
       <div className="mx-auto max-w-[1360px] space-y-5">
@@ -25,7 +29,7 @@ export function Footer() {
           <Link href="/blog" className="font-bold uppercase text-[var(--cyan)] hover:underline">
             Architecture Journal (SEO · AEO · GEO):
           </Link>
-          {INITIAL_BLOG_POSTS.map((post) => (
+          {posts.slice(0, 8).map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
