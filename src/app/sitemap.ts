@@ -1,8 +1,10 @@
 import type { MetadataRoute } from 'next';
+import { getAllBlogPosts } from '@/lib/db';
 import { PROJECTS, SITE_CONFIG } from '@/data/portfolio';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+  const blogPosts = await getAllBlogPosts();
 
   const homeImages = [
     `${SITE_CONFIG.url}/opengraph-image`,
@@ -17,6 +19,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(project.image ? { images: [`${SITE_CONFIG.url}${project.image}`] } : {}),
   }));
 
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${SITE_CONFIG.url}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt || post.publishedAt),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+    ...(post.coverImage ? { images: [`${SITE_CONFIG.url}${post.coverImage}`] } : {}),
+  }));
+
   return [
     {
       url: `${SITE_CONFIG.url}/`,
@@ -25,6 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
       images: homeImages,
     },
+    {
+      url: `${SITE_CONFIG.url}/blog`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+    ...blogRoutes,
     ...projectRoutes,
   ];
 }

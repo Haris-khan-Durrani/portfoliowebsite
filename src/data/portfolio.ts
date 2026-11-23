@@ -1143,10 +1143,11 @@ export const NAV_ITEMS = [
   { id: 'experience', label: 'Experience', mobileIndex: '01', mobileTitle: 'Experience & Leadership' },
   { id: 'dossiers', label: 'Blueprints', mobileIndex: '02', mobileTitle: 'Architectural Blueprints' },
   { id: 'work', label: 'Systems (12)', mobileIndex: '03', mobileTitle: '12 Production Systems' },
-  { id: 'codeplay', label: 'Code', mobileIndex: '04', mobileTitle: 'Code Playground' },
-  { id: 'architecture', label: 'Stack', mobileIndex: '05', mobileTitle: 'Technology Stack', hideInTopbar: true },
-  { id: 'terminal', label: 'Console >_', mobileIndex: '06', mobileTitle: 'Interactive Terminal' },
-  { id: 'contact', label: 'Contact', mobileIndex: '07', mobileTitle: 'Get In Touch' },
+  { id: 'blog', label: 'Blog', mobileIndex: '04', mobileTitle: 'Architecture Blog (SEO/GEO)' },
+  { id: 'codeplay', label: 'Code', mobileIndex: '05', mobileTitle: 'Code Playground' },
+  { id: 'architecture', label: 'Stack', mobileIndex: '06', mobileTitle: 'Technology Stack', hideInTopbar: true },
+  { id: 'terminal', label: 'Console >_', mobileIndex: '07', mobileTitle: 'Interactive Terminal' },
+  { id: 'contact', label: 'Contact', mobileIndex: '08', mobileTitle: 'Get In Touch' },
 ];
 
 export function getProjectBySlug(slug: string): ProjectItem | undefined {

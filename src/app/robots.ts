@@ -6,8 +6,24 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        disallow: ['/api/'],
+        allow: ['/', '/blog', '/projects', '/llms.txt', '/llms-full.txt', '/rss.xml'],
+        disallow: ['/api/contact', '/blog/admin'],
+      },
+      // Explicitly allow Generative AI & Answer Engine Crawlers (GEO / AEO)
+      {
+        userAgent: [
+          'OAI-SearchBot',
+          'ChatGPT-User',
+          'GPTBot',
+          'ClaudeBot',
+          'Claude-Web',
+          'PerplexityBot',
+          'Google-Extended',
+          'GoogleOther',
+          'Applebot-Extended',
+          'Amazonbot',
+        ],
+        allow: ['/', '/blog/', '/projects/', '/llms.txt', '/llms-full.txt', '/rss.xml'],
       },
     ],
     sitemap: `${SITE_CONFIG.url}/sitemap.xml`,

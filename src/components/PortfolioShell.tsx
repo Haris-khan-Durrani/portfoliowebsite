@@ -11,6 +11,7 @@ import { ExperienceSection } from '@/components/sections/ExperienceSection';
 import { DossiersSection } from '@/components/sections/DossiersSection';
 import { CodePlaygroundSection } from '@/components/sections/CodePlaygroundSection';
 import { ProjectsSection } from '@/components/sections/ProjectsSection';
+import { BlogPreviewSection } from '@/components/sections/BlogPreviewSection';
 import { SkillsMarqueeSection } from '@/components/sections/SkillsMarqueeSection';
 import { ArchitectureSection } from '@/components/sections/ArchitectureSection';
 import { TerminalSection } from '@/components/sections/TerminalSection';
@@ -30,6 +31,7 @@ const TRACKED_SECTIONS = [
   'dossiers',
   'codeplay',
   'work',
+  'blog',
   'skills',
   'architecture',
   'terminal',
@@ -175,6 +177,7 @@ export function PortfolioShell() {
         <DossiersSection onOpenBlueprint={handleOpenBlueprint} />
         <CodePlaygroundSection onShowToast={handleShowToast} />
         <ProjectsSection onOpenBlueprint={handleOpenBlueprint} />
+        <BlogPreviewSection />
         <SkillsMarqueeSection />
         <ArchitectureSection />
         <TerminalSection inputRef={terminalInputRef} onOpenBlueprint={handleOpenBlueprint} />

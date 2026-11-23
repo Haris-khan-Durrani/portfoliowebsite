@@ -1,12 +1,13 @@
 import Link from 'next/link';
+import { INITIAL_BLOG_POSTS } from '@/data/blog-seed';
 import { PROJECTS, SITE_CONFIG } from '@/data/portfolio';
 
 export function Footer() {
   return (
     <footer className="relative z-10 border-t border-[var(--line)] bg-[var(--surface)] px-[clamp(16px,4vw,72px)] pb-24 pt-10 lg:pb-24">
-      <div className="mx-auto max-w-[1360px] space-y-6">
-        {/* SEO Indexable Blueprint Quick Links */}
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-[var(--line-subtle)] pb-5 font-mono text-[10px] uppercase tracking-[0.1em] text-[var(--text-faint)]">
+      <div className="mx-auto max-w-[1360px] space-y-5">
+        {/* SEO Indexable System Blueprints Quick Links */}
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-[var(--line-subtle)] pb-4 font-mono text-[10px] uppercase tracking-[0.1em] text-[var(--text-faint)]">
           <span className="font-bold text-[var(--acid)]">System Blueprints:</span>
           {PROJECTS.map((project) => (
             <Link
@@ -19,20 +20,45 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Core Footer Row from index.backup.html */}
+        {/* SEO / AEO / GEO Blog Articles Quick Links */}
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-[var(--line-subtle)] pb-4 font-mono text-[10px] tracking-[0.06em] text-[var(--text-faint)]">
+          <Link href="/blog" className="font-bold uppercase text-[var(--cyan)] hover:underline">
+            Architecture Journal (SEO · AEO · GEO):
+          </Link>
+          {INITIAL_BLOG_POSTS.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="transition-colors hover:text-[var(--page-text)]"
+            >
+              {post.category}
+            </Link>
+          ))}
+        </div>
+
+        {/* Core Footer Row */}
         <div className="flex flex-wrap items-center justify-between gap-4 font-mono text-[10.5px] uppercase tracking-[0.14em] text-[var(--text-faint)]">
           <div>
             <strong className="text-[var(--page-text)]">{SITE_CONFIG.name}</strong> · Dubai, UAE ·{' '}
             {SITE_CONFIG.phone}
           </div>
           <div>Head of IT · Solution Architecture · Full-Stack Systems · Telephony · DevOps</div>
-          <div className="flex items-center gap-4">
-            <span>&copy; 2026 All Rights Reserved · {SITE_CONFIG.domain}</span>
-            <a
-              href="/sitemap.xml"
-              className="text-[var(--acid)] transition-opacity hover:opacity-80"
-            >
+          <div className="flex flex-wrap items-center gap-3.5">
+            <span>&copy; 2026 {SITE_CONFIG.domain}</span>
+            <Link href="/blog" className="text-[var(--acid)] hover:underline">
+              Blog
+            </Link>
+            <Link href="/blog/admin" className="text-[var(--text-soft)] hover:text-[var(--acid)]">
+              CMS
+            </Link>
+            <a href="/sitemap.xml" className="text-[var(--acid)] hover:underline">
               Sitemap.xml
+            </a>
+            <a href="/rss.xml" className="text-[var(--cyan)] hover:underline">
+              RSS.xml
+            </a>
+            <a href="/llms.txt" className="text-[var(--acid)] hover:underline">
+              llms.txt
             </a>
           </div>
         </div>

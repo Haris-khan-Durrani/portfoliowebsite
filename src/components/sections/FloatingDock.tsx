@@ -14,6 +14,7 @@ const DOCK_ITEMS = [
   { id: 'experience', label: 'Experience' },
   { id: 'dossiers', label: 'Blueprints' },
   { id: 'work', label: 'Systems' },
+  { id: 'blog', label: 'Blog' },
   { id: 'codeplay', label: 'Code' },
   { id: 'terminal', label: 'Shell' },
   { id: 'contact', label: 'Contact' },
