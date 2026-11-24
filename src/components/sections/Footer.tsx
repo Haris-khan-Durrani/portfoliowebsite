@@ -24,10 +24,10 @@ export function Footer({ posts = INITIAL_BLOG_POSTS }: FooterProps) {
           ))}
         </div>
 
-        {/* SEO / AEO / GEO Blog Articles Quick Links */}
+        {/* Blog Articles Quick Links */}
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-[var(--line-subtle)] pb-4 font-mono text-[10px] tracking-[0.06em] text-[var(--text-faint)]">
           <Link href="/blog" className="font-bold uppercase text-[var(--cyan)] hover:underline">
-            Architecture Journal (SEO · AEO · GEO):
+            Architecture Journal:
           </Link>
           {posts.slice(0, 8).map((post) => (
             <Link

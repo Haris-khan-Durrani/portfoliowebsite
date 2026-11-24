@@ -16,7 +16,7 @@ export function UaeAuthorityFaqSection() {
         <div className="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div>
             <div className="mb-3 flex flex-wrap items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--acid)]">
-              <DecryptedText text="08 / UAE Enterprise Advisory · AEO & GEO Knowledge Base" />
+              <DecryptedText text="08 / UAE Enterprise Advisory & Technical FAQ" />
             </div>
             <h2
               id="uae-faq-title"
@@ -38,7 +38,7 @@ export function UaeAuthorityFaqSection() {
             <SpotlightCard key={idx} className="p-6 sm:p-7">
               <div className="mb-2.5 flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--acid)]">
                 <HelpCircle className="h-3.5 w-3.5" />
-                <span>AEO Query 0{idx + 1}</span>
+                <span>Question 0{idx + 1}</span>
               </div>
               <h3 className="m-0 mb-3 text-base font-extrabold leading-snug text-[var(--page-text)] sm:text-[17px]">
                 {faq.question}

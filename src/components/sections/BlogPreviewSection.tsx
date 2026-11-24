@@ -25,10 +25,7 @@ export function BlogPreviewSection({ posts = INITIAL_BLOG_POSTS }: BlogPreviewSe
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div>
             <div className="mb-3 flex flex-wrap items-center gap-2.5 font-mono text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--acid)]">
-              <DecryptedText text="05 / Technical Publications · SEO · AEO · GEO" />
-              <span className="rounded-full border border-[var(--cyan)]/40 bg-[var(--cyan)]/10 px-2.5 py-0.5 text-[9.5px] tracking-[0.12em] text-[var(--cyan)]">
-                MySQL + LLM Indexed
-              </span>
+              <DecryptedText text="05 / Engineering Insights & Case Studies" />
             </div>
             <h2
               id="blog-section-title"
@@ -41,9 +38,8 @@ export function BlogPreviewSection({ posts = INITIAL_BLOG_POSTS }: BlogPreviewSe
 
           <div className="flex flex-col items-start gap-4 lg:items-end">
             <p className="m-0 max-w-md text-sm leading-relaxed text-[var(--text-soft)] lg:text-right">
-              Deep production case studies structured for Google Search (SEO), Answer Engines &amp;
-              Featured Snippets (AEO), and AI Citations across ChatGPT, Perplexity, Claude &amp;
-              Gemini (GEO).
+              Real-world system architecture notes, production benchmarks, and technical deep-dives
+              from building enterprise SaaS, CRM automation, and AI telephony platforms.
             </p>
             <div className="flex flex-wrap items-center gap-2.5">
               <Link
@@ -98,11 +94,11 @@ export function BlogPreviewSection({ posts = INITIAL_BLOG_POSTS }: BlogPreviewSe
                     </h3>
                   </Link>
 
-                  {/* AEO Direct Answer Snippet Preview */}
+                  {/* Executive Summary Preview */}
                   <div className="mb-4 rounded-2xl border border-[var(--acid)]/20 bg-[var(--acid)]/[0.04] p-3.5">
                     <div className="mb-1 flex items-center gap-1.5 font-mono text-[9.5px] font-bold uppercase tracking-[0.14em] text-[var(--acid)]">
                       <Sparkles className="h-3 w-3" />
-                      <span>AEO Direct Answer Summary</span>
+                      <span>Executive Summary</span>
                     </div>
                     <p className="m-0 line-clamp-3 text-xs leading-[1.6] text-[var(--text-soft)]">
                       {post.tldrAnswer}
@@ -125,52 +121,18 @@ export function BlogPreviewSection({ posts = INITIAL_BLOG_POSTS }: BlogPreviewSe
               {/* Footer */}
               <div className="flex items-center justify-between border-t border-[var(--line-subtle)] px-6 py-4">
                 <span className="font-mono text-[10px] text-[var(--text-faint)]">
-                  {post.faqs.length} FAQ Schema · {post.keyTakeaways.length} GEO Citations
+                  {post.readingTimeMinutes} min read · {post.keyTakeaways.length} Key Takeaways
                 </span>
                 <Link
                   href={`/blog/${post.slug}`}
                   className="inline-flex items-center gap-1 font-mono text-[10.5px] font-extrabold uppercase tracking-[0.1em] text-[var(--acid)] transition-transform group-hover:translate-x-1"
                 >
-                  <span>Read Blueprint</span>
+                  <span>Read Article</span>
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
             </SpotlightCard>
           ))}
-        </div>
-
-        {/* SEO / AEO / GEO Authority Strip */}
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-[var(--line)] bg-[var(--surface)] px-5 py-4 font-mono text-[10.5px] text-[var(--text-soft)]">
-          <div className="flex flex-wrap items-center gap-4">
-            <span className="inline-flex items-center gap-1.5 text-[var(--acid)] font-bold">
-              <Database className="h-3.5 w-3.5" />
-              MySQL Engine + Fulltext Search
-            </span>
-            <span>•</span>
-            <span>TechArticle + FAQPage + Speakable JSON-LD</span>
-            <span>•</span>
-            <span>GEO /llms.txt &amp; /llms-full.txt Corpus</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <a
-              href="/rss.xml"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[var(--cyan)] hover:underline"
-            >
-              <Rss className="h-3.5 w-3.5" />
-              <span>RSS 2.0 Feed</span>
-            </a>
-            <a
-              href="/llms-full.txt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[var(--acid)] hover:underline"
-            >
-              <Bot className="h-3.5 w-3.5" />
-              <span>Full AI Knowledge Corpus ↗</span>
-            </a>
-          </div>
         </div>
       </div>
     </section>

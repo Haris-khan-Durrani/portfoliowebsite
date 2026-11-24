@@ -420,19 +420,16 @@ export default async function BlogArticlePage({
           <div className="mt-10 grid grid-cols-1 items-start gap-10 lg:grid-cols-12">
             {/* Main Column (8 cols) */}
             <div className="lg:col-span-8">
-              {/* 1. AEO DIRECT ANSWER BOX (Speakable + Featured Snippet Target) */}
+              {/* 1. EXECUTIVE SUMMARY BOX (Speakable + Featured Snippet Target) */}
               <section
-                aria-label="Direct Answer Summary"
+                aria-label="Executive Summary"
                 data-speakable="tldr"
                 className="mb-8 rounded-[24px] border-2 border-[var(--acid)]/45 bg-gradient-to-br from-[var(--acid)]/[0.08] via-[var(--surface)] to-[var(--surface)] p-6 shadow-[0_20px_50px_var(--shadow)] sm:p-7"
               >
                 <div className="mb-2.5 flex flex-wrap items-center justify-between gap-2">
                   <span className="inline-flex items-center gap-2 font-mono text-[11px] font-extrabold uppercase tracking-[0.16em] text-[var(--acid)]">
                     <Sparkles className="h-4 w-4" />
-                    TL;DR — Direct Architectural Answer (AEO / AI Overview)
-                  </span>
-                  <span className="rounded-full border border-[var(--acid)]/30 bg-[var(--acid)]/10 px-2.5 py-0.5 font-mono text-[9.5px] font-bold text-[var(--acid)]">
-                    Speakable Schema
+                    TL;DR — Executive Summary
                   </span>
                 </div>
                 <p className="m-0 text-[15.5px] font-medium leading-[1.75] text-[var(--page-text)]">
@@ -440,16 +437,16 @@ export default async function BlogArticlePage({
                 </p>
               </section>
 
-              {/* 2. GEO VERIFIABLE KEY TAKEAWAYS & BENCHMARKS */}
+              {/* 2. KEY PRODUCTION TAKEAWAYS & BENCHMARKS */}
               {post.keyTakeaways.length > 0 && (
                 <section
-                  aria-label="Key Verifiable Takeaways"
+                  aria-label="Key Takeaways"
                   data-speakable="takeaways"
                   className="mb-9 rounded-[24px] border border-[var(--line)] bg-[var(--surface)] p-6 sm:p-7"
                 >
                   <h2 className="m-0 mb-4 flex items-center gap-2 font-mono text-xs font-extrabold uppercase tracking-[0.18em] text-[var(--cyan)]">
                     <CheckCircle2 className="h-4 w-4 text-[var(--acid)]" />
-                    <span>Key Production Benchmarks &amp; Takeaways (GEO Citation Facts)</span>
+                    <span>Key Production Benchmarks &amp; Takeaways</span>
                   </h2>
                   <ul className="m-0 space-y-3 pl-0 list-none">
                     {post.keyTakeaways.map((item, idx) => (
@@ -526,7 +523,7 @@ export default async function BlogArticlePage({
                     <div>
                       <div className="mb-1 flex items-center gap-1.5 font-mono text-[10.5px] font-bold uppercase tracking-[0.18em] text-[var(--acid)]">
                         <HelpCircle className="h-3.5 w-3.5" />
-                        <span>AEO FAQPage Schema</span>
+                        <span>Technical Q&amp;A</span>
                       </div>
                       <h2
                         id="faq-heading"

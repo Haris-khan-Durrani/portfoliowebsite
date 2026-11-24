@@ -108,7 +108,7 @@ export function BlogHubClient({ initialPosts, isAdmin = false }: BlogHubClientPr
         <div className="mb-10 border-b border-[var(--line)] pb-10">
           <div className="mb-3 inline-flex flex-wrap items-center gap-2 rounded-full border border-[var(--acid)]/30 bg-[var(--acid)]/[0.07] px-3.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--acid)]">
             <Sparkles className="h-3 w-3" />
-            <span>SEO · AEO (Answer Engine) · GEO (Generative AI Citation) Optimized</span>
+            <span>Production Case Studies &amp; Solution Architecture</span>
           </div>
 
           <h1 className="m-0 text-[clamp(36px,5.6vw,78px)] font-extrabold leading-[0.98] tracking-[-0.045em] text-[var(--page-text)]">
@@ -117,11 +117,9 @@ export function BlogHubClient({ initialPosts, isAdmin = false }: BlogHubClientPr
           </h1>
 
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-soft)]">
-            Written by <strong className="text-[var(--page-text)]">{SITE_CONFIG.name}</strong> (
-            {SITE_CONFIG.role}, Dubai). Every article includes a concise{' '}
-            <span className="text-[var(--acid)]">AEO Direct Answer Summary</span>,{' '}
-            <span className="text-[var(--cyan)]">GEO Quantitative Takeaways &amp; Comparison Matrices</span>,
-            and structured <span className="text-[var(--page-text)]">FAQPage + Speakable JSON-LD</span>.
+            Real-world engineering breakdowns, system architecture notes, and lessons learned building
+            multi-tenant SaaS, ERP/CRM platforms, AI telephony gateways, and cloud infrastructure in
+            Dubai.
           </p>
 
           {/* Search & Category Filter Bar */}
@@ -205,11 +203,11 @@ export function BlogHubClient({ initialPosts, isAdmin = false }: BlogHubClientPr
                       </h2>
                     </Link>
 
-                    {/* Highlighted AEO Direct Answer Box */}
+                    {/* Highlighted Executive Summary Box */}
                     <div className="mt-4 rounded-2xl border border-[var(--acid)]/30 bg-[var(--acid)]/[0.05] p-4">
                       <div className="mb-1.5 flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--acid)]">
                         <Sparkles className="h-3.5 w-3.5" />
-                        <span>TL;DR — AEO Direct Answer (Featured Snippet &amp; AI Citation Ready)</span>
+                        <span>TL;DR — Executive Summary</span>
                       </div>
                       <p className="m-0 text-[13px] leading-[1.68] text-[var(--page-text)]/90">
                         {heroPost.tldrAnswer}
