@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { ArrowUpRight, Menu, Terminal, X } from 'lucide-react';
+import { ArrowUpRight, Calculator, Menu, Terminal, X } from 'lucide-react';
 import { NAV_ITEMS, SITE_CONFIG } from '@/data/portfolio';
 import { ThemeTogglerButton } from '@/components/animate-ui/ThemeTogglerButton';
 import { cn } from '@/lib/utils';
@@ -52,31 +52,32 @@ export function Navbar({
       <header
         id="topbar"
         className={cn(
-          'fixed left-1/2 top-3.5 z-[80] flex min-h-[60px] w-[min(1360px,calc(100%-clamp(16px,3.2vw,44px)))] -translate-x-1/2 items-center justify-between gap-3 rounded-full border border-[var(--header-border)] bg-[var(--header-bg)] px-3 py-2 pl-4 text-[var(--header-text)] backdrop-blur-2xl transition-all duration-300 sm:pl-5',
+          'fixed left-1/2 top-3.5 z-[80] flex h-[58px] w-[min(1360px,calc(100%-clamp(16px,3vw,40px)))] -translate-x-1/2 items-center justify-between gap-3 rounded-full border border-[var(--header-border)] bg-[var(--header-bg)] px-3 pl-3.5 text-[var(--header-text)] backdrop-blur-2xl transition-all duration-300 sm:pl-4',
           scrolled
-            ? 'shadow-[0_22px_54px_-12px_rgba(0,0,0,0.72),inset_0_1px_0_rgba(255,255,255,0.1)]'
+            ? 'shadow-[0_22px_54px_-12px_rgba(0,0,0,0.75),inset_0_1px_0_rgba(255,255,255,0.1)]'
             : 'shadow-[0_16px_42px_-12px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)]'
         )}
       >
+        {/* Left Executive Brand Lockup — Never Truncates or Wraps Awkwardly */}
         <a
           href="#hero"
           aria-label="Haris Khan Durrani — Home"
-          className="group flex min-w-0 items-center gap-2.5 sm:gap-3"
+          className="group flex shrink-0 items-center gap-2.5"
         >
-          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-[10px] border border-[var(--acid)]/45 bg-gradient-to-br from-[var(--acid)]/20 to-[var(--cyan)]/15 font-mono text-[11px] font-black text-[var(--acid)] shadow-[0_0_18px_rgba(200,255,61,0.22)] transition-transform duration-300 group-hover:scale-105 sm:h-[34px] sm:w-[34px]">
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[11px] border border-[var(--acid)]/45 bg-gradient-to-br from-[var(--acid)]/20 to-[var(--cyan)]/15 font-mono text-[11px] font-black text-[var(--acid)] shadow-[0_0_18px_rgba(200,255,61,0.2)] transition-transform duration-300 group-hover:scale-105">
             {SITE_CONFIG.initials}
           </span>
-          <span className="flex min-w-0 items-baseline gap-2">
-            <span className="truncate text-[13px] font-extrabold tracking-[-0.015em] text-[var(--page-text)] sm:text-[13.5px]">
+          <span className="flex flex-col justify-center leading-none">
+            <span className="whitespace-nowrap text-[13.5px] font-extrabold tracking-[-0.015em] text-[var(--page-text)]">
               {SITE_CONFIG.name}
             </span>
-            <span className="hidden font-mono text-[9.5px] uppercase tracking-[0.12em] text-[var(--text-faint)] xl:inline">
-              / {SITE_CONFIG.shortRole}
+            <span className="mt-1 hidden whitespace-nowrap font-mono text-[9px] font-semibold uppercase tracking-[0.14em] text-[var(--text-faint)] sm:block">
+              {SITE_CONFIG.shortRole}
             </span>
           </span>
         </a>
 
-        {/* Desktop Nav with Animate UI Gliding Highlight */}
+        {/* Center Desktop Nav — Crisp Single-Line Pill with Gliding Highlight */}
         <nav
           aria-label="Primary navigation"
           onMouseLeave={() => setHoveredId(null)}
@@ -90,8 +91,10 @@ export function Navbar({
                 href={`#${item.id}`}
                 onMouseEnter={() => setHoveredId(item.id)}
                 className={cn(
-                  'relative z-10 rounded-full px-3.5 py-1.5 text-[11.5px] font-semibold tracking-[0.02em] transition-colors',
-                  isHighlighted ? 'text-[var(--page-text)]' : 'text-[var(--text-soft)] hover:text-[var(--page-text)]'
+                  'relative z-10 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-1.5 text-[12px] font-semibold tracking-[0.01em] transition-colors',
+                  isHighlighted
+                    ? 'text-[var(--page-text)]'
+                    : 'text-[var(--text-soft)] hover:text-[var(--page-text)]'
                 )}
               >
                 {isHighlighted && (
@@ -101,20 +104,30 @@ export function Navbar({
                     className="absolute inset-0 -z-10 rounded-full border border-[var(--line)] bg-[var(--page-text)]/[0.09]"
                   />
                 )}
-                {item.label}
+                <span>{item.label}</span>
+                {'badge' in item && item.badge && (
+                  <span className="rounded-full bg-[var(--acid)]/15 px-1.5 py-0.2 font-mono text-[9.5px] font-bold text-[var(--acid)]">
+                    {item.badge}
+                  </span>
+                )}
               </a>
             );
           })}
+
+          <span className="mx-1 h-3.5 w-[1px] bg-[var(--line)]" aria-hidden="true" />
+
           <a
             href="/tools"
-            className="relative z-10 rounded-full px-3.5 py-1.5 text-[11.5px] font-semibold tracking-[0.02em] text-[var(--acid)] transition-colors hover:bg-[var(--acid)]/10"
+            className="relative z-10 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-[var(--acid)]/10 px-3 py-1.5 text-[11.5px] font-bold tracking-[0.01em] text-[var(--acid)] transition-all hover:bg-[var(--acid)]/20"
           >
-            ROI Tools
+            <Calculator className="h-3 w-3" />
+            <span>Tools</span>
           </a>
         </nav>
 
+        {/* Right Actions — Availability, Terminal, Theme & Consult CTA */}
         <div className="flex shrink-0 items-center gap-2">
-          <div className="hidden items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--page-text)]/[0.03] px-3 py-1.5 font-mono text-[10.5px] text-[var(--text-soft)] sm:inline-flex">
+          <div className="hidden items-center gap-2 whitespace-nowrap rounded-full border border-[var(--line)] bg-[var(--page-text)]/[0.03] px-3 py-1.5 font-mono text-[10.5px] text-[var(--text-soft)] xl:inline-flex">
             <span className="status-dot-pulse h-1.5 w-1.5 rounded-full bg-emerald-500" />
             <span>{SITE_CONFIG.availability}</span>
           </div>
@@ -124,7 +137,7 @@ export function Navbar({
             onClick={onFocusTerminal}
             aria-label="Launch Interactive System Terminal"
             title="Launch Interactive Terminal"
-            className="grid h-9 w-9 place-items-center rounded-full border border-[var(--line)] bg-transparent text-[var(--page-text)] transition-all hover:-translate-y-0.5 hover:border-[var(--acid)] hover:bg-[var(--acid)] hover:text-[#060608] cursor-pointer"
+            className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--line)] bg-transparent text-[var(--page-text)] transition-all hover:-translate-y-0.5 hover:border-[var(--acid)] hover:bg-[var(--acid)] hover:text-[#060608] cursor-pointer"
           >
             <Terminal className="h-4 w-4" />
           </button>
@@ -133,7 +146,7 @@ export function Navbar({
 
           <a
             href="#contact"
-            className="hidden items-center gap-1.5 rounded-full bg-gradient-to-br from-[#c8ff3d] to-[#a5ea10] px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#060608] shadow-[0_4px_18px_rgba(200,255,61,0.28)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_26px_rgba(200,255,61,0.45)] sm:inline-flex"
+            className="hidden shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-gradient-to-br from-[#c8ff3d] to-[#a5ea10] px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#060608] shadow-[0_4px_18px_rgba(200,255,61,0.28)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_26px_rgba(200,255,61,0.45)] sm:inline-flex"
           >
             <span>Consult</span>
             <ArrowUpRight className="h-3.5 w-3.5" />
@@ -145,7 +158,7 @@ export function Navbar({
             aria-label={menuOpen ? 'Close mobile menu' : 'Open mobile menu'}
             aria-expanded={menuOpen}
             aria-controls="mobile-nav-drawer"
-            className="grid h-9 w-9 place-items-center rounded-full border border-[var(--line)] bg-transparent text-[var(--page-text)] transition-colors hover:border-[var(--acid)] hover:text-[var(--acid)] lg:hidden cursor-pointer"
+            className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--line)] bg-transparent text-[var(--page-text)] transition-colors hover:border-[var(--acid)] hover:text-[var(--acid)] lg:hidden cursor-pointer"
           >
             {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
@@ -175,7 +188,7 @@ export function Navbar({
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -14, scale: 0.97 }}
               transition={{ type: 'spring', stiffness: 360, damping: 28 }}
-              className="absolute left-3.5 right-3.5 top-[86px] max-h-[calc(100svh-104px)] overflow-y-auto rounded-[24px] border border-[var(--header-border)] bg-[var(--surface-card)] p-5 text-[var(--header-text)] shadow-[0_32px_90px_rgba(0,0,0,0.75)]"
+              className="absolute left-3.5 right-3.5 top-[82px] max-h-[calc(100svh-100px)] overflow-y-auto rounded-[24px] border border-[var(--header-border)] bg-[var(--surface-card)] p-5 text-[var(--header-text)] shadow-[0_32px_90px_rgba(0,0,0,0.75)]"
             >
               <div className="flex items-center justify-between border-b border-[var(--line)] pb-3.5 font-mono text-[11px] font-bold text-[var(--acid)]">
                 <span>HARIS KHAN DURRANI</span>
@@ -191,7 +204,7 @@ export function Navbar({
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.03 * idx }}
                     onClick={() => setMenuOpen(false)}
-                    className="flex min-h-[52px] items-center justify-between border-b border-[var(--line-subtle)] text-[18px] font-extrabold uppercase tracking-[-0.02em] text-[var(--page-text)] transition-colors hover:text-[var(--acid)]"
+                    className="flex min-h-[50px] items-center justify-between border-b border-[var(--line-subtle)] text-[17px] font-extrabold uppercase tracking-[-0.02em] text-[var(--page-text)] transition-colors hover:text-[var(--acid)]"
                   >
                     <span>{item.mobileTitle}</span>
                     <span className="font-mono text-[10.5px] font-bold text-[var(--acid)]">
@@ -202,7 +215,7 @@ export function Navbar({
                 <a
                   href="/tools"
                   onClick={() => setMenuOpen(false)}
-                  className="flex min-h-[52px] items-center justify-between border-b border-[var(--line-subtle)] text-[18px] font-extrabold uppercase tracking-[-0.02em] text-[var(--acid)] transition-colors"
+                  className="flex min-h-[50px] items-center justify-between border-b border-[var(--line-subtle)] text-[17px] font-extrabold uppercase tracking-[-0.02em] text-[var(--acid)] transition-colors"
                 >
                   <span>UAE ROI Calculators</span>
                   <span className="font-mono text-[10.5px] font-bold text-[var(--acid)]">
@@ -212,7 +225,7 @@ export function Navbar({
                 <a
                   href="/blog"
                   onClick={() => setMenuOpen(false)}
-                  className="flex min-h-[52px] items-center justify-between border-b border-[var(--line-subtle)] text-[18px] font-extrabold uppercase tracking-[-0.02em] text-[var(--cyan)] transition-colors"
+                  className="flex min-h-[50px] items-center justify-between border-b border-[var(--line-subtle)] text-[17px] font-extrabold uppercase tracking-[-0.02em] text-[var(--cyan)] transition-colors"
                 >
                   <span>Architecture Journal</span>
                   <span className="font-mono text-[10.5px] font-bold text-[var(--cyan)]">

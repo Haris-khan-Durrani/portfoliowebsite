@@ -1142,11 +1142,11 @@ export const PROJECT_FILTERS: { id: ProjectCategory; label: string }[] = [
 export const NAV_ITEMS = [
   { id: 'experience', label: 'Experience', mobileIndex: '01', mobileTitle: 'Experience & Leadership' },
   { id: 'dossiers', label: 'Blueprints', mobileIndex: '02', mobileTitle: 'Architectural Blueprints' },
-  { id: 'work', label: 'Systems (12)', mobileIndex: '03', mobileTitle: '12 Production Systems' },
-  { id: 'blog', label: 'Blog', mobileIndex: '04', mobileTitle: 'Architecture Blog (SEO/GEO)' },
+  { id: 'work', label: 'Systems', badge: '12', mobileIndex: '03', mobileTitle: '12 Production Systems' },
+  { id: 'blog', label: 'Blog', mobileIndex: '04', mobileTitle: 'Architecture Blog' },
   { id: 'codeplay', label: 'Code', mobileIndex: '05', mobileTitle: 'Code Playground' },
   { id: 'architecture', label: 'Stack', mobileIndex: '06', mobileTitle: 'Technology Stack', hideInTopbar: true },
-  { id: 'terminal', label: 'Console >_', mobileIndex: '07', mobileTitle: 'Interactive Terminal' },
+  { id: 'terminal', label: 'Console', mobileIndex: '07', mobileTitle: 'Interactive Terminal', hideInTopbar: true },
   { id: 'contact', label: 'Contact', mobileIndex: '08', mobileTitle: 'Get In Touch' },
 ];
 
