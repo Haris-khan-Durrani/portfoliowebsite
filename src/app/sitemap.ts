@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllBlogPosts } from '@/lib/db';
 import { PROJECTS, SITE_CONFIG } from '@/data/portfolio';
+import { UAE_SOLUTIONS } from '@/data/solutions';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
@@ -27,6 +28,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...(post.coverImage ? { images: [`${SITE_CONFIG.url}${post.coverImage}`] } : {}),
   }));
 
+  const solutionRoutes: MetadataRoute.Sitemap = UAE_SOLUTIONS.map((sol) => ({
+    url: `${SITE_CONFIG.url}/solutions/${sol.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.92,
+  }));
+
   return [
     {
       url: `${SITE_CONFIG.url}/`,
@@ -41,6 +49,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 0.95,
     },
+    {
+      url: `${SITE_CONFIG.url}/tools`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.93,
+    },
+    ...solutionRoutes,
     ...blogRoutes,
     ...projectRoutes,
   ];

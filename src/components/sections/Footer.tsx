@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { INITIAL_BLOG_POSTS, type BlogPost } from '@/data/blog-seed';
 import { PROJECTS, SITE_CONFIG } from '@/data/portfolio';
+import { UAE_SOLUTIONS } from '@/data/solutions';
 
 interface FooterProps {
   posts?: BlogPost[];
@@ -20,6 +21,25 @@ export function Footer({ posts = INITIAL_BLOG_POSTS }: FooterProps) {
               className="transition-colors hover:text-[var(--page-text)]"
             >
               {project.shortTitle}
+            </Link>
+          ))}
+        </div>
+
+        {/* UAE Enterprise Solutions & Interactive Tools Quick Links */}
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-[var(--line-subtle)] pb-4 font-mono text-[10px] tracking-[0.06em] text-[var(--text-faint)]">
+          <Link href="/tools" className="font-bold uppercase text-[var(--acid)] hover:underline">
+            UAE Solutions &amp; ROI Calculators:
+          </Link>
+          <Link href="/tools" className="text-[var(--page-text)] hover:text-[var(--acid)]">
+            SaaS &amp; VAT 201 Calculators
+          </Link>
+          {UAE_SOLUTIONS.map((sol) => (
+            <Link
+              key={sol.slug}
+              href={`/solutions/${sol.slug}`}
+              className="transition-colors hover:text-[var(--page-text)]"
+            >
+              {sol.shortTitle}
             </Link>
           ))}
         </div>
@@ -51,6 +71,9 @@ export function Footer({ posts = INITIAL_BLOG_POSTS }: FooterProps) {
             <span>&copy; 2026 {SITE_CONFIG.domain}</span>
             <Link href="/blog" className="text-[var(--acid)] hover:underline">
               Blog
+            </Link>
+            <Link href="/tools" className="text-[var(--cyan)] hover:underline">
+              Calculators
             </Link>
             <a href="/sitemap.xml" className="text-[var(--acid)] hover:underline">
               Sitemap.xml
