@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import { SITE_CONFIG } from '@/data/portfolio';
+import { WhatsAppAuditConcierge } from '@/components/concierge/WhatsAppAuditConcierge';
 import './globals.css';
 
 const plusJakarta = localFont({
@@ -194,6 +195,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <WhatsAppAuditConcierge />
       </body>
     </html>
   );

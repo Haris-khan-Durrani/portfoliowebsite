@@ -105,6 +105,12 @@ export function Navbar({
               </a>
             );
           })}
+          <a
+            href="/tools"
+            className="relative z-10 rounded-full px-3.5 py-1.5 text-[11.5px] font-semibold tracking-[0.02em] text-[var(--acid)] transition-colors hover:bg-[var(--acid)]/10"
+          >
+            ROI Tools
+          </a>
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
@@ -193,6 +199,26 @@ export function Navbar({
                     </span>
                   </motion.a>
                 ))}
+                <a
+                  href="/tools"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex min-h-[52px] items-center justify-between border-b border-[var(--line-subtle)] text-[18px] font-extrabold uppercase tracking-[-0.02em] text-[var(--acid)] transition-colors"
+                >
+                  <span>UAE ROI Calculators</span>
+                  <span className="font-mono text-[10.5px] font-bold text-[var(--acid)]">
+                    TOOLS ↗
+                  </span>
+                </a>
+                <a
+                  href="/blog"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex min-h-[52px] items-center justify-between border-b border-[var(--line-subtle)] text-[18px] font-extrabold uppercase tracking-[-0.02em] text-[var(--cyan)] transition-colors"
+                >
+                  <span>Architecture Journal</span>
+                  <span className="font-mono text-[10.5px] font-bold text-[var(--cyan)]">
+                    BLOG ↗
+                  </span>
+                </a>
               </nav>
 
               <div className="mt-4 flex flex-wrap items-center justify-between gap-3 pt-2">
