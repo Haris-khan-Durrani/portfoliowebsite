@@ -20,18 +20,18 @@ import { SpotlightCard } from '@/components/reactbits/SpotlightCard';
 
 export function InteractiveToolsHub() {
   // 1. Multi-Company SaaS & CRM Consolidation ROI Calculator State
-  const [companyCount, setCompanyCount] = useState(5);
-  const [staffUsers, setStaffUsers] = useState(65);
-  const [monthlySpendPerCompanyAed, setMonthlySpendPerCompanyAed] = useState(3200);
+  const [companyCount, setCompanyCount] = useState(3);
+  const [staffUsers, setStaffUsers] = useState(25);
+  const [monthlySpendPerCompanyAed, setMonthlySpendPerCompanyAed] = useState(1800);
 
   const saasRoi = useMemo(() => {
     const currentMonthlyAed = companyCount * monthlySpendPerCompanyAed;
     const currentAnnualAed = currentMonthlyAed * 12;
-    // Unified multi-tenant GHL + Node.js portal cuts duplicate tooling by ~78-80%
-    const unifiedMonthlyAed = Math.round(currentMonthlyAed * 0.22);
+    // Unified multi-tenant CRM + Node.js portal cuts duplicate tooling by ~65%
+    const unifiedMonthlyAed = Math.round(currentMonthlyAed * 0.35);
     const annualSavingsAed = currentAnnualAed - unifiedMonthlyAed * 12;
     const annualSavingsUsd = Math.round(annualSavingsAed / 3.6725);
-    const hoursSavedPerMonth = staffUsers * 11;
+    const hoursSavedPerMonth = staffUsers * 6;
     return {
       currentMonthlyAed,
       currentAnnualAed,
@@ -43,16 +43,16 @@ export function InteractiveToolsHub() {
   }, [companyCount, staffUsers, monthlySpendPerCompanyAed]);
 
   // 2. 3CX Speed-to-Lead & AI Auto-Dialer Revenue Recovery Calculator State
-  const [monthlyLeads, setMonthlyLeads] = useState(450);
-  const [avgDealValueAed, setAvgDealValueAed] = useState(12000);
+  const [monthlyLeads, setMonthlyLeads] = useState(200);
+  const [avgDealValueAed, setAvgDealValueAed] = useState(4500);
   const [currentCloseRate, setCurrentCloseRate] = useState(4);
 
   const dialerRoi = useMemo(() => {
     const currentMonthlyRevAed = Math.round(
       monthlyLeads * (currentCloseRate / 100) * avgDealValueAed
     );
-    // 450ms WebRTC & 3CX auto-dialer speed-to-lead typically boosts contact-to-close by +45% relative
-    const boostedCloseRate = Number((currentCloseRate * 1.45).toFixed(1));
+    // WebRTC & 3CX auto-dialer speed-to-lead typically boosts contact-to-close by +30% relative
+    const boostedCloseRate = Number((currentCloseRate * 1.3).toFixed(1));
     const projectedMonthlyRevAed = Math.round(
       monthlyLeads * (boostedCloseRate / 100) * avgDealValueAed
     );
@@ -68,9 +68,9 @@ export function InteractiveToolsHub() {
   }, [monthlyLeads, avgDealValueAed, currentCloseRate]);
 
   // 3. UAE FTA VAT 201 Tax & Invoice Calculator State
-  const [standardSuppliesAed, setStandardSuppliesAed] = useState(850000);
-  const [zeroRatedSuppliesAed, setZeroRatedSuppliesAed] = useState(120000);
-  const [recoverableExpensesAed, setRecoverableExpensesAed] = useState(310000);
+  const [standardSuppliesAed, setStandardSuppliesAed] = useState(250000);
+  const [zeroRatedSuppliesAed, setZeroRatedSuppliesAed] = useState(40000);
+  const [recoverableExpensesAed, setRecoverableExpensesAed] = useState(95000);
 
   const vatSummary = useMemo(() => {
     const outputVatAed = Math.round(standardSuppliesAed * 0.05 * 100) / 100;
@@ -86,9 +86,9 @@ export function InteractiveToolsHub() {
   }, [standardSuppliesAed, zeroRatedSuppliesAed, recoverableExpensesAed]);
 
   // 4. Live Webhook HMAC-SHA256 Signature Generator (Browser Web Crypto API)
-  const [webhookSecret, setWebhookSecret] = useState('ebms_tenant_secret_2026');
+  const [webhookSecret, setWebhookSecret] = useState('uae_webhook_secret_2026');
   const [webhookPayload, setWebhookPayload] = useState(
-    '{"tenantId":"ebms-dubai","event":"contact.synced","leadId":"LD-9941"}'
+    '{"workspace":"dubai-crm","event":"contact.synced","leadId":"LD-9941"}'
   );
   const [hmacSignature, setHmacSignature] = useState<string>('');
   const [copiedHmac, setCopiedHmac] = useState(false);
@@ -187,16 +187,16 @@ export function InteractiveToolsHub() {
                 <span>01 / Multi-Company SaaS &amp; CRM Savings Calculator</span>
               </span>
               <span className="rounded-full bg-[var(--acid)]/15 px-2.5 py-0.5 font-mono text-[10px] font-bold text-[var(--acid)]">
-                EBMS 80% Benchmark
+                UAE Cost Estimator
               </span>
             </div>
 
             <h2 className="m-0 mb-2 text-2xl font-extrabold">
-              How Much Can Your Group Save by Consolidating CRM &amp; SaaS?
+              How Much Can You Save by Consolidating CRM &amp; SaaS?
             </h2>
             <p className="m-0 mb-6 text-xs leading-relaxed text-[var(--text-soft)]">
-              Based on our real Dubai deployment unifying 9 sister companies and 105 users onto one
-              white-label GoHighLevel OAuth 2.0 + Node.js foundation.
+              Estimate annual savings when unifying separate per-branch CRM, document, and automation
+              subscriptions onto a shared GoHighLevel OAuth 2.0 + Node.js portal.
             </p>
 
             <div className="space-y-4">

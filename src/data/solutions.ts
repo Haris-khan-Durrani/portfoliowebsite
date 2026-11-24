@@ -43,7 +43,7 @@ export const UAE_SOLUTIONS: UaeSolutionLanding[] = [
       {
         title: 'Multi-Company SaaS & Tooling Consolidation',
         detail:
-          'Audit and unify disparate CRM, ERP, and document tools onto a single multi-tenant API foundation—modeled on our 80% cost reduction across EBMS & 9 sister companies.',
+          'Audit and unify disparate CRM, ERP, and document tools onto a single multi-tenant API foundation—eliminating redundant per-seat software spend across branches.',
       },
       {
         title: 'Engineering Team Leadership & Code Governance',

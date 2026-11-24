@@ -123,7 +123,7 @@ export default function BlogAdminStudioPage() {
     'GoHighLevel API v2, Node.js, MySQL, Multi-Tenant SaaS, Dubai UAE'
   );
   const [entitiesInput, setEntitiesInput] = useState(
-    'Haris Khan Durrani, EBMS Business Services, Dubai Enterprise Architecture'
+    'Haris Khan Durrani, Dubai Enterprise Architecture, UAE SaaS'
   );
   const [takeawaysInput, setTakeawaysInput] = useState('');
   const [faqs, setFaqs] = useState<BlogFaqItem[]>([]);
@@ -284,7 +284,7 @@ Deploying this **${category}** foundation empowers 100+ internal users across gr
       `${kw}, ${category}, Next.js, Node.js, MySQL, Multi-Tenant SaaS, Dubai UAE`
     );
     setEntitiesInput(
-      `Haris Khan Durrani, ${kw}, EBMS Business Services, Dubai Enterprise Architecture, UAE SaaS`
+      `Haris Khan Durrani, ${kw}, Dubai Enterprise Architecture, UAE SaaS`
     );
 
     // 5. AEO FAQPage Schema Pairs
@@ -321,7 +321,7 @@ Deploying this **${category}** foundation empowers 100+ internal users across gr
     setExcerpt('');
     setTldrAnswer('');
     setTagsInput('GoHighLevel API v2, Node.js, MySQL, Multi-Tenant SaaS, Dubai UAE');
-    setEntitiesInput('Haris Khan Durrani, EBMS Business Services, Dubai Enterprise Architecture');
+    setEntitiesInput('Haris Khan Durrani, Dubai Enterprise Architecture, UAE SaaS');
     setTakeawaysInput('');
     setContent('');
     setFaqs([]);
